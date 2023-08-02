@@ -1,0 +1,83 @@
+.heading {
+  color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* H2 */
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 50px; /* 125% */
+  text-transform: capitalize;
+}
+.review {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 4rem;
+  width: 100%;
+  height: 100%;
+}
+.testimonialText {
+  color: var(--body-text-color, #444);
+
+  /* Review Text */
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 56px;
+  margin: 5rem 12rem;
+}
+.testimonialSaider {
+  color: var(--medium-green, #82c79f);
+
+  /* Body Large */
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 28px; /* 155.556% */
+}
+.avatar {
+  margin: 0 12rem;
+  display: flex;
+  align-items: center;
+}
+.avatarDetail {
+  display: flex;
+  flex-direction: column;
+  margin-left: 0.5rem;
+}
+.avatarName {
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 30px; /* 150% */
+}
+.avatarTitle {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px; /* 171.429% */
+}
+@media screen and (max-width: 500px) {
+  .heading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 200;
+    text-transform: capitalize;
+    margin: 0 2rem;
+  }
+  .testimonialText {
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 56px;
+    margin: 1.5rem 1.5rem;
+  }
+  .avatar {
+    margin: 0 1.5rem;
+  }
+}

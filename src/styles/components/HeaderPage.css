@@ -1,0 +1,27 @@
+.dropdowns{
+    text-decoration: none;
+    margin: 0 2rem;
+    display: flex;
+    align-items: center;
+    column-gap: 2rem;
+}
+.dropdownLink{
+    color: #000;
+    font-weight: 500;
+    line-height: 16px !important;
+}
+.anticon svg {
+    height: 8px;
+    margin: 0 -10px;
+}
+.spaceBetween{
+    padding: 0 -10px;
+}
+/* rightIcons */
+.rightIcons {
+    display: flex;
+    align-items: center;
+    column-gap: 2rem;
+    font-size: x-large;
+    cursor: pointer;
+  }
