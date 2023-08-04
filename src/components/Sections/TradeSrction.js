@@ -6,6 +6,7 @@ import exam_resultsTrade from '../../assets/trade-icons/exam-resultsTrade.png'
 import questionnaireTrade from '../../assets/trade-icons/questionnaireTrade.png'
 import ARROW1 from '../../assets/trade-icons/ARROW1.png'
 import ARROW2 from '../../assets/trade-icons/ARROW2.png'
+import arrow_right from '../../assets/arrow_right.png'
 
 const TradeSrction = () => {
     return (
@@ -16,7 +17,7 @@ const TradeSrction = () => {
                         <p className='title-TradeSrction'>How To Trade With Print</p>
                         <p className='subtitle-TradeSrction'>You will receive a sketch and quote before you place your order</p>
                     </div>
-                    <button className='btn-TradeSrction'>Start choosing clothes</button>
+                    <button className='btn-TradeSrction'>Start choosing clothes<img src={arrow_right}/></button>
                 </div>
                 <div className='icons-TradeSrction'>
                     <div className='iconDiv'>

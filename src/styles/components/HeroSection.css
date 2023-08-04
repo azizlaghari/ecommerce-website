@@ -33,6 +33,7 @@
   padding-top: 3rem;
 }
 .heroBTN {
+  border: none;
   display: inline-flex;
   padding: 12px 24px;
   justify-content: center;

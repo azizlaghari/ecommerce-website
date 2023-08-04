@@ -10,3 +10,14 @@
   font-weight: 500;
   line-height: 28px; /* 155.556% */
 }
+
+@media screen and (max-width: 1024px) {
+  .featureIcons {
+    margin: 0;
+    display: flex;
+    row-gap: 2rem;
+    column-gap: 4rem;
+    flex-wrap: wrap;
+    margin: 3rem 0;
+  }
+}

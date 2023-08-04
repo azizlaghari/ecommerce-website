@@ -4,6 +4,8 @@ import { Row, Col } from 'antd'
 import '../../styles/components/Section/Section2.css'
 import manImage from '../../assets/manImage.png'
 import twoHatsImage from '../../assets/twoHats.png'
+import arrow_right from '../../assets/arrow_right.png'
+
 
 const Section2 = () => {
     const manImg = manImage
@@ -27,7 +29,7 @@ const Section2 = () => {
                             </p>
                             <p className='tags'>fatigues</p>
                             <p className='tags'>warning clothes</p>
-                            <button className='heroBTN section2LeftBTN'>All protective clothes</button>
+                            <button className='heroBTN section2LeftBTN'>All protective clothes<img src={arrow_right} /></button>
                         </div>
                         <div className='manImage'>
                             <img src={manImg}></img>
@@ -48,7 +50,7 @@ const Section2 = () => {
                             <p className='tags'>hats with embroidery & prints</p>
                             <p className='tags'>caps with print & embroidery</p>
                             <p className='tags'>hats</p>
-                            <button className='heroBTN section2RightBTN'>Check out all products</button>
+                            <button className='heroBTN section2RightBTN'>Check out all products<img src={arrow_right} /></button>
                         </div>
                         <div className='hatsImage'>
                             <img src={hatsImg}></img>

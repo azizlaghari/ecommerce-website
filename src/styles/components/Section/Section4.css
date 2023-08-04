@@ -60,6 +60,8 @@
   background: var(--white, #fff);
   color: #11505d;
   margin-top: 2rem;
+  border: none;
+  cursor: pointer;
 }
 /* box 2 */
 .imageCard2 {
@@ -94,6 +96,8 @@
   background: var(--white, #fff);
   color: #11505d;
   margin-top: 2rem;
+  border: none;
+  cursor: pointer;
 }
 @media screen and (max-width: 500px) {
   .Section4 {

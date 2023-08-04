@@ -7,7 +7,7 @@ const FeatureCards = ({ text, icon }) => {
     <div>
       <div className='featureIcons'>
         <img src={icon}></img>
-        <p>{text}</p>
+        <p className='featureCardsText'>{text}</p>
       </div>
     </div>
   )

@@ -13,6 +13,7 @@ import chat from '../assets/chat.png'
 import approve from '../assets/approve.png'
 import sketching from '../assets/sketching.png'
 import t_shirt from '../assets/t-shirt.png'
+import arrow_right from '../assets/arrow_right.png'
 
 
 import '../styles/components/HeroSection.css'
@@ -56,7 +57,7 @@ const HeroSection = () => {
             Order printing on clothes for companies, here you will always find tailor-made clothes
             with high-quality prints at favorable prices.
           </p>
-          <button className='heroBTN'>Start your search for print wear</button>
+          <button className='heroBTN'>Start your search for print wear<img src={arrow_right} /></button>
         </div>
       </div>
       <div className='featureImages'>
@@ -65,11 +66,11 @@ const HeroSection = () => {
         <img src={SportsWear}></img>
         <img src={sunglasses}></img>
       </div>
-      <Row className='featureCards'>
+      <Row className='featureCards' gutter={[20, 20]}>
         {data.map((item, index) => {
           return (
-            <Col md={6} sm={12} xs={12}  key={index}>
-              <FeatureCards  text={item.text} icon={item.icon} />
+            <Col md={6} sm={12} xs={12} key={index} >
+              <FeatureCards text={item.text} icon={item.icon} />
             </Col>
           )
         })}

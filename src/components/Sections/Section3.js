@@ -3,6 +3,7 @@ import '../../styles/components/Section/Section3.css'
 import { Col, Row } from 'antd'
 import shirtIcon from '../../assets/ICON.png'
 import yellowHoody from '../../assets/yellowHoody.png'
+import arrow_right from '../../assets/arrow_right.png'
 
 
 const Section3 = () => {
@@ -28,7 +29,7 @@ const Section3 = () => {
                                     <br />
                                     Since our start in 2012, we have come a long way with the development of our lasting sustainability work within operations, service and product range.
                                 </p>
-                                <button className='heroBTN sectionLeftBTN'>Learn more</button>
+                                <button className='heroBTN sectionLeftBTN'>Learn more<img src={arrow_right} /></button>
                             </div>
                         </div>
 
@@ -48,7 +49,7 @@ const Section3 = () => {
                                 <br />
                                 With us, you can always count on us to deliver high-class class shirts on your terms!
                             </p>
-                            <button className='heroBTN sectionRightBTN'>Show products</button>
+                            <button className='heroBTN sectionRightBTN'>Show products<img src={arrow_right} /></button>
                         </div>
 
                     </div>

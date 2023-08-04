@@ -9,6 +9,7 @@ import logo6 from '../assets/brand-logos/logo6.png'
 import logo7 from '../assets/brand-logos/logo7.png'
 import logo8 from '../assets/brand-logos/logo8.png'
 import logo9 from '../assets/brand-logos/logo9.png'
+import arrowRightGreen from '../assets/arrowRightGreen.png'
 
 const Brands = () => {
     const LOGO1 = logo1
@@ -52,7 +53,7 @@ const Brands = () => {
                     <img src={LOGO3} />
                     <img src={LOGO4} />
                 </div>
-                <button className='brandBTN'>See all brands for our profile clothing</button>
+                <button className='brandBTN'>See all brands for our profile clothing<img src={arrowRightGreen}/></button>
             </div >
         </>
     )

@@ -2,6 +2,7 @@ import React from 'react'
 import '../../styles/components/Section/Section4.css';
 // import imageCard1 from '../../assets/imageCard1.png'
 // import imageCard2 from '../../assets/imageCard2.png'
+import arrowRightGreen from '../../assets/arrowRightGreen.png'
 
 const Section4 = () => {
     // const IMG_CARD1 = imageCard1
@@ -27,14 +28,14 @@ const Section4 = () => {
                         <p className='tags'>print for home & kitchen</p>
                         <p className='tags'>tap toys & games</p>
                     </div>
-                    <button className='seaction4BTN1'>View all products</button>
+                    <button className='seaction4BTN1'>View all products<img src={arrowRightGreen}/></button>
                 </div>
 
                 <div className='imageCard2'>
                     <div className='title'>
                         <p className='heading2'>B&C - Soft Hoodie</p>
                     </div>
-                    <button className='seaction4BTN2'>View all products</button>
+                    <button className='seaction4BTN2'>View all products<img src={arrowRightGreen}/></button>
 
                 </div>
             </div>
