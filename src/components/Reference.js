@@ -36,7 +36,7 @@ const Reference = () => {
 
                 <p className='textREF'>We strive for elaborate deliveries of textiles with profiling and do our best to meet our customers&apos; needs</p>
                 <div className='imageREF'>
-                    <div className='top6refIMG'>
+                    <div className='top6refIMG laptopScreen'>
                         <img src={refIMG1} />
                         <img src={refIMG2} />
                         <img src={refIMG3} />
@@ -44,7 +44,7 @@ const Reference = () => {
                         <img src={refIMG5} />
                         <img src={refIMG6} />
                     </div>
-                    <div className='_7refIMG'>
+                    <div className='_7refIMG laptopScreen'>
                         <img src={refIMG7} />
                         <img src={refIMG8} />
                         <img src={refIMG9} />
@@ -53,7 +53,7 @@ const Reference = () => {
                         <img src={refIMG12} />
                         <img src={refIMG13} />
                     </div>
-                    <div className='_6refIMG'>
+                    <div className='_6refIMG laptopScreen'>
                         <img src={refIMG14} />
                         <img src={refIMG15} />
                         <img src={refIMG16} />
@@ -61,7 +61,7 @@ const Reference = () => {
                         <img src={refIMG18} />
                         <img src={refIMG19} />
                     </div>
-                    <div className='bottom5regIMG'>
+                    <div className='bottom5regIMG laptopScreen'>
                         <img src={refIMG20} />
                         <img src={refIMG21} />
                         <img src={refIMG22} />

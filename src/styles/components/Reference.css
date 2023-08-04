@@ -60,7 +60,7 @@
 }
 /* Smartphone Portrait and Landscape */
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
-  .imageREF{
+  .imageREF {
     display: none;
   }
   .refIMG-slider {
@@ -71,5 +71,15 @@
     column-gap: 3rem;
     margin-top: 3rem;
     padding-bottom: 2rem;
+  }
+}
+/* laptop responsive */
+@media screen and (max-width: 1024px) {
+  .laptopScreen {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    row-gap: 1rem;
   }
 }
