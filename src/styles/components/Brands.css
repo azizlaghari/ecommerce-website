@@ -1,0 +1,77 @@
+.brands {
+  display: flex;
+  flex-direction: column;
+  margin: 5rem 0;
+  row-gap: 2rem;
+  align-items: center;
+  justify-content: center;
+}
+.heading {
+  color: #000;
+
+  /* H2 */
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 50px; /* 125% */
+  text-transform: capitalize;
+  margin: 4rem 0;
+}
+.companiesLogos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 1.5rem;
+  width: 60%;
+  cursor: pointer;
+}
+.top4logos {
+  display: flex;
+  column-gap: 3rem;
+  align-items: center;
+}
+.bottom5Logos {
+  display: flex;
+  column-gap: 3rem;
+  align-items: center;
+}
+.brandBTN {
+  width: max-content;
+  color: var(--dark-green, #11505d);
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px; /* 160% */
+
+  display: inline-flex;
+  padding: 12px 24px;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+
+  border-radius: 24px;
+  border: 2px solid var(--dark-green, #11505d);
+  background: var(--white, #fff);
+}
+.image-slider {
+  display: none;
+}
+/* Smartphone Portrait and Landscape */
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  .heading {
+    width: 100%;
+    font-size: 30px;
+    display: flex;
+    text-align: center;
+  }
+  .companiesLogos {
+    display: none;
+  }
+  .image-slider {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    overflow-x: auto;
+    column-gap: 3rem;
+  }
+}

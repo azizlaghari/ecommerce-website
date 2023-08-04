@@ -1,0 +1,28 @@
+.ModelSection {
+  margin-top: 6rem;
+}
+.models {
+  column-gap: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 2rem;
+  justify-content: center;
+}
+.model {
+  position: relative;
+}
+.modelTAG {
+  position: absolute;
+  bottom: 30px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  color: var(--black, #2a2a2a);
+  text-align: center;
+
+  /* Body Large */
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 18px; /* 155.556% */
+}

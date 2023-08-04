@@ -15,9 +15,13 @@
   height: 700px;
   align-items: center;
   position: relative;
+  padding: 2rem;
 }
 .leftText {
   width: 60%;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
 }
 .manImage {
   position: absolute;
@@ -32,6 +36,7 @@
   height: 700px;
   align-items: center;
   position: relative;
+  padding: 2rem;
 }
 .hatsImage {
   position: absolute;
@@ -41,8 +46,8 @@
 
 .textTitle {
   color: var(--main-text-color);
-  margin-top: 1rem;
-  margin-left: 3rem;
+  /* margin-top: 1rem;
+  margin-left: 3rem; */
 
   /* H5 */
   font-size: 24px;
@@ -53,8 +58,8 @@
 }
 .textSubtitle {
   color: var(--buttons-color, #11505d);
-  margin-left: 3rem;
-  margin-top: 1rem;
+  /* margin-left: 3rem;
+  margin-top: 1rem; */
 
   /* Overline */
   font-size: 12px;
@@ -66,8 +71,8 @@
 }
 .paragraphText {
   color: var(--main-text-color);
-  margin-left: 3rem;
-  margin-top: 2.5rem;
+  /* margin-left: 3rem;
+  margin-top: 2.5rem; */
 
   /* Body Normal */
   font-size: 16px;
@@ -86,11 +91,14 @@
   justify-content: center;
   align-items: center;
   gap: 10px;
-  margin-left: 3rem;
-  margin-top: 1.5rem;
+  /* margin-left: 3rem;
+  margin-top: 1.5rem; */
 }
-.heroBTN {
-  margin-left: 3rem;
+.section2LeftBTN {
+  width: max-content;
+}
+.section2RightBTN {
+  width: max-content;
 }
 @media screen and (max-width: 500px) {
   .boxes {
@@ -98,8 +106,8 @@
     flex-wrap: wrap;
     flex-direction: column;
     padding: 2rem;
-}
-.leftText {
+  }
+  .leftText {
     width: 100%;
   }
   .manImage {
@@ -107,5 +115,8 @@
   }
   .hatsImage {
     display: none;
+  }
+  .tags{
+    padding: 0 0;
   }
 }

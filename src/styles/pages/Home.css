@@ -17,3 +17,28 @@
   line-height: 50px; /* 125% */
   text-transform: capitalize;
 }
+
+.trend-sec-container{
+  display: block;
+}
+
+.trending-carousel{
+  display: none;
+}
+.recoIMG{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  display: none;
+}
+
+@media(max-width: 500px){
+  .trend-sec-container{
+    display: none;
+  }
+  
+  .trending-carousel{
+    display: block;
+  }
+}

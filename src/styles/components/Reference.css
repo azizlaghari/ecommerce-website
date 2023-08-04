@@ -1,0 +1,75 @@
+.reference {
+  margin-top: 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.titleREF {
+  color: #000;
+  text-align: center;
+
+  /* H2 */
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 50px; /* 125% */
+  text-transform: capitalize;
+}
+.textREF {
+  color: #000;
+  text-align: center;
+  margin-top: 1.5rem;
+
+  /* Body Normal */
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px; /* 150% */
+}
+.imageREF {
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 1.5rem;
+  width: 60%;
+  cursor: pointer;
+}
+.top6refIMG {
+  display: flex;
+  column-gap: 3rem;
+  align-items: center;
+}
+._7refIMG {
+  display: flex;
+  column-gap: 3rem;
+  align-items: center;
+}
+._6refIMG {
+  display: flex;
+  column-gap: 3rem;
+  align-items: center;
+}
+.bottom5regIMG {
+  display: flex;
+  column-gap: 3rem;
+  align-items: center;
+}
+.refIMG-slider {
+  display: none;
+}
+/* Smartphone Portrait and Landscape */
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  .imageREF{
+    display: none;
+  }
+  .refIMG-slider {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    overflow-x: auto;
+    column-gap: 3rem;
+    margin-top: 3rem;
+    padding-bottom: 2rem;
+  }
+}

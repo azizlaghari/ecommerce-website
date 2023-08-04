@@ -5,6 +5,7 @@ import { useDispatch, useSelector } from 'react-redux'
 
 import { toggleTheme } from '../redux'
 import MenuDrawer from './MenuDrawer'
+import FooterPage from '../components/FooterPage'
 
 const { Content } = Layout
 
@@ -25,6 +26,9 @@ const MobileLayout = ({ active, children }) => {
         />
       </div>
       <Content className='m-children'>{children}</Content>
+      <footer>
+        <FooterPage></FooterPage>
+      </footer>
     </Layout>
   )
 }

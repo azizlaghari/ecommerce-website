@@ -9,6 +9,7 @@ import { Layout } from 'antd'
 // import { toggleTheme } from '../redux'
 
 import HeaderPage from '../components/HeaderPage'
+import FooterPage from '../components/FooterPage'
 // import { Dropdown, Space } from 'antd';
 
 const VerticalLayout = ({ children }) => {
@@ -60,7 +61,11 @@ const VerticalLayout = ({ children }) => {
               onChange={() => dispatch(toggleTheme())}
             /> */}
           </Header>
+
           <Content className='main-content'>{children}</Content>
+          <footer>
+            <FooterPage></FooterPage>
+          </footer>
         </Layout>
       </Layout>
     </div>
