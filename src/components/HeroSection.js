@@ -69,7 +69,7 @@ const HeroSection = () => {
       <Row className='featureCards' gutter={[20, 20]}>
         {data.map((item, index) => {
           return (
-            <Col md={6} sm={12} xs={12} key={index} >
+            <Col lg={6} md={6} sm={12} xs={12} key={index} >
               <FeatureCards text={item.text} icon={item.icon} />
             </Col>
           )

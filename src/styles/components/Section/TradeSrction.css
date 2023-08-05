@@ -41,6 +41,7 @@
   font-style: normal;
   font-weight: 500;
   line-height: 24px; /* 160% */
+  border: none;
 }
 .icons-TradeSrction {
   margin-top: 5rem;
@@ -81,7 +82,7 @@
   display: flex;
   flex-direction: column;
   row-gap: 1rem;
-  width: 200%;
+  width: 100%;
 }
 /* mobile responsive */
 @media screen and (max-width: 500px) {
@@ -118,20 +119,48 @@
 /* laptop responsive */
 @media screen and (max-width: 1024px) {
   .TradeSrction {
-    padding: 2rem 1rem;
-    margin: 0;
+    padding: 2rem 0;
+    margin: 2rem 0;
+  }
+  .title-btn-TradeSrction{
+    padding: 2rem;
+  }
+  .icons-TradeSrction{
+    padding: 3rem;
+    margin-top: 0;
   }
   .subtitle-cart {
-    font-size: 20px;
+    font-size: 16px;
   }
 }
 /* tablet responsive */
 @media screen and (max-width: 800px) {
   .TradeSrction {
-    padding: 2rem 1rem;
-    margin: 0;
+    margin-top: 1rem;
+  }
+  .heading-TradeSection {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+  }
+  .icons-TradeSrction {
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+    align-items: center;
+  }
+  .iconDiv {
+    align-items: center;
+  }
+  .arrow-big {
+    transform: rotate(90deg);
   }
   .subtitle-cart {
     font-size: 20px;
+  }
+  .title-btn-TradeSrction {
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
   }
 }

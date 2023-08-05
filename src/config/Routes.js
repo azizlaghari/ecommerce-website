@@ -3,6 +3,7 @@ import { Routes, Route, BrowserRouter, Navigate } from 'react-router-dom'
 import Dashboard from '../pages/Dashboard'
 import Home from '../pages/Home'
 import Login from '../pages/Login'
+import ProductListing from '../pages/ProductListing'
 // import PrivateWrapper from './PrivateRoutes'
 
 const Routers = () => {
@@ -13,6 +14,7 @@ const Routers = () => {
         {/* <Route element={<PrivateWrapper />}> */}
         <Route path='/' element={<Dashboard />} />
         <Route path='/home' element={<Home />} />
+        <Route path='/product-listing' element={<ProductListing />} />
         <Route path='*' element={<Navigate to='/' />} />
         {/* </Route> */}
 

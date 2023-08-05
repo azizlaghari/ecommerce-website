@@ -80,4 +80,17 @@
   .avatar {
     margin: 0 1.5rem;
   }
+  .review{
+    margin: 0;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .heading{
+    margin: 0px;
+    line-height: 14px;
+    font-size: 34px;
+  }
+  .testimonialText {
+  margin: 3rem 4rem;
+  }
 }

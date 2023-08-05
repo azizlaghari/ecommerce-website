@@ -23,6 +23,7 @@ import Reference from '../components/Reference'
 import ModelSection from '../components/Sections/ModelSection'
 import TradeSrction from '../components/Sections/TradeSrction'
 
+
 const data = [
   {
     title: 'Training clothes with print',
@@ -68,14 +69,14 @@ const Home = () => {
       {/* TrendingCarousel */}
       <div>
         <p className='titleTreanding'>Treanding Now</p>
-        <div className='trending-carousel'>
+        <div className='trending-carousel' >
           <TrendingCarousel carouselData={data} />
         </div>
-        <div className='trend-sec-container'>
-          <Row className='TrendingSection' gutter={[20, 20]} >
+        <div className='trend-sec-container ' >
+          <Row className='TrendingSection' gutter={[20, 20]}  >
             {data.map((item, index) => {
               return (
-                <Col md={6} sm={12} xs={12} key={index}>
+                <Col lg={6} md={12} sm={8} xs={12} key={index}>
                   <TrendingSection title={item.title} subtitle={item.subtitle} image={item.image} tags={item.tags} />
                 </Col>
               )
@@ -90,9 +91,7 @@ const Home = () => {
       <div className='Section4'>
         <Section4 />
       </div>
-      <div className='Reference'>
-        <Reference />
-      </div>
+
       <div className='recoIMG'>
         <img src={recoIMG} />
       </div>
@@ -101,6 +100,9 @@ const Home = () => {
       </div>
       <div className='ModelSection'>
         <ModelSection />
+      </div>
+      <div className='Reference'>
+        <Reference />
       </div>
     </Layout>
   )

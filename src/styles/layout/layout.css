@@ -1,11 +1,11 @@
 .main-content {
-  background-color: var(--background);
+  background-color: #fff;
   min-height: 88vh;
   padding: 0.6rem 4rem;
 
 }
 .ant-layout-header {
-  background-color: var(--background) !important;
+  background-color: #fff !important;
   min-height: 12vh;
   display: flex;
   align-items: center;

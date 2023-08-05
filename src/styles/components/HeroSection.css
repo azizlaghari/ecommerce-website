@@ -93,13 +93,46 @@
 .featureImages img {
   width: 23%;
   height: auto;
-  /* flex-shrink: 0; */
 }
 /* responsive of feature images */
 @media screen and (max-width: 500px) {
   .featureImages img {
     width: 45%;
-    /* flex-shrink: 0; */
+  }
+  .headingHero{
+    margin: 0 0;
+  }
+  .heroBTN{
+    margin: 3rem 0;
+    width: max-content;
+  }
+}
+@media screen and (max-width: 800px) {
+  .featureImages {
+    width: 100%;
+    padding: 0 2rem;
+  }
+  .featureCards{
+    padding: 0 2rem;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .headingHero{
+    font-size: 30px;
+    line-height: 30px;
+    font-weight: bold;
+  }
+  .textHero{
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    padding: 1rem 0;
+  }
+  .textBox{
+    padding: 2rem 2rem;
+  }
+  .heroBTN{
+    margin-top: 1.5rem;
   }
 }
 

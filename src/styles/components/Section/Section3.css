@@ -5,6 +5,7 @@
   --tags-color: #ffeb7b;
   --dark-subTitle-color: #11505d;
 }
+
 .sectionLeftBTN {
   margin: 0 !important;
   width: max-content;
@@ -141,4 +142,9 @@
   .rightBox-Section3{
     height: 100%;
   }
+}
+@media screen and (max-width: 500px) {
+.Section3{
+  margin: 0 2rem;
+}
 }

@@ -36,4 +36,6 @@
   color: var(--text) !important;
   text-transform: uppercase;
 }
-
+.mainHeader{
+  background-color: #fff;
+}

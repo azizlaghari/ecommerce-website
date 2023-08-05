@@ -83,3 +83,9 @@
     row-gap: 1rem;
   }
 }
+@media screen and (max-width: 800px) {
+  .laptopScreen{
+    column-gap: 2rem;
+
+  }
+}

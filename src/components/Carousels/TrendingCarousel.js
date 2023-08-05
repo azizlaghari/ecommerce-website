@@ -8,7 +8,9 @@ const TrendingCarousel = ({ carouselData }) => {
     return (
         <Carousel afterChange={onChange}>
             {carouselData.map((item, index) => (
-                <div key={index} style={{ height: '400px', width: '100%' }}>
+                <div key={index} 
+                style={{ height: '400px', width: '50%' }}
+                >
                     <TrendingSection title={item.title} subtitle={item.subtitle} image={item.image} tags={item.tags} />
                 </div>
             ))}

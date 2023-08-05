@@ -52,6 +52,13 @@ const Testimonial = () => {
               the girl&apos;s model was a little smaller than &quot;usual&quot;, fit but would have
               rather gone up a size if it said so.
             </p>
+            <div className='avatar'>
+              <Avatar src={<img src={url} alt="avatar" />} />
+              <div className='avatarDetail'>
+                <span className='avatarName'>Annette Black</span>
+                <span className='avatarTitle'>Some Dummy Company</span>
+              </div>
+            </div>
           </div>
         </div>
       </Carousel>
