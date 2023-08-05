@@ -1,0 +1,28 @@
+.text-proctuctListing {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  column-gap: 1rem;
+}
+.greenText-proctuctListing {
+  color: var(--dark-green, #11505d);
+
+  /* Breadcrumb Text */
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 12px; /* 100% */
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.grayText-proctuctListing {
+  color: var(--form-placeholder-text, #89909a);
+
+  /* Breadcrumb Text */
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 12px; /* 100% */
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}

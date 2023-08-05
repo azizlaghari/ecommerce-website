@@ -1,0 +1,109 @@
+:root {
+  --whiteText: #fff;
+  --darkGreenText: #11505d;
+}
+.manTshirtBG {
+  background-image: url(../../../assets/productListing/tshirtIMG.png);
+  width: 1320px;
+  height: 368px;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  background-repeat: no-repeat;
+}
+.MarginTop1rem {
+  margin-top: 1rem;
+}
+.tshirt-content {
+  width: 50%;
+  row-gap: 2rem;
+}
+
+.tshirt-title {
+  color: var(--whiteText);
+
+  /* H2 */
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 50px; /* 125% */
+  text-transform: capitalize;
+}
+.tshirt-subtitle {
+  color: var(--whiteText);
+  width: 530px;
+  /* H6 */
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 30px; /* 150% */
+  text-transform: capitalize;
+}
+.tshirt-description {
+  color: var(--whiteText);
+
+  /* Body Large */
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 28px; /* 155.556% */
+}
+.tshirtBTN {
+  display: inline-flex;
+  padding: 12px 24px;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  border-radius: 24px;
+  background: var(--whiteText);
+  border: none;
+  color: var(--darkGreenText);
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px; /* 160% */
+}
+.check-products {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.checkProductText {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.Check-out-the-products {
+  color: #102434;
+
+  /* H6 */
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 30px; /* 150% */
+  text-transform: capitalize;
+}
+.PRODUCTS-250 {
+  color: var(--gray, #7a8089);
+
+  /* Overline */
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 20px; /* 166.667% */
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+}
+.checkProductText {
+  color: var(--body-text-color, #444);
+
+  /* Placeholder Text */
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 16px; /* 114.286% */
+}
+/* mobile responsiveness */
+/* @media screen and (max-width: 500px) {
+    
+} */
