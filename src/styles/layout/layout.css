@@ -2,7 +2,6 @@
   background-color: #fff;
   min-height: 88vh;
   padding: 0.6rem 4rem;
-
 }
 .ant-layout-header {
   background-color: #fff !important;
@@ -26,10 +25,15 @@
 }
 
 @media (max-width: 800px) {
+  .main-content {
+    background-color: #fff;
+  }
   .v-layout {
     display: none;
   }
   .m-layout {
     display: block;
+    padding: 2rem;
+    background-color: #fff;
   }
 }

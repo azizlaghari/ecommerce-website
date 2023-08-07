@@ -1,11 +1,16 @@
 :root {
   --whiteText: #fff;
   --darkGreenText: #11505d;
+  --stroke-gray: #cdcdcd;
+  --body-text-color: #444;
+}
+.TshirtIMG {
+  width: 100%;
 }
 .manTshirtBG {
   background-image: url(../../../assets/productListing/tshirtIMG.png);
-  width: 1320px;
   height: 368px;
+  background-size: 100% auto;
   display: flex;
   align-items: center;
   justify-content: end;
@@ -63,10 +68,12 @@
   font-weight: 500;
   line-height: 24px; /* 160% */
 }
+/* check product dropdown and text */
 .check-products {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  height: 80px;
 }
 .checkProductText {
   display: flex;
@@ -82,6 +89,7 @@
   font-weight: 500;
   line-height: 30px; /* 150% */
   text-transform: capitalize;
+  padding-right: 2rem;
 }
 .PRODUCTS-250 {
   color: var(--gray, #7a8089);
@@ -94,8 +102,11 @@
   letter-spacing: 0.6px;
   text-transform: uppercase;
 }
+.filter {
+  display: none;
+}
 .checkProductText {
-  color: var(--body-text-color, #444);
+  color: var(--body-text-color);
 
   /* Placeholder Text */
   font-size: 14px;
@@ -103,7 +114,231 @@
   font-weight: 500;
   line-height: 16px; /* 114.286% */
 }
+.mobile-tshirtBTN {
+  display: none;
+}
+/* Check product mobile responsiveness */
+@media screen and (max-width: 500px) {
+  .Check-out-the-products {
+    display: none;
+  }
+  .PRODUCTS-250 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--gray, #7a8089);
+
+    /* Overline */
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 20px; /* 166.667% */
+    letter-spacing: 0.6px;
+    text-transform: uppercase;
+    border-right: 1px solid var(--stroke-gray);
+    border-bottom: 1px solid var(--stroke-gray);
+    background: var(--white, #fff);
+    width: 120px;
+    height: 40px;
+    flex-shrink: 0;
+  }
+  .filter {
+    color: var(--body-text-color, #444);
+
+    /* Placeholder Text */
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 16px; /* 114.286% */
+    width: 120px;
+    height: 40px;
+    flex-shrink: 0;
+    border-right: 1px solid var(--stroke-gray);
+    border-bottom: 1px solid var(--stroke-gray);
+    background: var(--white, #fff);
+    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .featured {
+    display: none;
+  }
+  .sortBy-text {
+    color: var(--body-text-color);
+
+    /* Placeholder Text */
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 16px; /* 114.286% */
+    width: 120px;
+    height: 40px;
+    flex-shrink: 0;
+    border-bottom: 1px solid var(--stroke-gray);
+    background: var(--white, #fff);
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  .feature{
+    display: none;
+  }
+  .arrow_drop_down {
+    width: 6px;
+    height: 3px;
+    fill: var(--nav, #4e4e4e);
+  }
+  .colon{
+    display: none;
+  }
+  .dividerNone{
+    display: none;
+  }
+}
+
+/* laptop responsiveness */
+@media screen and (max-width: 1024px) {
+  .manTshirtBG {
+    height: 325px;
+    background-size: auto 100%;
+  }
+  .tshirt-content {
+    width: 60%;
+    row-gap: 2rem;
+  }
+  /* .tshirt-subtitle{
+    font-size: 14px;
+  } */
+}
+/* Tablet responsiveness */
+@media screen and (max-width: 800px) {
+  /* .manTshirtBG {
+    height: 325px;
+    background-size: auto 100%; */
+
+  .manTshirtBG {
+    display: unset;
+  }
+  .tshirt-content {
+    background: var(--light-pink, #fbdeeb);
+    width: 100%;
+    height: auto;
+    padding: 2rem;
+    margin: 2rem 0;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+  }
+  .tshirt-title {
+    color: var(--black, #2a2a2a);
+
+    /* H2 */
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 50px; /* 125% */
+    text-transform: capitalize;
+  }
+  .tshirt-subtitle {
+    color: var(--body-text-color, #444);
+    width: 100%;
+    /* H6 */
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 30px; /* 150% */
+    text-transform: capitalize;
+  }
+  .tshirt-description {
+    color: var(--body-text-color, #444);
+
+    /* Body Large */
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 28px; /* 155.556% */
+  }
+  .mobile-tshirtBTN {
+    border-radius: 24px;
+    background: var(--dark-green, #11505d);
+    display: inline-flex;
+    padding: 12px 24px;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    color: var(--white, #fff);
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px; /* 160% */
+    border: none;
+    width: fit-content;
+  }
+  .tshirtBTN {
+    display: none;
+  }
+}
 /* mobile responsiveness */
-/* @media screen and (max-width: 500px) {
-    
-} */
+@media screen and (max-width: 500px) {
+  .manTshirtBG {
+    display: unset;
+  }
+  .tshirt-content {
+    background: var(--light-pink, #fbdeeb);
+    width: 100%;
+    height: auto;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+  }
+  .tshirt-title {
+    color: var(--black, #2a2a2a);
+
+    /* H2 */
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 50px; /* 125% */
+    text-transform: capitalize;
+  }
+  .tshirt-subtitle {
+    color: var(--body-text-color);
+    width: 100%;
+    /* H6 */
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 30px; /* 150% */
+    text-transform: capitalize;
+  }
+  .tshirt-description {
+    color: var(--body-text-color);
+
+    /* Body Large */
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 28px; /* 155.556% */
+  }
+  .mobile-tshirtBTN {
+    border-radius: 24px;
+    background: var(--dark-green, #11505d);
+    display: inline-flex;
+    padding: 12px 24px;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    color: var(--white, #fff);
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px; /* 160% */
+    border: none;
+    width: fit-content;
+  }
+  .tshirtBTN {
+    display: none;
+  }
+}
