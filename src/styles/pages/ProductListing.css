@@ -26,3 +26,16 @@
   letter-spacing: 1px;
   text-transform: uppercase;
 }
+/* Product Page */
+.ProductPage {
+  width: 100%;
+  display: flex;
+  column-gap: 2rem;
+}
+.LeftCollapse-main {
+  width: 20%;
+  background-color: gray !important;
+}
+.TshirtsList-main {
+  width: 80%;
+}
