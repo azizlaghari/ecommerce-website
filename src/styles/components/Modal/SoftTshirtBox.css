@@ -1,0 +1,101 @@
+.SoftTshirtBoxBTN {
+  display: inline-flex;
+  padding: 12px 24px;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  border-radius: 24px;
+  background: var(--dark-green, #11505d);
+  color: var(--white, #fff);
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px; /* 160% */
+  border: none;
+}
+.SoftTshirtBoxBTN span {
+  color: #fff;
+}
+.SoftTshirtBoxBTN .ant-btn-default:not(:disabled):hover {
+  color: #fff;
+  border-color: #fff;
+}
+.SoftTshirtBox-main .ant-modal-content {
+  width: 1050px;
+  height: 483px;
+  background-color: #fff;
+  border-radius: 0;
+  position: relative;
+  right: 200px;
+}
+.SoftTshirtBox-main img {
+  width: 440px;
+  height: 600px;
+  margin: -80px 14px;
+}
+.SoftTshirtBox-main .modalContainer {
+  display: flex;
+  align-items: start;
+  justify-content: start;
+  column-gap: 3rem;
+}
+.SoftTshirtBox-main .rightTextModal {
+  margin-top: 3rem;
+  padding: 0 1rem;
+}
+.SoftTshirtBox-main .rightTextModal-heading {
+  color: var(--black, #2a2a2a);
+
+  /* H5 */
+  font-family: 'Barlow';
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 34px; /* 141.667% */
+  text-transform: capitalize;
+  margin-bottom: 2rem;
+}
+.SoftTshirtBox-main .rightTextModal-subheading {
+  color: var(--black, #2a2a2a);
+
+  /* H6 */
+  font-family: 'Barlow';
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 30px; /* 150% */
+  text-transform: capitalize;
+  margin-bottom: 1rem;
+}
+.SoftTshirtBox-main .rightTextModal-discp {
+  color: var(--body-text-color, #444);
+
+  /* Body Normal */
+  font-family: 'Barlow';
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px; /* 150% */
+}
+.SoftTshirtBox-main .ant-modal-footer {
+  display: none;
+}
+/* Tablet responsive */
+@media screen and (max-width: 1040px) {
+  .SoftTshirtBox-main .ant-modal-content {
+    width: 935px;
+    height: 540px;
+  }
+}
+/* Tablet responsive */
+@media screen and (max-width: 800px) {
+  .SoftTshirtBox-main {
+    display: none;
+  }
+}
+/* LAPTOP responsive */
+@media screen and (max-width: 500px) {
+  .SoftTshirtBox-main {
+    display: none;
+  }
+}

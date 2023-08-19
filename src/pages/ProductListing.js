@@ -5,7 +5,10 @@ import ellipse from '../assets/productListing/ellipse.png'
 import '../styles/pages/ProductListing.css'
 import TshirtIMG from '../components/Product Listing/TshirtIMG'
 import TshirtsList from '../components/TshirtsList'
-import LeftCollapse from '../components/LeftCollapse'
+// icons
+import needHelpBox_call from '../assets/needHelpBox_call.png'
+import needHelpBox_email from '../assets/needHelpBox_email.png'
+import InformationAccordion from '../components/Accordion/InformationAccordion'
 
 const ProductListing = () => {
     return (
@@ -23,11 +26,30 @@ const ProductListing = () => {
                     <TshirtIMG />
                 </div>
                 <div className='ProductPage'>
-                    <div className='LeftCollapse-main'>
-                        <LeftCollapse />
-                    </div>
                     <div className='TshirtsList-main'>
                         <TshirtsList />
+                    </div>
+                    <div className='needHelpBox'>
+                        <h2 className='needHelpBox-heading'>Need help? We are happy to help you</h2>
+                        <div className='needHelpBox-call-email'>
+                            <div className='needHelpBox-call'>
+                                <img src={needHelpBox_call} />
+                                <div className='needHelpBox-text-num'>
+                                    <p className='needHelpBox-text'>call us at</p>
+                                    <p className='needHelpBox-num'>010-551 88 60</p>
+                                </div>
+                            </div>
+                            <div className='needHelpBox-call'>
+                                <img src={needHelpBox_email} />
+                                <div className='needHelpBox-text-num'>
+                                    <p className='needHelpBox-text'>drop us a mail at</p>
+                                    <p className='needHelpBox-num'>hej@profilewear.se</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className='InformationAccordion-main'>
+                        <InformationAccordion />
                     </div>
                 </div>
             </Layout>

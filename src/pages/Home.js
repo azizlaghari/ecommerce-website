@@ -91,7 +91,6 @@ const Home = () => {
       <div className='Section4'>
         <Section4 />
       </div>
-
       <div className='recoIMG'>
         <img src={recoIMG} />
       </div>

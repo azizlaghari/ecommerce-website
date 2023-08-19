@@ -1,0 +1,18 @@
+.SearchDrawerCompo {
+  display: flex;
+  row-gap: 2rem;
+  align-items: center;
+  /* justify-content: space-evenly; */
+  column-gap: 2rem;
+}
+.SearchDrawerCompo .SearchDrawer-title {
+  color: var(--black, #2a2a2a);
+
+  /* H6 */
+  font-family: "Barlow";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 30px; /* 150% */
+  text-transform: capitalize;
+}

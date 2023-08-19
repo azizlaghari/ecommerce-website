@@ -28,6 +28,7 @@
   color: var(--whiteText);
 
   /* H2 */
+  font-family: 'Barlow', 'sans-serif';
   font-size: 40px;
   font-style: normal;
   font-weight: 400;
@@ -35,6 +36,7 @@
   text-transform: capitalize;
 }
 .tshirt-subtitle {
+  font-family: 'Barlow', 'sans-serif';
   color: var(--whiteText);
   width: 530px;
   /* H6 */
@@ -48,6 +50,7 @@
   color: var(--whiteText);
 
   /* Body Large */
+  font-family: 'Barlow', 'sans-serif';
   font-size: 18px;
   font-style: normal;
   font-weight: 500;

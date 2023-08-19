@@ -1,3 +1,165 @@
-.LeftCollapse-main{
-    background-color: gray  !important; 
+.LeftCollapse-main {
+  width: 20%;
+  background: none !important;
+}
+
+/* ant design css */
+.leftCollapse-Container {
+  border: none !important;
+  background-color: transparent !important;
+  color: var(--black, #2a2a2a);
+
+  /* Product Price Text */
+  font-family: 'Barlow';
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 14px; /* 100% */
+}
+.leftCollapse-Container .anticon svg {
+  display: none !important;
+}
+.leftCollapse-Container .ant-collapse-content {
+  border: none !important;
+}
+.leftCollapse-Container .ant-slider-track {
+  background: var(--selection-green, #32cd32);
+}
+.leftCollapse-Container .ant-slider-handle::after {
+  box-shadow: 0 0 0 2px #32cd32;
+}
+.leftCollapse-Container .ant-slider-handle:focus::after {
+  box-shadow: 0 0 0 4px #32cd32;
+}
+.leftCollapse-Container .ant-slider-track {
+  background-color: #32cd32;
+}
+
+.Sub-categories-data {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem !important;
+}
+.Sub-categories-text {
+  color: var(--body-text-color, #444);
+
+  /* Filter Options */
+  font-family: 'Barlow';
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px; /* 123.077% */
+}
+.greenTextBTN {
+  color: var(--selection-green, #32cd32);
+  font-family: 'Barlow';
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 16px; /* 123.077% */
+}
+.Sub-categories-BTNs {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 2px;
+}
+.Sub-categories-BTNs .Sub-categories-leftBTN {
+  border: none;
+  border-radius: 5px;
+  border: 1px solid var(--stroke-gray, #cdcdcd);
+  background: var(--white, #fff);
+  display: flex;
+  padding: 6px 10px;
+  align-items: flex-start;
+  gap: 10px;
+  color: #000;
+  font-family: 'Barlow';
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 14px; /* 127.273% */
+}
+.Sub-categories-BTNs .Sub-categories-rightBTN {
+  border: none;
+  border-radius: 5px;
+  background: var(--selection-green, #32cd32);
+  display: flex;
+  padding: 6px 10px;
+  align-items: flex-start;
+  gap: 10px;
+  color: var(--white, #fff);
+  font-family: 'Barlow';
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 14px; /* 127.273% */
+  width: fit-content;
+}
+.priceAmount .ant-slider-handle-2 {
+  background: var(--selection-green, #32cd32);
+  color: #32cd32;
+}
+
+.materialData {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+}
+.tagsLeft {
+  padding: 1rem;
+}
+.tagsLeft-heading {
+  margin-bottom: 1rem;
+  color: var(--black, #2a2a2a);
+
+  /* Product Price Text */
+  font-family: 'Barlow';
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 14px; /* 100% */
+}
+.leftCollapse-tags {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  flex-wrap: wrap;
+  row-gap: 1rem;
+  column-gap: 1rem;
+  cursor: pointer;
+}
+.tagsLeft .leftCollapse-replyBTN {
+  margin-top: 1rem;
+  border: none;
+  background: none;
+  color: var(--dark-green, #11505d);
+  font-family: 'Barlow';
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 12px; /* 100% */
+  cursor: pointer;
+}
+
+/* TABLET responsiveness */
+@media screen and (max-width: 800px) {
+  .LeftCollapse-main {
+    display: none;
+  }
+  .TshirtsList {
+    width: 100%;
+  }
+  .information-container {
+    margin-bottom: 3rem;
+  }
+  .needHelpBox{
+    margin-top: 3rem;
+  }
+}
+/* MOBILE responsiveness */
+@media screen and (max-width: 500px) {
+  .LeftCollapse-main {
+    display: none;
+  }
 }

@@ -12,6 +12,19 @@
 
 /* Component CSS */
 @import './components/table.css';
+@import './components/Modal/SoftTshirtBox.css';
+@import './components/Drawer/SearchDrawer.css';
+@import './components/SearchDrawerCompo.css';
+
+
 
 /* Page CSS */
 @import './pages/login.css';
+
+/* Fonts */
+@font-face {
+  font-family: 'Barlow';
+  src: url('../assets/Barlow/Barlow-Black.ttf') format('ttf');
+  font-weight: normal;
+  font-style: normal;
+}

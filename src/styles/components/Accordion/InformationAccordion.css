@@ -1,0 +1,45 @@
+.InformationAccordion-main{
+  width: 100% !important;
+}
+.information-container{
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    flex-direction: column;
+    margin-bottom: 10rem;
+}
+.informationHeading {
+  color: #000;
+
+  /* H2 */
+  font-family: 'Barlow';
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 50px; /* 125% */
+  text-transform: capitalize;
+  margin-top: 150px;
+  margin-bottom: 56px;
+}
+.questions {
+  border: none !important;
+  background: none !important;
+  width: 100%;
+}
+.questions .ant-collapse-header-text {
+  color: var(--gray, #7a8089);
+
+  /* H6 */
+  font-family: "Barlow";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 30px; /* 150% */
+  text-transform: capitalize;
+}
+.questions .ant-collapse-header{
+    padding: 30px 0 !important;
+}
+/* .questions .anticon svg {
+  display: none;
+} */

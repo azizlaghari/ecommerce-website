@@ -6,18 +6,19 @@ const TshirtComp = ({ image, title, subtitle, price, colors, logo, toptags }) =>
     <>
       <div className='TshirtComp'>
         <div className='tshirt-container'>
-          <div className='toptags-TshirtComp'>
-            {toptags.map((item, i) => {
-              return (
-                <p key={i} className='toptags'>
-                  {item}
-                </p>
-              )
-            })}
-          </div>
           <div className='image-TshirtComp'>
+            <div className='toptags-TshirtComp'>
+              {toptags.map((item, i) => {
+                return (
+                  <p key={i} className='toptags'>
+                    {item}
+                  </p>
+                )
+              })}
+            </div>
             <img src={image} />
           </div>
+
           <div className='logo-TshirtComp'>
             <img src={logo} />
           </div>

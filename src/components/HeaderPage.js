@@ -3,9 +3,10 @@ import { DownOutlined, SmileOutlined } from '@ant-design/icons'
 import { Dropdown, Space } from 'antd'
 import '../styles/components/HeaderPage.css'
 // icons
-import { BiSearch, BiHeart } from 'react-icons/bi'
+import { BiHeart } from 'react-icons/bi'
 import { AiOutlineShoppingCart } from 'react-icons/ai'
 import { CgProfile } from 'react-icons/cg'
+import SearchDrawer from './Drawer/SearchDrawer'
 
 const items = [
   {
@@ -44,7 +45,7 @@ const items = [
 
 const HeaderPage = () => {
   return (
-    <div style={{display:'flex', justifyContent:'space-between', width: '100%'}}>
+    <div style={{ display: 'flex', justifyContent: 'space-between', width: '100%' }}>
       <div className='dropdowns'>
         <Dropdown
           menu={{
@@ -133,7 +134,8 @@ const HeaderPage = () => {
       </div>
       {/* Icons */}
       <div className='rightIcons'>
-        <BiSearch />
+        <SearchDrawer />
+        {/* <BiSearch /> */}
         <BiHeart />
         <AiOutlineShoppingCart />
         <CgProfile />

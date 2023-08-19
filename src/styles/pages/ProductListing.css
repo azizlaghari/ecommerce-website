@@ -37,5 +37,109 @@
   background-color: gray !important;
 }
 .TshirtsList-main {
-  width: 80%;
+  width: 100%;
+}
+.ProductPage {
+  display: flex;
+  flex-direction: column;
+}
+/* Need help box */
+.needHelpBox {
+  width: 100%;
+  background: var(--light-pink, #fbdeeb);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  row-gap: 3rem;
+  padding: 3rem 0;
+  margin-top: 10rem;
+}
+.needHelpBox .needHelpBox-heading {
+  color: var(--black, #2a2a2a);
+
+  /* H2 */
+  font-family: 'Barlow';
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 50px; /* 125% */
+  text-transform: capitalize;
+}
+.needHelpBox-call-email {
+  display: flex;
+  column-gap: 4rem;
+}
+.needHelpBox-call-email .needHelpBox-call {
+  display: flex;
+  column-gap: 1rem;
+}
+.needHelpBox-call .needHelpBox-text-num {
+  display: flex;
+  flex-direction: column;
+}
+.needHelpBox-call .needHelpBox-text-num .needHelpBox-text {
+  color: var(--black, #2a2a2a);
+
+  /* Overline */
+  font-family: 'Barlow';
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 20px; /* 166.667% */
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+}
+.needHelpBox-call .needHelpBox-text-num .needHelpBox-num {
+  color: var(--black, #2a2a2a);
+  font-family: 'Barlow';
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 34px;
+  text-transform: capitalize;
+}
+/* mobile responsiveness */
+@media screen and (max-width: 500px) {
+  .TshirtsList-main {
+    width: 100%;
+  }
+  .softTshirtBox {
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+    align-items: start;
+  }
+  .needHelpBox {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    text-align: center;
+    margin-top: 108px;
+  }
+  .needHelpBox-call img {
+    width: 40px;
+    height: 40px;
+  }
+  .needHelpBox .needHelpBox-heading {
+    font-size: 20px !important;
+  }
+  .needHelpBox-call .needHelpBox-text-num .needHelpBox-text {
+    font-size: 12px !important;
+  }
+  .needHelpBox-call .needHelpBox-text-num .needHelpBox-num {
+    font-size: 20px !important;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+    align-items: start;
+    justify-self: start;
+  }
+  .needHelpBox-call-email {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+    align-items: start;
+    justify-self: start;
+  }
 }
