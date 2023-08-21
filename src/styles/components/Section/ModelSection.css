@@ -27,36 +27,4 @@
   font-weight: 500;
   line-height: 18px; /* 155.556% */
 }
-/* Mobile responsive */
-@media (max-width: 500px) {
-  /* .models{
-    display: flex;
-    flex-direction: column;
-  } */
-}
-/* Tablet responsive */
 
-@media (max-width: 800px) {
-  /* .models {
-    content: '';
-    clear: both;
-    display: table;
-    align-items: center;
-    justify-content: space-between;
-  }
-  .model {
-    float: left;
-    width: 50%;
-    padding: 2rem;
-  }
-  .model img{
-    height: 350px !important;
-  }
-  .modelTAG {
-    bottom: 50px;
-  } */
-}
-/* Laptop responsive */
-
-@media (max-width: 1440) {
-}

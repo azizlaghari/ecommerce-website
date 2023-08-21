@@ -4,6 +4,7 @@ import Dashboard from '../pages/Dashboard'
 import Home from '../pages/Home'
 import Login from '../pages/Login'
 import ProductListing from '../pages/ProductListing'
+import ProductCategoryDetails from '../pages/ProductCategoryDetails'
 // import PrivateWrapper from './PrivateRoutes'
 
 const Routers = () => {
@@ -15,6 +16,7 @@ const Routers = () => {
         <Route path='/' element={<Dashboard />} />
         <Route path='/home' element={<Home />} />
         <Route path='/product-listing' element={<ProductListing />} />
+        <Route path='/product-category-details' element={<ProductCategoryDetails />} />
         <Route path='*' element={<Navigate to='/' />} />
         {/* </Route> */}
 

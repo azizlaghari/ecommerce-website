@@ -21,6 +21,7 @@ import TshirtComp from './TshirtComp'
 // import InformationAccordion from './Accordion/InformationAccordion'
 import LeftCollapse from './LeftCollapse'
 import SoftTshirtBox from './modal/SoftTshirtBox'
+// import SearchNone from './Drawer/SearchNone'
 
 const tshirtData = [
   {

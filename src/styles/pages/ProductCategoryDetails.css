@@ -1,0 +1,185 @@
+.ProductCategoryDetails .printWear-container {
+  background: #d1eaf0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.ProductCategoryDetails .printWear-container .blueGBModel {
+  width: 60% !important;
+}
+.leftText-printWear {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+  width: 40% !important;
+}
+.printWear-container .leftText-printWear h2 {
+  color: #000;
+
+  /* H2 */
+  font-family: 'Barlow';
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 50px; /* 125% */
+  text-transform: capitalize;
+}
+.printWear-container .leftText-printWear p {
+  color: var(--body-text-color, #444);
+
+  /* Body Large */
+  font-family: 'Barlow';
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 28px; /* 155.556% */
+}
+
+
+/* Models Section */
+.model-productCD {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.modelTAG-productCD {
+  position: absolute;
+  bottom: 30px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  color: var(--black, #2a2a2a);
+  text-align: center;
+
+  /* Body Large */
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 18px; /* 155.556% */
+}
+.mobileCarousel {
+  display: none;
+}
+/* Great news! section */
+.greatNews {
+  background-image: url(../../assets//greatNewsIMG.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 350px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 4rem;
+}
+.greatNewsMobileIMG {
+  background-image: url(../../assets/greatNewsMobileIMG.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  width: 361px;
+  height: 431px;
+}
+.greatNews-text {
+  padding: 3rem 0;
+}
+.greatNews h1 {
+  color: #fff;
+
+  /* H1 */
+  font-family: 'Barlow';
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 64px; /* 100% */
+  text-transform: capitalize;
+}
+.greatNews p {
+  color: #fff;
+  width: 446px;
+
+  /* Body Large */
+  font-family: 'Barlow';
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 28px; /* 155.556% */
+}
+.greatNews button {
+  display: inline-flex;
+  padding: 12px 24px;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  border-radius: 24px;
+  background: var(--white, #fff);
+  color: var(--dark-green, #11505d);
+  font-family: 'Barlow';
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px; /* 160% */
+  border: none;
+  cursor: pointer;
+  width: max-content;
+}
+.greatNews-mobile {
+  width: 205px;
+  padding: 0;
+}
+/* T shirt Cards */
+.tshirtCards h2 {
+  color: #000;
+
+  /* H2 */
+  font-family: 'Barlow';
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 50px; /* 125% */
+  text-transform: capitalize;
+  text-align: center;
+  margin: 5rem 0 2rem 0;
+}
+.greatNews{
+    display: inline-block;
+}
+.greatNewsMobileIMG{
+    display: none;
+}
+
+/* LAPTOP responsiveness */
+@media screen and (max-width: 1024px) {
+  .ProductCategoryDetails .printWear-container .blueGBModel {
+    display: none;
+  }
+  .leftText-printWear {
+    width: 100% !important;
+    padding: 3rem;
+  }
+}
+/* TABLET responsiveness */
+@media screen and (max-width: 800px) {
+  .modelSectionPC {
+    display: none;
+  }
+  .mobileCarousel {
+    display: inline;
+  }
+}
+
+/* MOBILE responsiveness */
+@media screen and (max-width: 500px) {
+  .pinkBGMobile {
+    background: var(--light-pink, #fbdeeb);
+  }
+  .modelSectionPC {
+    display: none;
+  }
+  .mobileCarousel {
+    display: inline;
+  }
+  .greatNews{
+    display: none !important;
+}
+}

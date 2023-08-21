@@ -1,15 +1,15 @@
-.ant-drawer-open {
+.searchDrawer-main {
   width: 1040px;
   height: 1024px;
   margin: 0 560px;
 }
-.searchDrawer-main .ant-drawer-header {
-  display: inline;
-}
 .searchDrawer-container .searchDrawer-input {
-  width: 1015px;
+  width: 1000px;
   height: 70px;
   border-bottom: 2px solid gray !important;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
 }
 
 .searchDrawer-input .ant-input-affix-wrapper {
@@ -36,7 +36,7 @@
 }
 .searchDrawer-heading1 .searchTags-container span {
   color: var(--body-text-color, #444);
-  font-family: "Barlow";
+  font-family: 'Barlow';
   font-size: 12px;
   font-style: normal;
   font-weight: 500;
@@ -53,5 +53,12 @@
   background: var(--light-gray, #eaeaea);
 }
 .searchDrawer-container .searchDivider {
-    margin-top: 1rem;
+  margin-top: 1rem;
+}
+
+.searchDrawer-input .closeIconSearch svg {
+  height: 40px;
+  width: 40px;
+  cursor: pointer;
+  color: #2A2A2A;
 }

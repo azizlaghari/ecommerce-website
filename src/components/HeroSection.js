@@ -13,6 +13,7 @@ import chat from '../assets/chat.png'
 import approve from '../assets/approve.png'
 import sketching from '../assets/sketching.png'
 import t_shirt from '../assets/t-shirt.png'
+
 import arrow_right from '../assets/arrow_right.png'
 
 

@@ -15,11 +15,15 @@
 @import './components/Modal/SoftTshirtBox.css';
 @import './components/Drawer/SearchDrawer.css';
 @import './components/SearchDrawerCompo.css';
+@import './components/Drawer/SearchNone.css';
+@import './components/Carousel/ModelsCarousel.css';
+@import './components/Drawer/PrintWearDrawer.css';
 
 
 
 /* Page CSS */
 @import './pages/login.css';
+@import './pages/ProductCategoryDetails.css';
 
 /* Fonts */
 @font-face {

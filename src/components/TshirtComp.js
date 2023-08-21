@@ -18,7 +18,6 @@ const TshirtComp = ({ image, title, subtitle, price, colors, logo, toptags }) =>
             </div>
             <img src={image} />
           </div>
-
           <div className='logo-TshirtComp'>
             <img src={logo} />
           </div>

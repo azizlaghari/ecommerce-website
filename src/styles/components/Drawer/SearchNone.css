@@ -1,0 +1,46 @@
+.searchNoneDrawer-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  row-gap: 1rem;
+}
+.searchNoneDrawer-main {
+    width: 640px !important;
+    height: 940px !important;
+    background: #ffffff !important;
+    margin: 0 960px !important;
+}
+
+.searchNoneDrawer-container img {
+  margin-top: 10rem;
+}
+.searchNoneDrawer-container .searcNone-heading {
+  color: var(--black, #2a2a2a);
+
+  /* H5 */
+  font-family: 'Barlow';
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 34px; /* 141.667% */
+  text-transform: capitalize;
+}
+.searchNoneDrawer-container .searcNone-subheading {
+  color: var(--body-text-color, #444);
+  text-align: center;
+
+  /* Body Small */
+  font-family: 'Barlow';
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px; /* 171.429% */
+}
+.closeIconSearch svg {
+  height: 40px;
+  width: 40px;
+  cursor: pointer;
+  color: #2A2A2A;
+  float: right;
+}

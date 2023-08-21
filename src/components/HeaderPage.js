@@ -7,6 +7,7 @@ import { BiHeart } from 'react-icons/bi'
 import { AiOutlineShoppingCart } from 'react-icons/ai'
 import { CgProfile } from 'react-icons/cg'
 import SearchDrawer from './Drawer/SearchDrawer'
+import SearchNone from './Drawer/SearchNone'
 
 const items = [
   {
@@ -134,6 +135,7 @@ const HeaderPage = () => {
       </div>
       {/* Icons */}
       <div className='rightIcons'>
+        <SearchNone/>
         <SearchDrawer />
         {/* <BiSearch /> */}
         <BiHeart />

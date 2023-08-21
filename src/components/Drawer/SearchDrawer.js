@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { Col, Divider, Drawer, Input, Row } from 'antd'
 import { BiSearch } from 'react-icons/bi'
+import { LiaTimesSolid } from 'react-icons/lia'
 // img
 import searchDimg1 from '../../assets/searchDrawerIMG/searchDimg1.png'
 import searchDimg2 from '../../assets/searchDrawerIMG/searchDimg2.png'
@@ -100,10 +101,14 @@ const SearchDrawer = () => {
                 placement='right'
                 onClose={onClose}
                 open={open}
+                headerStyle={{ display: 'none' }}
             >
                 <div className='searchDrawer-container'>
                     <div className='searchDrawer-input'>
                         <Input size='large' placeholder='What are you looking for?' prefix={<BiSearch />} />
+                        <div className='closeIconSearch'>
+                            <LiaTimesSolid onClick={onClose} />
+                        </div>
                     </div>
                     <div className='searchDrawer-heading1'>
                         <p className='searchDrawer'>Recent searches</p>
