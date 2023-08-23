@@ -18,12 +18,14 @@
 @import './components/Drawer/SearchNone.css';
 @import './components/Carousel/ModelsCarousel.css';
 @import './components/Drawer/PrintWearDrawer.css';
+@import './components/RecentlyViewedCompo.css';
 
 
 
 /* Page CSS */
 @import './pages/login.css';
 @import './pages/ProductCategoryDetails.css';
+@import './pages//ProductDetails.css';
 
 /* Fonts */
 @font-face {

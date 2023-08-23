@@ -5,6 +5,7 @@ import Home from '../pages/Home'
 import Login from '../pages/Login'
 import ProductListing from '../pages/ProductListing'
 import ProductCategoryDetails from '../pages/ProductCategoryDetails'
+import ProductDetails from '../pages/ProductDetails'
 // import PrivateWrapper from './PrivateRoutes'
 
 const Routers = () => {
@@ -17,6 +18,7 @@ const Routers = () => {
         <Route path='/home' element={<Home />} />
         <Route path='/product-listing' element={<ProductListing />} />
         <Route path='/product-category-details' element={<ProductCategoryDetails />} />
+        <Route path='/product-details' element={<ProductDetails/>} />
         <Route path='*' element={<Navigate to='/' />} />
         {/* </Route> */}
 

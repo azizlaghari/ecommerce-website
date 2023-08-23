@@ -35,7 +35,6 @@
   line-height: 28px; /* 155.556% */
 }
 
-
 /* Models Section */
 .model-productCD {
   position: relative;
@@ -73,7 +72,7 @@
   margin-top: 4rem;
 }
 .greatNewsMobileIMG {
-  background-image: url(../../assets/greatNewsMobileIMG.png);
+  background-image: url('../../assets/greatNewsMobileIMG.png');
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
@@ -81,7 +80,7 @@
   height: 431px;
 }
 .greatNews-text {
-  padding: 3rem 0;
+  padding: 3rem 2rem;
 }
 .greatNews h1 {
   color: #fff;
@@ -141,11 +140,11 @@
   text-align: center;
   margin: 5rem 0 2rem 0;
 }
-.greatNews{
-    display: inline-block;
+.greatNews {
+  display: inline-block;
 }
-.greatNewsMobileIMG{
-    display: none;
+.greatNewsMobileIMG {
+  display: none;
 }
 
 /* LAPTOP responsiveness */
@@ -166,6 +165,9 @@
   .mobileCarousel {
     display: inline;
   }
+  .greatNews-text {
+    padding: 3rem;
+  }
 }
 
 /* MOBILE responsiveness */
@@ -179,7 +181,10 @@
   .mobileCarousel {
     display: inline;
   }
-  .greatNews{
+  .greatNews {
     display: none !important;
-}
+  }
+  .greatNewsMobileIMG {
+    display: inline;
+  }
 }

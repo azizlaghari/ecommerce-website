@@ -1,0 +1,30 @@
+.RecentlyViewedCompo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  row-gap: 1rem;
+  margin-top: 2rem;
+}
+.RecentlyViewedCompo img {
+  background: #f8f8f8;
+}
+.RecentlyViewedCompo p:nth-child(1) {
+  color: var(--black, #2a2a2a);
+
+  /* Menu Links */
+  font-family: 'Barlow';
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 18px; /* 112.5% */
+  text-transform: capitalize;
+}
+.RecentlyViewedCompo p:nth-child(2) {
+  color: var(--black, #2a2a2a);
+  font-family: 'Barlow';
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 14px; /* 100% */
+}

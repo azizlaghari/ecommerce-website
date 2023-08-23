@@ -17,8 +17,15 @@
   margin-top: 5rem;
   cursor: pointer;
 }
+.printWearBTN:hover {
+  color: #fff !important;
+  border-color: #fff !important;
+}
+
+
+
 .printWear-main {
-  min-width: 1040px;
+  width: 100%;
   height: 1024px;
   margin: 0 640px;
 }
@@ -76,4 +83,30 @@
   width: 400px;
   height: 300px;
   flex-shrink: 0;
+}
+/* LAPTOP responsiveness */
+@media screen and (max-width: 1024px) {
+  .printWear-main{
+    margin: 0 70px;
+    width: 100%;
+  }
+}
+/* TABLET responsiveness */
+@media screen and (max-width: 800px) {
+.printWear-main{
+  margin: 0 0;
+  width: 100%;
+}
+.printWearDrawerText p {
+  width: 735px;
+}
+.printWear-ImgsText .printWear-text p {
+  width: 325px;
+}
+}
+/* MOBILE responsiveness */
+@media screen and (max-width: 500px) {
+  .printWear-main{
+    display: none;
+  }
 }

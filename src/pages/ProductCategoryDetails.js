@@ -239,11 +239,18 @@ const ProductCategoryDetails = () => {
                         <TshirtCarousel carouselData={tshirtData} />
                     </div>
                     {/* Great news! Big screen section */}
-                    <div className='greatNews greatNewsMobileIMG'>
+                    <div className='greatNews '>
                         <div className='greatNews-text'>
-                            <h1 className='greatNews-heading greatNews-mobile'>Great news!</h1>
-                            {/* <p className='greatNews-discp greatNews-mobile'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc euismod nulla ut orci cursus lobortis.</p> */}
-                            <button className='greatNews-btn greatNews-mobile'>Shop now</button>
+                            <h1 className='greatNews-heading '>Great news!</h1>
+                            <p className='greatNews-discp '>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc euismod nulla ut orci cursus lobortis.</p>
+                            <button className='greatNews-btn '>Shop now</button>
+                        </div>
+                    </div>
+                    <div className='greatNewsMobileIMG'>
+                        <div className='greatNews-text'>
+                            <h1 className='greatNews-mobile'>Great news!</h1>
+                            <p className='greatNews-mobile'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc euismod nulla ut orci cursus lobortis.</p>
+                            <button className='greatNews-mobile'>Shop now</button>
                         </div>
                     </div>
                     {/* t shirts carousel section 2 */}
