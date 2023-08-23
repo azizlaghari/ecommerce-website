@@ -1,11 +1,15 @@
 .searchDrawer-main {
   width: 1040px;
   height: 1024px;
-  margin: 0 560px;
+}
+.searchDrawer .ant-drawer-content-wrapper{
+  width: 60% !important;
+  height: 1024px;
+
 }
 .searchDrawer-container .searchDrawer-input {
-  width: 1000px;
-  height: 70px;
+  width: 900px !important;
+  height: auto !important;
   border-bottom: 2px solid gray !important;
   display: flex;
   align-items: center;
@@ -61,4 +65,9 @@
   width: 40px;
   cursor: pointer;
   color: #2A2A2A;
+}
+@media screen and (max-width: 4024px) {
+  .searchDrawer-main .ant-drawer-content-wrapper{
+    width: 1040px !important;
+  }
 }

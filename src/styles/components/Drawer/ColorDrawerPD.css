@@ -1,0 +1,21 @@
+.ColorDrawerCompo {
+  width: 100%;
+}
+.ColorDrawerCompo .colorIMG-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.ColorDrawerCompo .colorIMG-title img {
+  padding-right: 1rem;
+}
+.ColorDrawerCompo .colorIMG-title p {
+  color: var(--black, #2a2a2a);
+
+  /* Body Large */
+  font-family: "Barlow";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 28px; /* 155.556% */
+}

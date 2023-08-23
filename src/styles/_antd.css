@@ -180,3 +180,25 @@ tr.ant-table-expanded-row:hover > td {
   color: var(--text);
   font-weight: 500;
 }
+.ant-drawer-header {
+  display: none !important;
+}
+.ant-drawer .ant-drawer-mask{
+  background-color: transparent !important;
+}
+/* @media screen and (max-width: 4024px) {
+  .ant-drawer-content-wrapper{
+    width: 60% !important;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .ant-drawer-content-wrapper{
+    width: 800px !important;
+  }
+}
+@media screen and (max-width: 624px) {
+  .ant-drawer-content-wrapper{
+    width: 100% !important;
+  }
+} */
+

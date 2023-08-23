@@ -19,9 +19,7 @@
 .ant-switch-checked .ant-switch-inner {
   margin-left: 3px !important;
 }
-.ant-drawer-content-wrapper {
-  width: 100% !important;
-}
+
 .v-layout .company-logo {
   display: flex;
   width: 100%;
@@ -149,3 +147,8 @@
   outline: none !important;
   border: none !important;
 }
+/* @media screen and (max-width: 624px) {
+  .ant-drawer-content-wrapper {
+    width: 100% !important;
+  }
+} */
