@@ -60,6 +60,7 @@ import ColorDrawerCompo from '../components/ColorDrawerCompo'
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 
+// Recently Viewed Articles carousel responsive
 const responsive = {
     superLargeDesktop: {
         // the naming can be any, depends on you.
@@ -175,7 +176,7 @@ const recentlyViewedData = [
         price: 'From 39.00 SEK',
     },
 ]
-
+// Category Browse Carousel Data
 const CategoryBrowseCarouselData = [
     {
         images: categoryBrowseIMG1,
@@ -318,7 +319,7 @@ const items = [
 ]
 
 const ProductDetails = () => {
-
+    // Open and Close Drawer function
     const [openColor, setOpenColor] = useState(false)
     const showColorDrawer = () => {
         setOpenColor(true)
@@ -625,7 +626,6 @@ const ProductDetails = () => {
                 <div className='reacentlyViewed'>
                     <h2>Recently Viewed Articles</h2>
                     <div>
-
                         <Carousel responsive={responsive}>
                             {recentlyViewedData?.map((item, index) => (
                                 <RecentlyViewedCompo key={index} image={item.image} title={item.title} price={item.price} />

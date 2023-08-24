@@ -6,6 +6,7 @@
   padding: 4rem;
   column-gap: 5rem;
   display: flex;
+  border-top: 1px solid var(--stroke-gray, #CDCDCD);
 }
 .Offers {
   display: flex;

@@ -87,9 +87,9 @@
   font-weight: 400;
   line-height: 18px;
 }
-
+/* ? Global Ant design Drawer Size */
 .ant-drawer .ant-drawer-content-wrapper{
-  width: 30% !important;
+  width: 60% !important;
 }
 .productContainer .productDetails .productDetails-drawer {
   display: flex;
