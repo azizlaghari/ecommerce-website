@@ -4,10 +4,11 @@ import { Dropdown, Space } from 'antd'
 import '../styles/components/HeaderPage.css'
 // icons
 import { BiHeart } from 'react-icons/bi'
-import { AiOutlineShoppingCart } from 'react-icons/ai'
 import { CgProfile } from 'react-icons/cg'
 import SearchDrawer from './Drawer/SearchDrawer'
 import SearchNone from './Drawer/SearchNone'
+import CartEmptyDrawer from './Drawer/CartEmptyDrawer'
+import CartFullDrawer1 from './Drawer/CartFullDrawer1'
 
 const items = [
   {
@@ -139,7 +140,8 @@ const HeaderPage = () => {
         <SearchDrawer />
         {/* <BiSearch /> */}
         <BiHeart />
-        <AiOutlineShoppingCart />
+        <CartEmptyDrawer />
+        <CartFullDrawer1 />
         <CgProfile />
       </div>
     </div>

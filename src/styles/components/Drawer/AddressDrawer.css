@@ -1,0 +1,86 @@
+.addressTitleClose {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem;
+}
+.addressTitleClose p {
+  color: #000;
+
+  /* H2 */
+  font-family: 'Barlow';
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 50px; /* 125% */
+  text-transform: capitalize;
+}
+.addressTitleClose span svg {
+  width: 48px;
+  height: 48px;
+  flex-shrink: 0;
+  cursor: pointer;
+}
+.addressDrawer form {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  margin-top: 1rem;
+  padding: 2rem;
+}
+.addressDrawer form label {
+  color: var(--body-text-color, #444);
+  font-family: 'Barlow';
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 14px; /* 107.692% */
+  margin-top: 1rem;
+}
+.addressDrawer form label span {
+  color: var(--red, #ff1d1d);
+  font-family: 'Barlow';
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 14px;
+}
+.addressDrawer form input {
+  width: 100%;
+  display: flex;
+  padding: 20px 24px;
+  align-items: center;
+  gap: 10px;
+  border-radius: 6px;
+  border: 1px solid var(--stroke-gray, #cdcdcd);
+  margin-top: 0.5rem;
+}
+.addressDrawer form input::placeholder{
+    color: var(--form-placeholder-text, #89909a);
+  font-family: "Barlow";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 16px; /* 114.286% */
+}
+.addressDrawer form input:focus{
+    outline: none;
+}
+.addressDrawer form select {
+  width: 100%;
+  display: flex;
+  padding: 20px 24px;
+  align-items: center;
+  gap: 10px;
+  border-radius: 6px;
+  border: 1px solid var(--stroke-gray, #cdcdcd);
+  margin-top: 0.5rem;
+}
+.addressDrawer form select {
+  color: var(--form-placeholder-text, #89909a);
+  font-family: "Barlow";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 16px; /* 114.286% */
+}

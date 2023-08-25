@@ -21,6 +21,10 @@
 @import './components/RecentlyViewedCompo.css';
 @import './components/Drawer/ColorDrawerPD.css';
 @import './components/MyOrdersCompo.css';
+@import './components/Drawer/AddressDrawer.css';
+@import './components/Drawer/CartEmptyDrawer.css';
+@import './components/Drawer/CartFullDrawer1.css';
+@import './components/Modal/CartDeleteModal.css';
 
 
 /* Page CSS */

@@ -23,9 +23,9 @@ const MyOrdersCompo = ({
   const showDrawer = () => {
     setOpen(true);
   };
-  const onClose = () => {
-    setOpen(false);
-  };
+  // const onClose = () => {
+  //   setOpen(false);
+  // };
   return (
     <div className='MyOrdersCompo' onClick={showDrawer}>
       <div className='MyOrdersCompo-topSection'>
@@ -60,9 +60,9 @@ const MyOrdersCompo = ({
       </div>
       <Drawer className='orderDetailsDrawer' placement="right" open={open}>
         <div className='ColorDrawer-closeBTN'>
-          <p>Order Details</p>
-          <div className='closeIconSearch'>
-            <LiaTimesSolid onClose={onClose} />
+          <p onClick={() => {setOpen(false)}}>Order Details</p>
+          <div  className='closeIconSearch'>
+            <LiaTimesSolid  />
           </div>
         </div>
         <div className='orderDrawer'>

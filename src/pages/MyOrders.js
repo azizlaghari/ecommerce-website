@@ -1,13 +1,18 @@
 import React, { useEffect, useState } from 'react'
 import { Tabs, Divider } from 'antd'
 import Layout from '../layout/Layout'
+import AddressDrawer from '../components/Drawer/AddressDrawer'
+// img
 import ellipse from '../assets/productListing/ellipse.png'
 import filter_list from '../assets/myOrderIMG/filter_list.png'
 import BG from '../assets/myOrderIMG/BG.png'
+import BG2 from '../assets/myOrderIMG/BG2.png'
 import orderIMG1 from '../assets/myOrderIMG/orderIMG1.png'
 import orderIMG2 from '../assets/myOrderIMG/orderIMG2.png'
 import moreICON from '../assets/myOrderIMG/moreICON.png'
 import MyOrdersCompo from '../components/MyOrdersCompo'
+import arrow_right from '../assets/arrow_right.png'
+import arrowRightGreen from '../assets/arrowRightGreen.png'
 
 const orderListData = [
     {
@@ -128,16 +133,16 @@ const activeOrderData = [
 ]
 
 const MyOrders = () => {
-    const { TabPane } = Tabs; // Destructuring TabPane from Tabs
-    const [size, setSize] = useState(); // State for window size
+    const { TabPane } = Tabs // Destructuring TabPane from Tabs
+    const [size, setSize] = useState() // State for window size
     useEffect(() => {
         function updateSize() {
-            setSize(window.innerWidth); // Update state with window width
+            setSize(window.innerWidth) // Update state with window width
         }
-        window.addEventListener('resize', updateSize); // Add resize event listener
-        updateSize(); // Initial call to set initial size
-        return () => window.removeEventListener('resize', updateSize); // Remove event listener on cleanup
-    }, []); // Empty dependency array for one-time setup
+        window.addEventListener('resize', updateSize) // Add resize event listener
+        updateSize() // Initial call to set initial size
+        return () => window.removeEventListener('resize', updateSize) // Remove event listener on cleanup
+    }, []) // Empty dependency array for one-time setup
     return (
         <Layout active='my-orders'>
             <div className='myOrders'>
@@ -151,7 +156,7 @@ const MyOrders = () => {
                     <div>
                         <Tabs
                             className='tabsMain'
-                            defaultActiveKey='tab3'
+                            defaultActiveKey='tab5'
                             tabPosition={size > 800 ? 'left' : 'top'}
                             style={{
                                 height: 'auto',
@@ -166,7 +171,73 @@ const MyOrders = () => {
                                 }
                                 key={'tab1'}
                             >
-                                Tab 1
+                                <div className='myAccountTab'>
+                                    <h6>My Profile</h6>
+                                    <div className='profileDetails'>
+                                        <div className='profileIMGdetaisl'>
+                                            <img src={BG2} />
+                                            <div className='profileDetail'>
+                                                <p className='profileTitle'>Darrell Steward</p>
+                                                <p className='customerNo'>Customer No. - 350076</p>
+                                                <div className='profileBTNs'>
+                                                    <button className='changeImageProfile'>
+                                                        Change image
+                                                        <img src={arrow_right} />
+                                                    </button>
+                                                    <button className='removeImageProfile'>Remove image</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <button>
+                                            Change password
+                                            <img src={arrowRightGreen} />
+                                        </button>
+                                    </div>
+                                    <Divider />
+                                    <p>Profile</p>
+                                    <form>
+                                        <div className='topSection'>
+                                            <label htmlFor='name'>
+                                                Name <span>*</span>
+                                            </label>
+                                            <input placeholder='Darrel Steward' type='text' id='name' name='name' />
+                                            <label htmlFor='emailID'>
+                                                Email ID <span>*</span>
+                                            </label>
+                                            <input
+                                                placeholder='darrelsteward23@gmail.com'
+                                                type='text'
+                                                id='EmailID'
+                                                name='emailID'
+                                            />
+                                        </div>
+                                        <br></br>
+                                        <div className='bottomSection'>
+                                            <label htmlFor='company'>
+                                                Company <span>*</span>
+                                            </label>
+                                            <input
+                                                placeholder='Steward Industries'
+                                                type='text'
+                                                id='company'
+                                                name='company'
+                                            />
+                                            <label htmlFor='phoneNo'>
+                                                Phone No <span>*</span>
+                                            </label>
+                                            <input
+                                                placeholder='+46 16 557 6098'
+                                                type='text'
+                                                id='phoneNo'
+                                                name='phoneNo'
+                                            />
+                                        </div>
+                                    </form>
+                                    <div className='profileButton'>
+                                        <button>Save changes<img src={arrow_right} /></button>
+                                        <button>Delete Account<img src={arrowRightGreen} /></button>
+                                    </div>
+                                </div>
                             </TabPane>
                             <TabPane
                                 tab={
@@ -176,7 +247,6 @@ const MyOrders = () => {
                                     </div>
                                 }
                                 key={'tab2'}
-
                             >
                                 {/* My Active orders */}
                                 <div className='historyTAB'>
@@ -197,7 +267,7 @@ const MyOrders = () => {
                                             </p>
                                         </div>
                                     </div>
-                                    <div className='orderList' >
+                                    <div className='orderList'>
                                         {activeOrderData.map((item, index) => (
                                             <div key={index}>
                                                 <MyOrdersCompo
@@ -218,7 +288,6 @@ const MyOrders = () => {
                                         ))}
                                     </div>
                                 </div>
-
                             </TabPane>
                             <TabPane
                                 tab={
@@ -290,7 +359,31 @@ const MyOrders = () => {
                                 }
                                 key={'tab5'}
                             >
-                                Tab 5
+                                <div className='addressBookTab'>
+                                    <div className='titleandBtn'>
+                                        <h6>Address book</h6>
+                                        <AddressDrawer />
+                                    </div>
+                                    <div className='addressBoxes'>
+                                        <div className='addressBoxBorder'>
+                                            <div className='addressBoxTitelIcon'>
+                                                <p>Jenny Wilson</p>
+                                                <img src={moreICON} />
+                                            </div>
+                                            <p>06 51 328 4274</p>
+                                            <p>Morvall Färilavägen 66, Ljusdal 827 00</p>
+                                        </div>
+                                        <div className='addressBoxBorder'>
+                                            <div className='addressBoxTitelIcon'>
+                                                <p>Jenny Wilson</p>
+                                                <img src={moreICON} />
+                                            </div>
+                                            <p>06 51 328 4274</p>
+                                            <p>Morvall Färilavägen 66, Ljusdal 827 00</p>
+                                        </div>
+
+                                    </div>
+                                </div>
                             </TabPane>
                         </Tabs>
                     </div>
