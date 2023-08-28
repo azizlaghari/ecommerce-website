@@ -52,6 +52,8 @@
   align-items: start;
   justify-content: space-between;
   padding: 2rem;
+  cursor: pointer;
+
 }
 .CartFullDrawer1-container .product-container .productIMGDescp {
   display: flex;

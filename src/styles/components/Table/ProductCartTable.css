@@ -1,0 +1,13 @@
+.ProductCartTable .ant-table-cell {
+  color: var(--body-text-color, #444);
+
+  /* Table Cell Text */
+  font-family: Barlow;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 14px; /* 100% */
+}
+.ProductCartTable .ant-pagination{
+    display: none;
+}

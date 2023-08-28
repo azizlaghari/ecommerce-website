@@ -1,0 +1,335 @@
+.PrintInformation .topHeading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 3rem;
+}
+.PrintInformation .topHeading h6 {
+  color: #000;
+
+  /* H6 */
+  font-family: 'Barlow';
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 30px; /* 150% */
+  text-transform: capitalize;
+}
+.PrintInformation .topHeading button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  border-radius: 24px;
+  color: var(--dark-green, #11505d);
+  font-family: 'Barlow';
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px; /* 160% */
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+.PrintInformation .productCardSummary {
+  margin-top: 2rem;
+  width: 100%;
+  display: flex;
+  align-items: start;
+  column-gap: 1rem;
+}
+.PrintInformation .productCardSummary .leftProductCard {
+  width: 70% !important;
+}
+.PrintInformation .productCardSummary .summaryCard {
+  width: 30%;
+}
+.PrintInformation .productCardSummary .productCard {
+  display: flex;
+  padding: 16px;
+  align-items: flex-start;
+  gap: 10px;
+  background: #f8f8f8;
+  width: 100%;
+  justify-content: space-between;
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+.PrintInformation .productCardSummary .productCard .productIMGDetails {
+  display: flex;
+  align-items: center;
+  row-gap: 1rem;
+  column-gap: 1rem;
+}
+.PrintInformation
+  .productCardSummary
+  .productCard
+  .productIMGDetails
+  .productDetails
+  p:nth-child(1) {
+  color: var(--black, #2a2a2a);
+
+  /* Body Normal */
+  font-family: 'Barlow';
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px; /* 150% */
+}
+.PrintInformation
+  .productCardSummary
+  .productCard
+  .productIMGDetails
+  .productDetails
+  p:nth-child(2) {
+  color: var(--body-text-color, #444);
+
+  /* Overline */
+  font-family: 'Barlow';
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 20px; /* 166.667% */
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+}
+.PrintInformation
+  .productCardSummary
+  .productCard
+  .productIMGDetails
+  .productDetails
+  p:nth-child(3) {
+  color: var(--body-text-color, #444);
+
+  /* Filter Options */
+  font-family: 'Barlow';
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px; /* 123.077% */
+}
+.PrintInformation .productCardSummary .summaryCard {
+  padding: 2rem;
+}
+.PrintInformation .productCardSummary .summaryCard h6 {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  color: #000;
+
+  /* H6 */
+  font-family: 'Barlow';
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 30px; /* 150% */
+  text-transform: capitalize;
+  margin-bottom: 1rem;
+}
+.PrintInformation .productCardSummary .summaryCard {
+  width: 30%;
+  background: var(--blue-gray, #f0f7f9);
+  height: 320px;
+  flex-shrink: 0;
+}
+.PrintInformation .productCardSummary .summaryCard .summaryTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.PrintInformation .productCardSummary .summaryCard .summaryTop .leftSide p {
+  padding: 0.2rem 0;
+}
+.PrintInformation .productCardSummary .summaryCard .summaryTop .rightSide p {
+  padding: 0.2rem 0;
+}
+.PrintInformation .productCardSummary .summaryCard .summaryTop .rightSide p:nth-child(2) {
+  text-align: right;
+}
+.PrintInformation .productCardSummary .CustomizeDetails .CustomizeDetailsText {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.PrintInformation
+  .productCardSummary
+  .CustomizeDetails
+  .CustomizeDetailsText
+  .summaryRadioBTN
+  .ant-radio-inner {
+  color: #32cd32;
+  background-color: #32cd32;
+  border-color: #32cd32;
+}
+.PrintInformation .productCardSummary .CustomizeDetails p {
+  color: var(--black, #2a2a2a);
+
+  /* Body Normal */
+  font-family: 'Barlow';
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px; /* 150% */
+}
+.PrintInformation .productCardSummary .CustomizeDetails .CustomizeDetailsText {
+  display: flex;
+  align-items: baseline;
+}
+.PrintInformation .productCardSummary .CustomizeDetails .CustomizeDetailsText p img {
+  color: var(--body-text-color, #444);
+
+  /* Product Price Text */
+  font-family: 'Barlow';
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 14px; /* 100% */
+  padding-right: 5rem;
+  margin: 1rem 0;
+}
+.PrintInformation
+  .productCardSummary
+  .CustomizeDetails
+  .CustomizeDetailsText
+  .fileUploadField
+  .upload {
+  border-radius: 6px;
+  border: 1px dashed var(--stroke-gray, #cdcdcd);
+  display: flex;
+  width: 640px;
+  padding: 16px 24px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  margin: 1rem 0;
+}
+.PrintInformation
+  .productCardSummary
+  .CustomizeDetails
+  .CustomizeDetailsText
+  .fileUploadField
+  .upload
+  p {
+  color: var(--form-placeholder-text, #89909a);
+  text-align: center;
+
+  /* Placeholder Text */
+  font-family: 'Barlow';
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 16px; /* 114.286% */
+}
+.PrintInformation .productCardSummary .messageInfo p {
+  color: var(--body-text-color, #444);
+  font-family: 'Barlow';
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 14px; /* 107.692% */
+  margin-bottom: 0.5rem;
+}
+.PrintInformation .productCardSummary .messageInfo p span {
+  color: var(--red, #ff1d1d);
+  font-family: 'Barlow';
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 14px;
+}
+.PrintInformation .productCardSummary .messageInfo textarea {
+  border-radius: 6px;
+  border: 1px solid var(--stroke-gray, #cdcdcd);
+  display: flex;
+  padding: 20px 24px;
+  align-items: center;
+  gap: 10px;
+  width: 70%;
+  height: 150px;
+  color: var(--form-placeholder-text, #89909a);
+  font-family: 'Barlow';
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 16px; /* 114.286% */
+}
+.PrintInformation .productCardSummary button {
+  color: var(--dark-green, #11505d);
+  font-family: 'Barlow';
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px; /* 160% */
+  border-radius: 24px;
+  border: 2px solid var(--dark-green, #11505d);
+  background: var(--white, #fff);
+  display: inline-flex;
+  padding: 12px 24px;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  margin: 3rem 0;
+}
+.PrintInformation .summaryCardMobile {
+  display: none;
+}
+
+@media screen and (max-width: 500px) {
+  .productCardSummary .summaryCard {
+    display: none;
+  }
+  .PrintInformation .productCardSummary .leftProductCard {
+    width: 100% !important;
+  }
+  .PrintInformation .productCardSummary .CustomizeDetails .CustomizeDetailsText {
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    margin: 1rem 0;
+  }
+  .PrintInformation .productCardSummary .messageInfo textarea {
+    width: 100%;
+  }
+  .PrintInformation .summaryCardMobile {
+    width: 100%;
+    height: 66px;
+    flex-shrink: 0;
+    background: var(--blue-gray, #f0f7f9);
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .PrintInformation .summaryCardMobile .titleLink p {
+    color: #102434;
+
+    /* Table Header Text */
+    font-family: 'Barlow';
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 14px; /* 107.692% */
+  }
+  .PrintInformation .summaryCardMobile .titleLink a {
+    color: var(--dark-green, #11505d);
+    font-family: 'Barlow';
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 16px; /* 123.077% */
+  }
+  .PrintInformation .summaryCardMobile p {
+    color: var(--black, #2a2a2a);
+    text-align: right;
+
+    /* Product Details Price */
+    font-family: 'Barlow';
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 18px; /* 100% */
+    text-align: left;
+  }
+}

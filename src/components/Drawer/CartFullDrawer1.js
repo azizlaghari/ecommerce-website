@@ -10,13 +10,18 @@ import editIcon from '../../assets/edit.png'
 import CartDeleteModal from '../modal/CartDeleteModal'
 
 const CartFullDrawer1 = () => {
-    const [open, setOpen] = useState(true)
+    const [open, setOpen] = useState(false)
     const showDrawer = () => {
         setOpen(true)
     }
     const onClose = () => {
         setOpen(false)
     }
+
+    const [isVisible, setIsVisible] = useState(false);
+    const toggle = () => {
+        setIsVisible(prevState => !prevState);
+    };
 
 
     return (
@@ -54,7 +59,7 @@ const CartFullDrawer1 = () => {
                     </div>
 
                     <Divider />
-                    <div className='product-container'>
+                    <div className='product-container' onClick={toggle}>
                         <div className='productIMGDescp'>
                             <img src={shoppingCartIMG2} />
                             <span>
@@ -70,42 +75,44 @@ const CartFullDrawer1 = () => {
                     </div>
 
                     {/* Product show container */}
-                    <div className='productShowContainer'>
-                        <p>Color</p>
-                        <div className='productColor'>
-                            <img src={shoppingCartIMG2} />
-                            <img src={shoppingCartIMG2} />
-                            <img src={shoppingCartIMG2} />
-                            <img src={shoppingCartIMG2} />
-                            <img src={shoppingCartIMG2} />
-                            <img src={shoppingCartIMG2} />
-                            <img src={shoppingCartIMG2} />
-                            <img src={shoppingCartIMG2} />
+                    {isVisible && (
+                        <div className='productShowContainer'>
+                            <p>Color</p>
+                            <div className='productColor'>
+                                <img src={shoppingCartIMG2} />
+                                <img src={shoppingCartIMG2} />
+                                <img src={shoppingCartIMG2} />
+                                <img src={shoppingCartIMG2} />
+                                <img src={shoppingCartIMG2} />
+                                <img src={shoppingCartIMG2} />
+                                <img src={shoppingCartIMG2} />
+                                <img src={shoppingCartIMG2} />
+                            </div>
+                            <p>Print</p>
+                            <div className='productPrint'>
+                                <span>No Print</span>
+                                <span>1-Color Print</span>
+                                <span>1-Color Print</span>
+                                <span>2-Color Print</span>
+                                <span>3-Color Print</span>
+                                <span>4-Color Print</span>
+                            </div>
+                            <p>Delivery Type</p>
+                            <div className='productDelivery productPrint'>
+                                <span>Normal Delivery - 0.00 SEK</span>
+                                <span>Express Delivery (7 days) - 500.00 SEK</span>
+                                <span>Express Delivery (5 days) - 1,200.00 SEK</span>
+                            </div>
+                            <p>Quantity</p>
+                            <div className='productQuantity'>
+                                <ol>
+                                    <li><span>*</span>The minimum amount quantity 25pcs</li>
+                                    <li><span>*</span>Increase with 25pcs more and get 10% discount</li>
+                                </ol>
+                                <span>One-size   |   400</span>
+                            </div>
                         </div>
-                        <p>Print</p>
-                        <div className='productPrint'>
-                            <span>No Print</span>
-                            <span>1-Color Print</span>
-                            <span>1-Color Print</span>
-                            <span>2-Color Print</span>
-                            <span>3-Color Print</span>
-                            <span>4-Color Print</span>
-                        </div>
-                        <p>Delivery Type</p>
-                        <div className='productDelivery productPrint'>
-                            <span>Normal Delivery - 0.00 SEK</span>
-                            <span>Express Delivery (7 days) - 500.00 SEK</span>
-                            <span>Express Delivery (5 days) - 1,200.00 SEK</span>
-                        </div>
-                        <p>Quantity</p>
-                        <div className='productQuantity'>
-                            <ol>
-                                <li><span>*</span>The minimum amount quantity 25pcs</li>
-                                <li><span>*</span>Increase with 25pcs more and get 10% discount</li>
-                            </ol>
-                            <span>One-size   |   400</span>
-                        </div>
-                    </div>
+                    )}
                     <Divider style={{ marginTop: "2rem" }} />
                     <div className='cartTotal'>
                         <p>Sub Total</p>

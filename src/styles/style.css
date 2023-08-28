@@ -25,6 +25,7 @@
 @import './components/Drawer/CartEmptyDrawer.css';
 @import './components/Drawer/CartFullDrawer1.css';
 @import './components/Modal/CartDeleteModal.css';
+@import './components/Table/ProductCartTable.css';
 
 
 /* Page CSS */
@@ -32,6 +33,8 @@
 @import './pages/ProductCategoryDetails.css';
 @import './pages//ProductDetails.css';
 @import './pages/MyOrders.css';
+@import './pages/ProductCartDetails.css';
+@import './pages/PrintInformation.css';
 
 /* Fonts */
 @font-face {

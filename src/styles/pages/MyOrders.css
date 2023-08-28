@@ -471,8 +471,48 @@
 }
 
 /* LAPTOP responsiveness */
+@media screen and (max-width: 500px) {
+  .tabsMain .myAccountTab .profileDetails .profileIMGdetaisl {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+  }
+  .myAccountTab .profileButton{
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+  }
+  .addressBookTab .titleandBtn {
+  display: flex;
+  flex-direction: column;
+  row-gap: 2rem;
+  }
+  .addressBookTab .addressBoxes {
+  display: flex;
+  flex-direction: column;
+  row-gap: 2rem;
+  }
+  .tabsMain .historyTAB .profileSection{
+    flex-wrap: wrap;
+  }
+}
+
+/* LAPTOP responsiveness */
+@media screen and (max-width: 800px) {
+  .addressBookTab .titleandBtn{
+    margin-top: 2rem;
+  }
+}
+
+/* LAPTOP responsiveness */
 @media screen and (max-width: 1024px) {
   .tabsMain .ant-tabs-nav .ant-tabs-tab {
     padding: 5px 10px;
   }
+  .MyOrdersCompo{
+    padding: 1rem;
+  }
+  .tabsMain .historyTAB {
+    padding: 0 1rem;
+}
 }
