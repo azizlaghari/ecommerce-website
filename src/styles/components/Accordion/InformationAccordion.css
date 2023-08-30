@@ -1,14 +1,14 @@
-.InformationAccordion-main{
+.InformationAccordion-main {
   width: 100% !important;
 }
-.information-container{
-    display: flex;
-    align-items: start;
-    justify-content: start;
-    flex-direction: column;
-    margin-bottom: 10rem;
+.information-container {
+  display: flex;
+  align-items: start;
+  justify-content: start;
+  flex-direction: column;
+  margin-bottom: 10rem;
 }
-.informationHeading {
+.information-container h2 {
   color: #000;
 
   /* H2 */
@@ -18,7 +18,7 @@
   font-weight: 400;
   line-height: 50px; /* 125% */
   text-transform: capitalize;
-  margin-top: 150px;
+  margin-top: 100px;
   margin-bottom: 56px;
 }
 .questions {
@@ -30,16 +30,37 @@
   color: var(--gray, #7a8089);
 
   /* H6 */
-  font-family: "Barlow";
+  font-family: 'Barlow';
   font-size: 20px;
   font-style: normal;
   font-weight: 500;
   line-height: 30px; /* 150% */
   text-transform: capitalize;
 }
-.questions .ant-collapse-header{
-    padding: 30px 0 !important;
+.questions .ant-collapse-header {
+  padding: 30px 0 !important;
 }
 /* .questions .anticon svg {
   display: none;
 } */
+.information-container .questions h6 {
+  color: var(--black, #2a2a2a);
+
+  /* H6 */
+  font-family: 'Barlow';
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 30px; /* 150% */
+  text-transform: capitalize;
+}
+.information-container .questions p {
+  color: var(--body-text-color, #444);
+
+  /* Body Normal */
+  font-family: 'Barlow';
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px; /* 150% */
+}

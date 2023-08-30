@@ -11,7 +11,7 @@ const FavoriteProductsCompo = ({ images, logo, heartIcon, title, discp, price })
             <div className='productDetails'>
                 <p>{title}</p>
                 <p>{discp}</p>
-                <p>{price}</p>
+                {price}
             </div>
         </div>
     )

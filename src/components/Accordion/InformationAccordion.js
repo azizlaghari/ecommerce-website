@@ -1,5 +1,4 @@
 import React from 'react'
-import '../../styles/components/Accordion/InformationAccordion.css';
 import { Collapse } from 'antd';
 import { BsPlusLg } from 'react-icons/bs';
 import { RxCross2 } from 'react-icons/rx';
@@ -15,7 +14,7 @@ const InformationAccordion = () => {
     const { Panel } = Collapse
     return (
         <div className='information-container'>
-            <h2 className='informationHeading'>Some more information for you</h2>
+            <h2 className='informationHcontainereading'>Some more information for you</h2>
             <Collapse accordion className='questions' expandIcon={({ isActive }) => !isActive ? <BsPlusLg /> : <RxCross2 />} expandIconPosition={'end'}>
                 <Panel header="T-shirts with print"  >
                     <div>

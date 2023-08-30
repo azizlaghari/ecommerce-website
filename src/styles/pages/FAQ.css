@@ -1,0 +1,154 @@
+.faq {
+  margin-top: 2rem;
+}
+.faq .faqBox {
+  width: 100%;
+  height: 203px;
+  padding: 5rem;
+  flex-shrink: 0;
+  background: var(--light-pink, #fbdeeb);
+}
+.faq .faqBox .faqContent {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.faq .faqBox .faqContent h2 {
+  color: #000;
+
+  /* H2 */
+  font-family: 'Barlow';
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 50px; /* 125% */
+  text-transform: capitalize;
+}
+.faq .faqBox .faqContent input {
+  display: inline-flex;
+  padding: 16px 22px;
+  align-items: center;
+  gap: 265px;
+  /* background: var(--white, #fff); */
+  color: var(--form-placeholder-text, #89909a);
+
+  /* Placeholder Text */
+  font-family: 'Barlow';
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 16px; /* 114.286% */
+  border: none;
+  width: 24%;
+  padding-left: 25px;
+  background: url('../../assets/searchIcon.png') #fff no-repeat right;
+  background-size: 20px;
+}
+.faq .faqBox .faqContent input:focus-visible {
+  outline: none;
+}
+.faq .faqTabs .faqTabMain {
+  margin-top: 4rem;
+}
+.faq .faqTabs .faqTabMain .ant-tabs-tabpane-active {
+  padding-left: 50px;
+}
+.faq .faqTabs .faqTabMain .ant-tabs-tab-btn {
+  color: var(--medium-gray, #96a0af);
+
+  /* Menu Links */
+  font-family: 'Barlow';
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 18px; /* 112.5% */
+  text-transform: capitalize;
+}
+
+.faq .faqTabs .faqTabMain .ant-tabs-tab-btn:hover {
+  color: var(--black, #2a2a2a);
+
+  /* Menu Links */
+  font-family: 'Barlow';
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 18px; /* 112.5% */
+  text-transform: capitalize;
+}
+.faq .contactUsBox {
+  width: 100%;
+  height: 396px;
+  flex-shrink: 0;
+  background: var(--light-green, #d6eade);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 2rem;
+  padding: 5rem;
+  margin: 3rem 0;
+}
+.faq .contactUsBox h2 {
+  color: var(--black, #2a2a2a);
+
+  /* H2 */
+  font-family: 'Barlow';
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 50px; /* 125% */
+  text-transform: capitalize;
+}
+.faq .contactUsBox p {
+  color: var(--body-text-color, #444);
+  text-align: center;
+  font-family: 'Barlow';
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 30px; /* 150% */
+  text-transform: capitalize;
+  width: 688px;
+  height: 75px;
+  flex-shrink: 0;
+}
+/* LAPTOP responsiveness */
+@media screen and (max-width: 800px) {
+  .faq .faqBox .faqContent h2 {
+    font-size: 30px;
+  }
+  .faq .faqBox .faqContent input {
+    width: 40%;
+  }
+  .faq .faqBox {
+    padding: 3rem;
+  }
+  .faq .contactUsBox h2 {
+    text-align: center;
+  }
+}
+/* MOBILE responsiveness */
+@media screen and (max-width: 500px) {
+  .faq .faqBox {
+    height: 300px;
+  }
+  .faq .faqBox .faqContent {
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    flex-direction: column;
+  }
+  .faq .faqBox .faqContent input {
+    width: 100%;
+    margin-top: 1rem;
+  }
+  .faq .contactUsBox p {
+    width: 100%;
+  }
+  .faq .contactUsBox {
+    height: auto;
+  }
+  .faq .contactUsBox button{
+    margin-top: 10rem;
+  }
+}

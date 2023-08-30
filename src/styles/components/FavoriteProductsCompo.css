@@ -23,7 +23,11 @@
     bottom: 34px;
     
 }
-
+.FavoriteProductsCompo .productDetails{
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+}
 .FavoriteProductsCompo .productDetails p:nth-child(1) {
   color: var(--black, #2a2a2a);
 

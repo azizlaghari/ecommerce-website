@@ -1,0 +1,32 @@
+.Page404 .page404Container {
+  background: #fff;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  row-gap: 2rem;
+}
+.Page404 .page404Container h5 {
+  color: var(--black, #2a2a2a);
+
+  /* H5 */
+  font-family: 'Barlow';
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 34px; /* 141.667% */
+  text-transform: capitalize;
+}
+.Page404 .page404Container p {
+  color: var(--body-text-color, #444);
+  text-align: center;
+
+  /* Body Small */
+  font-family: 'Barlow';
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px; /* 171.429% */
+}

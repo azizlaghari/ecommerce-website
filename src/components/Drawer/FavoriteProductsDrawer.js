@@ -21,7 +21,7 @@ const FavoriteProductsData = [{
     logo: FavoriteProductsLOGO,
     title: 'Barn T-shirt',
     discp: "Children's T-shirt with double stitching in sleeves and hem. Taped neckline fro...",
-    price: 'From 39.00 SEK'
+    price: <p> From <span style={{ fontWeight: 'bold' }}>39.00 SEK</span></p>
 },
 {
     images: FavoriteProducts2,
@@ -29,7 +29,7 @@ const FavoriteProductsData = [{
     logo: FavoriteProductsLOGO,
     title: 'Barn T-shirt',
     discp: "Children's T-shirt with double stitching in sleeves and hem. Taped neckline fro...",
-    price: 'From 39.00 SEK'
+    price: <p> From <span style={{ fontWeight: 'bold' }}>39.00 SEK</span></p>
 },
 {
     images: FavoriteProducts3,
@@ -37,7 +37,7 @@ const FavoriteProductsData = [{
     logo: FavoriteProductsLOGO,
     title: 'Barn T-shirt',
     discp: "Children's T-shirt with double stitching in sleeves and hem. Taped neckline fro...",
-    price: 'From 39.00 SEK'
+    price: <p> From <span style={{ fontWeight: 'bold' }}>39.00 SEK</span></p>
 },
 {
     images: FavoriteProducts4,
@@ -45,7 +45,8 @@ const FavoriteProductsData = [{
     logo: FavoriteProductsLOGO,
     title: 'Barn T-shirt',
     discp: "Children's T-shirt with double stitching in sleeves and hem. Taped neckline fro...",
-    price: 'From 39.00 SEK'
+    // price: 'From 39.00 SEK'
+    price: <p> From <span style={{ fontWeight: 'bold' }}>39.00 SEK</span></p>
 },
 ]
 
@@ -53,7 +54,7 @@ const FavoriteProductsData = [{
 const FavoriteProductsDrawer = () => {
     const { TabPane } = Tabs // Destructuring TabPane from Tabs
 
-    const [open, setOpen] = useState(true)
+    const [open, setOpen] = useState(false)
     const showDrawer = () => {
         setOpen(true)
     }
@@ -77,25 +78,25 @@ const FavoriteProductsDrawer = () => {
                     <p>Favorites</p>
                     <LiaTimesSolid onClick={onClose} />
                 </div>
-                <div className='FavoriteProductsDrawer'>
+                <div className='FavoriteProductsDrawer' style={{ marginTop: '3rem' }}>
                     <Tabs defaultActiveKey="tab1" onChange={onChange}>
                         <TabPane
                             tab={
-                                <div className='tabFavorites-main'>
-                                    <p>My Favorites</p>
+                                <div className='tabFavorites-main' >
+                                    <p >My Favorites</p>
                                 </div>
                             }
                             key={'tab1'}
                         >
-                            <Row gutter={[10,10]}>
+                            <Row gutter={[10, 10]}>
                                 {/* <div className='tabFavorites'> */}
-                                    {FavoriteProductsData.map((item, index) => {
-                                        return (
-                                            <Col lg={12} md={12} sm={12} xs={24} key={index}>
-                                                <FavoriteProductsCompo images={item.images} logo={item.logo} heartIcon={item.heartIcon} title={item.title} discp={item.discp} price={item.price} />
-                                            </Col>
-                                        )
-                                    })}
+                                {FavoriteProductsData.map((item, index) => {
+                                    return (
+                                        <Col lg={12} md={12} sm={12} xs={24} key={index}>
+                                            <FavoriteProductsCompo images={item.images} logo={item.logo} heartIcon={item.heartIcon} title={item.title} discp={item.discp} price={item.price} />
+                                        </Col>
+                                    )
+                                })}
                                 {/* </div> */}
                             </Row>
 
@@ -108,6 +109,17 @@ const FavoriteProductsDrawer = () => {
                             }
                             key={'tab2'}
                         >
+                            <Row gutter={[10, 10]}>
+                                {/* <div className='tabFavorites'> */}
+                                {FavoriteProductsData.map((item, index) => {
+                                    return (
+                                        <Col lg={12} md={12} sm={12} xs={24} key={index}>
+                                            <FavoriteProductsCompo images={item.images} logo={item.logo} heartIcon={item.heartIcon} title={item.title} discp={item.discp} price={item.price} />
+                                        </Col>
+                                    )
+                                })}
+                                {/* </div> */}
+                            </Row>
 
                         </TabPane>
                     </Tabs>
