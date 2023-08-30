@@ -3,12 +3,13 @@ import { DownOutlined, SmileOutlined } from '@ant-design/icons'
 import { Dropdown, Space } from 'antd'
 import '../styles/components/HeaderPage.css'
 // icons
-import { BiHeart } from 'react-icons/bi'
 import { CgProfile } from 'react-icons/cg'
 import SearchDrawer from './Drawer/SearchDrawer'
 import SearchNone from './Drawer/SearchNone'
 import CartEmptyDrawer from './Drawer/CartEmptyDrawer'
 import CartFullDrawer1 from './Drawer/CartFullDrawer1'
+import FavoritesDrawer from './Drawer/FavoritesDrawer'
+import FavoriteProductsDrawer from './Drawer/FavoriteProductsDrawer'
 
 const items = [
   {
@@ -138,8 +139,8 @@ const HeaderPage = () => {
       <div className='rightIcons'>
         <SearchNone/>
         <SearchDrawer />
-        {/* <BiSearch /> */}
-        <BiHeart />
+        <FavoritesDrawer />
+        <FavoriteProductsDrawer />
         <CartEmptyDrawer />
         <CartFullDrawer1 />
         <CgProfile />

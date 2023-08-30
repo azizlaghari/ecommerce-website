@@ -9,8 +9,6 @@ import deleteIcon from '../assets/delete.png'
 import ProductCartTable from '../components/Table/ProductCartTable'
 import { Divider } from 'antd'
 
-
-
 const ProductCartDetails = () => {
     return (
         <>

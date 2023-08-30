@@ -9,6 +9,10 @@ import ProductDetails from '../pages/ProductDetails'
 import MyOrders from '../pages/MyOrders'
 import ProductCartDetails from '../pages/ProductCartDetails'
 import PrintInformation from '../pages/PrintInformation'
+import Quotation from '../pages/Quotation'
+import OrderSuccessfull from '../pages/OrderSuccessfull'
+import ThankYou from '../pages/ThankYou'
+import ManufacturesDetails from '../pages/ManufacturesDetails'
 // import PrivateWrapper from './PrivateRoutes'
 
 const Routers = () => {
@@ -25,6 +29,10 @@ const Routers = () => {
         <Route path='/my-orders' element={<MyOrders/>} />
         <Route path='/product-cart-details' element={<ProductCartDetails/>} />
         <Route path='/print-information' element={<PrintInformation/>} />
+        <Route path='/quotation' element={<Quotation/>} />
+        <Route path='/manufactures-details' element={<ManufacturesDetails/>} />
+        <Route path='/order-successfull' element={<OrderSuccessfull/>} />
+        <Route path='/thank-you' element={<ThankYou/>} />
         <Route path='*' element={<Navigate to='/' />} />
         {/* </Route> */}
 

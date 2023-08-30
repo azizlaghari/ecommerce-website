@@ -51,7 +51,6 @@ const TshirtIMG = () => {
                         <button className='tshirtBTN MarginTop1rem' >Read more<img src={arrowRightGreen} /></button>
                         <button className='mobile-tshirtBTN MarginTop1rem' >Read more<img src={arrow_right} /></button>
                     </div>
-
                 </div>
                 <div className='check-products'>
                     <div className='checkProductText'>

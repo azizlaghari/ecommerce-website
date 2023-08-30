@@ -1,0 +1,19 @@
+.closeIconSearch{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.closeIconSearch p {
+  color: #000;
+
+  /* H2 */
+  font-family: 'Barlow';
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 50px; /* 125% */
+  text-transform: capitalize;
+}
+.searchNoneDrawer-container{
+    margin-top: 10rem;
+}

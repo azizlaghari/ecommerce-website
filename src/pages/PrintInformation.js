@@ -3,29 +3,42 @@ import Layout from '../layout/Layout'
 import ellipse from '../assets/productListing/ellipse.png'
 import arrowRightGreen from '../assets/arrowRightGreen.png'
 import uploadICON from '../assets/upload.png'
+import colorsWheel from '../assets/colorsWheel.png'
 import shoppingCartIMG1 from '../assets/shoppingCartIMG1.png'
 import shoppingCartIMG2 from '../assets/shoppingCartIMG2.png'
 import info from '../assets/info.png'
-import { Divider, Radio, Tag, Tooltip, Upload, message } from 'antd'
-
-
-
+import { Divider, Radio, Select, Tag, Tooltip, Upload, message } from 'antd'
+import { LiaTimesSolid } from 'react-icons/lia'
 
 const PrintInformation = () => {
-    const [valueFile, setValueFile] = useState(1);
+    // state of file radio btn
+    const [fileValue, setFileValue] = useState('');
     const onChangeFile = (e) => {
-        console.log('radio checked', e.target.valueFile);
-        setValueFile(e.target.valueFile);
+        console.log('radio checked', e.target.value);
+        setFileValue(e.target.value);
     };
-    const [valueColor, setValueColor] = useState(2);
+    // state of color radio btn
+    const [colorValue, setColorValue] = useState('');
     const onChangeColor = (e) => {
-        console.log('radio checked', e.target.valueColor);
-        setValueColor(e.target.valueColor);
+        console.log('radio checked', e.target.value);
+        setColorValue(e.target.value);
     };
+    // tags prevent Default
     const preventDefault = (e) => {
         e.preventDefault();
         console.log('Clicked! But prevent default.');
     };
+    // Color selector
+    const handleChange = (value) => {
+        console.log(`selected ${value}`);
+    };
+    // product customization tab open/close state
+    const [isVisible, setIsVisible] = useState(false);
+    const toggle = () => {
+        setIsVisible(prevState => !prevState);
+    };
+
+    // upload box
     const props = {
         name: 'file',
         action: 'https://www.mocky.io/v2/5cc8019d300000980a055e76',
@@ -60,7 +73,7 @@ const PrintInformation = () => {
                     </div>
                     <div className='productCardSummary'>
                         <div className='leftProductCard'>
-                            <div className='productCard'>
+                            <div className='productCard' onClick={toggle}>
                                 <div className='productIMGDetails'>
                                     <img src={shoppingCartIMG1} />
                                     <div className='productDetails'>
@@ -73,58 +86,145 @@ const PrintInformation = () => {
                                     <p>37,905.00 SEK</p>
                                 </div>
                             </div>
-                            <div className='CustomizeDetails'>
-                                <p>Customize Details</p>
-                                <div className='CustomizeDetailsText'>
-                                    <div>
-                                        <p>Print File
-                                            <Tooltip title="File info">
-                                                <img src={info} />
-                                            </Tooltip>
-                                        </p>
-                                        <div className='summaryRadioBTN'>
-                                            <Radio.Group onChange={onChangeFile} value={valueFile}>
-                                                <Radio value={0}>Upload my print files later</Radio>
-                                                <Radio value={1}>Upload my print files now</Radio>
-                                            </Radio.Group>
-                                        </div>
-                                    </div>
-                                    <div className='fileUploadField'>
-                                        <div className='uploadBox'>
-                                            <Upload className='upload' {...props}>
-                                                <div icon={uploadICON}><p>Select files to upload (the file size should not exceed 5.0MB)</p>
+                            {isVisible && (
+                                <div className='productCustomization'>
+                                    <div className='CustomizeDetails'>
+                                        <p>Customize Details</p>
+                                        <div className='CustomizeDetailsText'>
+                                            <div>
+                                                <p>Print File
+                                                    <Tooltip title="File info">
+                                                        <img src={info} />
+                                                    </Tooltip>
+                                                </p>
+                                                <div className='summaryRadioBTN'>
+                                                    <Radio.Group onChange={onChangeFile} value={fileValue}>
+                                                        <Radio value={'upload-file-later'}>Upload my print files later</Radio>
+                                                        <Radio value={'upload-file-now'}>Upload my print files now</Radio>
+                                                    </Radio.Group>
                                                 </div>
-                                            </Upload>
+                                            </div>
+                                            <div className='fileUploadField'>
+                                                <div className='uploadBox'>
+                                                    <Upload className='upload' {...props}>
+                                                        <div> <img src={uploadICON} /><p>Select files to upload (the file size should not exceed 5.0MB)</p>
+                                                        </div>
+                                                    </Upload>
+                                                </div>
+                                                <div className='antDtags'>
+                                                    <span>
+                                                        <Tag closeIcon onClose={preventDefault}>
+                                                            logotype.pdf (1.0 MB)
+                                                            <LiaTimesSolid />
+                                                        </Tag>
+                                                    </span>
+                                                    <span>
+                                                        <Tag closeIcon onClose={preventDefault}>
+                                                            shape-one.eps (2.7 MB)
+                                                            <LiaTimesSolid />
+                                                        </Tag>
+                                                    </span>
+                                                </div>
+                                            </div>
                                         </div>
-                                        <div className='antDtags'>
-                                            <Tag closeIcon onClose={preventDefault}>
-                                                logotype.pdf (1.0 MB)
-                                            </Tag>
-                                            <Tag closeIcon onClose={preventDefault}>
-                                                shape-one.eps (2.7 MB)
-                                            </Tag>
+                                        <div className='CustomizeDetailsText'>
+                                            <p>Print Color
+                                                <Tooltip title="Color info">
+                                                    <img src={info} />
+                                                </Tooltip>
+                                            </p>
+                                            <div className='summaryRadioBTN'>
+                                                <Radio.Group onChange={onChangeColor} value={colorValue}>
+                                                    <Radio value={'color-suggestion'}>I want suggestion for printing color</Radio>
+                                                    <Radio value={'specify-color'}>I want to specify print color</Radio>
+                                                </Radio.Group>
+                                            </div>
+                                        </div>
+                                        <div className='colorsSeletions'>
+                                            <div>
+                                                <p>Color 01 <span>*</span> <img src={colorsWheel} /></p>
+                                                <Select
+                                                    defaultValue="Select"
+                                                    className='color-select'
+                                                    // style={{
+                                                    //     width: 120,
+                                                    // }}
+                                                    onChange={handleChange}
+                                                    options={[
+                                                        {
+                                                            value: 'blue',
+                                                            label: 'Blue',
+                                                        },
+                                                        {
+                                                            value: 'green',
+                                                            label: 'Green',
+                                                        },
+                                                        {
+                                                            value: 'red',
+                                                            label: 'Red',
+                                                        },
+                                                    ]}
+                                                />
+                                            </div>
+                                            <div>
+                                                <p>Color 02 <span>*</span> <img src={colorsWheel} /></p>
+                                                <Select
+                                                    defaultValue="Select"
+                                                    className='color-select'
+                                                    // style={{
+                                                    //     width: 120,
+                                                    // }}
+                                                    onChange={handleChange}
+                                                    options={[
+                                                        {
+                                                            value: 'blue',
+                                                            label: 'Blue',
+                                                        },
+                                                        {
+                                                            value: 'green',
+                                                            label: 'Green',
+                                                        },
+                                                        {
+                                                            value: 'red',
+                                                            label: 'Red',
+                                                        },
+                                                    ]}
+                                                />
+                                            </div>
+                                            <div>
+                                                <p>Color 03 <span>*</span> <img src={colorsWheel} /></p>
+                                                <Select
+                                                    defaultValue="Select"
+                                                    className='color-select'
+                                                    // style={{
+                                                    //     width: 120,
+                                                    // }}
+                                                    onChange={handleChange}
+                                                    options={[
+                                                        {
+                                                            value: 'blue',
+                                                            label: 'Blue',
+                                                        },
+                                                        {
+                                                            value: 'green',
+                                                            label: 'Green',
+                                                        },
+                                                        {
+                                                            value: 'red',
+                                                            label: 'Red',
+                                                        },
+                                                    ]}
+                                                />
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div className='CustomizeDetailsText'>
-                                    <p>Print Color
-                                        <Tooltip title="Color info">
-                                            <img src={info} />
-                                        </Tooltip>
-                                    </p>
-                                    <div className='summaryRadioBTN'>
-                                        <Radio.Group onChange={onChangeColor} value={valueColor}>
-                                            <Radio value={1}>I want suggestion for printing color</Radio>
-                                            <Radio value={2}>I want to specify print color</Radio>
-                                        </Radio.Group>
+                                    <div className='messageInfo'>
+                                        <p>Message <span>*</span></p>
+                                        <textarea placeholder='Your message'></textarea>
                                     </div>
+                                    <button>Save details <img src={arrowRightGreen} /></button>
                                 </div>
-                            </div>
-                            <div className='messageInfo'>
-                                <p>Message <span>*</span></p>
-                                <textarea placeholder='Your message'></textarea>
-                            </div>
-                            <button>Save details <img src={arrowRightGreen} /></button>
+                            )}
                             <div className='productCard'>
                                 <div className='productIMGDetails'>
                                     <img src={shoppingCartIMG2} />
@@ -173,7 +273,6 @@ const PrintInformation = () => {
                             </div>
 
                         </div>
-
                     </div>
                     <div className='summaryCardMobile'>
                         <div className='titleLink'>

@@ -1,0 +1,56 @@
+.FavoriteProductsCompo .productIMG {
+  background: #f8f8f8;
+  width: 249px;
+  height: 340px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.FavoriteProductsCompo .productIMG img{
+    mix-blend-mode: darken;
+
+}
+.FavoriteProductsCompo .heartIcon{
+    position: relative;
+    top: 34px;
+    left: 210px;
+    cursor: pointer;
+}
+.FavoriteProductsCompo .logo{
+    position: relative;
+    bottom: 34px;
+    
+}
+
+.FavoriteProductsCompo .productDetails p:nth-child(1) {
+  color: var(--black, #2a2a2a);
+
+  /* Menu Links */
+  font-family: 'Barlow';
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 18px; /* 112.5% */
+  text-transform: capitalize;
+}
+.FavoriteProductsCompo .productDetails p:nth-child(2) {
+  color: var(--body-text-color, #444);
+
+  /* Body Small */
+  font-family: 'Barlow';
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px; /* 171.429% */
+  width: 249px;
+}
+.FavoriteProductsCompo .productDetails p:nth-child(3) {
+  color: var(--black, #2a2a2a);
+  font-family: 'Barlow';
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 14px; /* 100% */
+}

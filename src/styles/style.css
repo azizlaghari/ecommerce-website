@@ -26,6 +26,8 @@
 @import './components/Drawer/CartFullDrawer1.css';
 @import './components/Modal/CartDeleteModal.css';
 @import './components/Table/ProductCartTable.css';
+@import './components/Drawer/FavoritesDrawer.css';
+@import './components/FavoriteProductsCompo.css';
 
 
 /* Page CSS */
@@ -35,6 +37,10 @@
 @import './pages/MyOrders.css';
 @import './pages/ProductCartDetails.css';
 @import './pages/PrintInformation.css';
+@import './pages/Quotation.css';
+@import './pages/OrderSuccessfull.css';
+@import './pages/ThankYou.css';
+@import './pages/ManufacturesDetails.css';
 
 /* Fonts */
 @font-face {
