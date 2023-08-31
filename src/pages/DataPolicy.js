@@ -1,6 +1,5 @@
 import React from 'react'
 import Layout from '../layout/Layout'
-import { Divider } from 'antd'
 import ellipse from '../assets/productListing/ellipse.png'
 // import InformationAccordion from '../components/Accordion/InformationAccordion'
 import FAQaccordion from '../components/Accordion/FAQaccordion'
@@ -9,7 +8,6 @@ const DataPolicy = () => {
     return (
         <>
             <Layout active={'data-policy'}>
-                <Divider></Divider>
                 <div className='text-proctuctListing'>
                     <p className='greenText-proctuctListing'>HOME</p>
                     <img src={ellipse} />

@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import Layout from '../layout/Layout'
-import { Divider, Drawer, Tabs } from 'antd'
+import { Drawer, Tabs } from 'antd'
 import ellipse from '../assets/productListing/ellipse.png'
 import product1 from '../assets/product1.png'
 import { AiFillCaretRight, AiOutlineHeart } from 'react-icons/ai'
@@ -356,7 +356,6 @@ const ProductDetails = () => {
     return (
         <Layout active={'product-details'}>
             <div className='product-detail-container'>
-                <Divider></Divider>
                 <div className='text-proctuctListing'>
                     <p className='greenText-proctuctListing'>HOME</p>
                     <img src={ellipse} />

@@ -146,7 +146,6 @@ const MyOrders = () => {
     return (
         <Layout active='my-orders'>
             <div className='myOrders'>
-                <Divider></Divider>
                 <div className='text-proctuctListing'>
                     <p className='greenText-proctuctListing'>HOME</p>
                     <img src={ellipse} />
@@ -156,7 +155,7 @@ const MyOrders = () => {
                     <div>
                         <Tabs
                             className='tabsMain'
-                            defaultActiveKey='tab5'
+                            defaultActiveKey='tab3'
                             tabPosition={size > 800 ? 'left' : 'top'}
                             style={{
                                 height: 'auto',

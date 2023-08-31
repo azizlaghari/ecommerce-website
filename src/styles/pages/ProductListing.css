@@ -3,6 +3,7 @@
   align-items: center;
   justify-content: left;
   column-gap: 1rem;
+  margin: 1rem 0;
 }
 .greenText-proctuctListing {
   color: var(--dark-green, #11505d);

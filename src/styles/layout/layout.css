@@ -11,6 +11,7 @@
   width: 100%;
   z-index: 6;
   padding: 0 30px;
+  border-bottom: 1px solid #cdcdcd;
 }
 
 .v-layout {

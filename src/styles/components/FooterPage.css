@@ -45,6 +45,7 @@ a {
 }
 .social-icons img{
     padding: 0 .5rem;
+    cursor: pointer;
 }
 .copyright {
   margin-top: 4rem;
@@ -68,6 +69,12 @@ a {
   justify-content: space-between;
   padding: 0 2rem 0 1rem;
   border: 1px solid rgb(186, 186, 186);
+}
+.input-container input:focus-visible{
+  outline: none;
+}
+.input-container img{
+  cursor: pointer;
 }
 .divider{
     display: none;

@@ -1,6 +1,6 @@
 import React from 'react'
 import Layout from '../layout/Layout'
-import { Divider, Dropdown, Space } from 'antd'
+import { Dropdown, Space } from 'antd'
 import ellipse from '../assets/productListing/ellipse.png'
 import arrow_right from '../assets/arrow_right.png'
 import arrow_drop_down from '../assets/productListing/arrow_drop_down.png'
@@ -50,7 +50,6 @@ const ManufacturesDetails = () => {
     return (
         <>
             <Layout active={'manufactures-details'}>
-                <Divider />
                 <div className='text-proctuctListing'>
                     <p className='greenText-proctuctListing'>HOME</p>
                     <img src={ellipse} />

@@ -1,5 +1,4 @@
 import React from 'react'
-import '../styles/components/ProductListing/TshirtsList.css'
 // images
 import tshirt1 from '../assets/productListing/tshirt1.png'
 import tshirt2 from '../assets/productListing/tshirt2.png'
@@ -14,6 +13,8 @@ import tshirt9 from '../assets/productListing/tshirt9.png'
 import tlogo1 from '../assets/productListing/tlogo1.png'
 import tlogo2 from '../assets/productListing/tlogo2.png'
 import tlogo3 from '../assets/productListing/tlogo3.png'
+import colorsWheel from '../assets/colorsWheel.png'
+import heartWhiteIcon from '../assets/heartWhiteIcon.png'
 
 
 import { Col, Row } from 'antd'
@@ -29,9 +30,11 @@ const tshirtData = [
     subtitle:
       'ATTENTION! This promotional item can only be purchased without printing. Reservation for final sale! If any color or..',
     price: 'From 36.55 SEK',
+    heartWhiteIcon: heartWhiteIcon,
     image: tshirt1,
     logo: tlogo1,
     toptags: ['best seller', 'cheap t-shirt'],
+    colorsWheel: colorsWheel,
     colors: '02 color variants',
   },
   {
@@ -39,9 +42,11 @@ const tshirtData = [
     subtitle:
       'ATTENTION! This promotional item can only be purchased without printing. Reservation for final sale! If any color or..',
     price: 'From 36.55 SEK',
+    heartWhiteIcon: heartWhiteIcon,
     image: tshirt2,
     logo: tlogo1,
     toptags: ['best seller', 'cheap t-shirt'],
+    colorsWheel: colorsWheel,
     colors: '02 color variants',
   },
   {
@@ -49,9 +54,11 @@ const tshirtData = [
     subtitle:
       'ATTENTION! This promotional item can only be purchased without printing. Reservation for final sale! If any color or..',
     price: 'From 36.55 SEK',
+    heartWhiteIcon: heartWhiteIcon,
     image: tshirt3,
     logo: tlogo1,
     toptags: ['best seller', 'cheap t-shirt'],
+    colorsWheel: colorsWheel,
     colors: '02 color variants',
   },
   {
@@ -59,9 +66,11 @@ const tshirtData = [
     subtitle:
       'ATTENTION! This promotional item can only be purchased without printing. Reservation for final sale! If any color or..',
     price: 'From 36.55 SEK',
+    heartWhiteIcon: heartWhiteIcon,
     image: tshirt4,
     logo: tlogo2,
     toptags: ['best seller', 'cheap t-shirt'],
+    colorsWheel: colorsWheel,
     colors: '02 color variants',
   },
   {
@@ -69,9 +78,11 @@ const tshirtData = [
     subtitle:
       'ATTENTION! This promotional item can only be purchased without printing. Reservation for final sale! If any color or..',
     price: 'From 36.55 SEK',
+    heartWhiteIcon: heartWhiteIcon,
     image: tshirt5,
     logo: tlogo2,
     toptags: ['best seller', 'cheap t-shirt'],
+    colorsWheel: colorsWheel,
     colors: '02 color variants',
   },
   {
@@ -79,9 +90,11 @@ const tshirtData = [
     subtitle:
       'ATTENTION! This promotional item can only be purchased without printing. Reservation for final sale! If any color or..',
     price: 'From 36.55 SEK',
+    heartWhiteIcon: heartWhiteIcon,
     image: tshirt6,
     logo: tlogo2,
     toptags: ['best seller', 'cheap t-shirt'],
+    colorsWheel: colorsWheel,
     colors: '02 color variants',
   },
   {
@@ -89,9 +102,11 @@ const tshirtData = [
     subtitle:
       'ATTENTION! This promotional item can only be purchased without printing. Reservation for final sale! If any color or..',
     price: 'From 36.55 SEK',
+    heartWhiteIcon: heartWhiteIcon,
     image: tshirt7,
     logo: tlogo3,
     toptags: ['best seller', 'cheap t-shirt'],
+    colorsWheel: colorsWheel,
     colors: '02 color variants',
   },
   {
@@ -99,9 +114,11 @@ const tshirtData = [
     subtitle:
       'ATTENTION! This promotional item can only be purchased without printing. Reservation for final sale! If any color or..',
     price: 'From 36.55 SEK',
+    heartWhiteIcon: heartWhiteIcon,
     image: tshirt8,
     logo: tlogo3,
     toptags: ['best seller', 'cheap t-shirt'],
+    colorsWheel: colorsWheel,
     colors: '02 color variants',
   },
   {
@@ -109,9 +126,11 @@ const tshirtData = [
     subtitle:
       'ATTENTION! This promotional item can only be purchased without printing. Reservation for final sale! If any color or..',
     price: 'From 36.55 SEK',
+    heartWhiteIcon: heartWhiteIcon,
     image: tshirt9,
     logo: tlogo3,
     toptags: ['best seller', 'cheap t-shirt'],
+    colorsWheel: colorsWheel,
     colors: '02 color variants',
   },
 ]
@@ -148,8 +167,10 @@ const TshirtsList = () => {
                         title={item.title}
                         subtitle={item.subtitle}
                         price={item.price}
+                        heartWhiteIcon={item.heartWhiteIcon}
                         image={item.image}
                         logo={item.logo}
+                        colorsWheel={item.colorsWheel}
                         colors={item.colors}
                         toptags={item.toptags}
                       />

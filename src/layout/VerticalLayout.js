@@ -1,4 +1,7 @@
 import { Layout } from 'antd'
+import logo from '../assets/LOGO.png'
+
+// import logo from '../assets/LOGO.png'
 
 // import { MdOutlineDarkMode, MdDarkMode } from 'react-icons/md'
 // import { useSelector } from 'react-redux'
@@ -46,7 +49,9 @@ const VerticalLayout = ({ children }) => {
         </Sider> */}
         <Layout className='site-layout' style={{ marginLeft: 0 }}>
           <Header className='mainHeader'>
-            <h1>LOGO</h1>
+            <div className='logo'>
+              <img src={logo} />
+            </div>
             <HeaderPage />
 
             <h3 className='company-title'></h3>

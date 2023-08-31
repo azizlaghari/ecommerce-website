@@ -1,0 +1,225 @@
+.sign-up {
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5rem 0;
+}
+.sign-up .logo {
+  margin-bottom: 2rem;
+}
+.sign-up .tabHeading {
+  color: var(--Black, #2a2a2a);
+  text-align: center;
+
+  /* H3 */
+  font-family: 'Barlow';
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 46px; /* 127.778% */
+}
+.sign-up .signUpContainer {
+  width: 600px;
+}
+.sign-up .signUpContainer h4 {
+  color: var(--Black, #2a2a2a);
+
+  /* H4 */
+  font-family: 'Barlow';
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 42px; /* 131.25% */
+  text-transform: capitalize;
+  margin-top: 2rem;
+}
+.sign-up .signUpContainer p {
+  width: 450px;
+  color: var(--Body-Text-Color, #444);
+
+  /* Body Normal */
+  font-family: 'Barlow';
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  margin-top: 2rem;
+}
+
+.sign-up .signUpContainer .orText p{
+   text-align: center; 
+   border-bottom: 1px solid #cdcdcd; 
+   line-height: 0.1em;
+   margin: 10px 0 20px; 
+
+}
+.sign-up .signUpContainer .orText p span { 
+    background:#fff; 
+    padding:0 10px; 
+}
+
+.sign-up .signUpContainer form label {
+  color: var(--Body-Text-Color, #444);
+  font-family: 'Barlow';
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 14px; /* 107.692% */
+  margin-top: 2rem;
+}
+.sign-up .signUpContainer form label span {
+  color: var(--Red, #ff1d1d);
+  font-family: 'Barlow';
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 14px;
+}
+.sign-up .signUpContainer form input {
+  width: 80%;
+  display: flex;
+  padding: 20px 24px;
+  align-items: center;
+  gap: 10px;
+  border-radius: 6px;
+  border: 1px solid var(--Stroke-Gray, #cdcdcd);
+  color: var(--Form-Placeholder-Text, #89909a);
+
+  /* Placeholder Text */
+  font-family: 'Barlow';
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 16px; /* 114.286% */
+  margin-top: 2px;
+}
+.sign-up .signUpContainer form input:focus-visible {
+  outline: none;
+}
+.sign-up .signUpContainer .signUpCheckBoxes .ant-checkbox-wrapper {
+  color: var(--Body-Text-Color, #444);
+  font-family: 'Barlow';
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px; /* 200% */
+}
+.sign-up .signUpContainer span {
+  color: var(--Body-Text-Color, #444);
+  font-family: 'Barlow';
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 14px; /* 107.692% */
+  margin-top: 0.2rem;
+}
+/* .sign-up .signUpIMG {
+  max-width: 100%;
+  height: auto;
+  flex-shrink: 0;
+} */
+.sign-up .signUpContainer .btns {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 80%;
+  margin-top: 2rem;
+}
+.sign-up .signUpContainer .btns .forgotBTN {
+  color: var(--Nav, #4e4e4e);
+
+  /* Menu Links */
+  font-family: 'Barlow';
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 18px; /* 112.5% */
+  text-transform: capitalize;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.sign-up .signUpContainer .btns .socialBTN {
+  border-radius: 8px;
+  border: 1px solid var(--Very-Light-Gray, #f5f6f8);
+  background: var(--Very-Light-Gray, #f5f6f8);
+  display: flex;
+  padding: 16px 32px;
+  align-items: center;
+  gap: 16px;
+  color: var(--BodyTextGrey, #393939);
+
+  /* Placeholder Text */
+  font-family: 'Barlow';
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 16px; /* 114.286% */
+  cursor: pointer;
+}
+.sign-up .signUpContainer .copyRight {
+  margin-top: 2rem;
+}
+.sign-up .signUpIMG img {
+  min-width: 550px;
+  height: auto;
+  width: 100%;
+  flex-shrink: 0;
+}
+.sign-up .signUpContainer .signUpCheckBoxes .ant-checkbox-wrapper + .ant-checkbox-wrapper {
+  margin-inline-start: 0;
+}
+@media screen and (max-width: 500px) {
+  .sign-up .signUpIMG img {
+    display: none;
+  }
+  .sign-up .signUpContainer {
+    width: 100%;
+  }
+  .signup-main-tab .ant-tabs-nav {
+    width: 100%;
+  }
+  .sign-up .signUpContainer .socialBTNs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 1rem;
+  }
+  .sign-up .signUpContainer .btns .socialBTN {
+    width: 100%;
+  }
+  .sign-up {
+    padding: 2rem 0;
+  }
+  .sign-up .rowMobile {
+    width: 100%;
+  }
+  .sign-up .signUpContainer p {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 800px) {
+  .sign-up .signUpIMG img {
+    display: none;
+  }
+  .signup-main-tab .ant-tabs-nav {
+    width: 100%;
+  }
+  .sign-up .signUpContainer form input {
+    width: 100%;
+  }
+  .sign-up .signUpContainer .btns {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .sign-up .rowMobile {
+    width: 100%;
+  }
+  .sign-up .signUpIMG img {
+    min-width: 100%;
+
+  }
+}

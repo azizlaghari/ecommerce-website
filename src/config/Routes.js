@@ -18,6 +18,7 @@ import ContactUs from '../pages/ContactUs'
 import FAQ from '../pages/FAQ'
 import Page404 from '../pages/Page404'
 import NoInternet from '../pages/NoInternet'
+import SignUp from '../pages/SignUp'
 // import PrivateWrapper from './PrivateRoutes'
 
 const Routers = () => {
@@ -40,6 +41,7 @@ const Routers = () => {
         <Route path='/data-policy' element={<DataPolicy/>} />
         <Route path='/faq' element={<FAQ/>} />
         <Route path='/contact-us' element={<ContactUs/>} />
+        <Route path='/sign-up' element={<SignUp/>} />
         <Route path='/thank-you' element={<ThankYou/>} />
         <Route path='/page-404' element={<Page404/>} />
         <Route path='/no-internet' element={<NoInternet/>} />

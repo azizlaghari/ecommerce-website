@@ -1,0 +1,70 @@
+.ForgotModal{
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.5rem;
+    padding: 2rem;
+}
+.ForgotModal h4 {
+  color: var(--Black, #2a2a2a);
+
+  /* H4 */
+  font-family: 'Barlow';
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 42px; /* 131.25% */
+  text-transform: capitalize;
+}
+.ForgotModal p {
+  color: var(--Body-Text-Color, #444);
+
+  /* Body Normal */
+  font-family: 'Barlow';
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px; /* 150% */
+}
+.ForgotModal form label {
+  color: var(--Body-Text-Color, #444);
+  font-family: 'Barlow';
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 14px; /* 107.692% */
+}
+.ForgotModal form label span {
+  color: var(--Red, #ff1d1d);
+  font-family: 'Barlow';
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 14px;
+}
+.ForgotModal form input {
+  display: flex;
+  padding: 20px 24px;
+  align-items: center;
+  gap: 10px;
+  border-radius: 6px;
+  border: 1px solid var(--Stroke-Gray, #cdcdcd);
+  color: var(--Form-Placeholder-Text, #89909a);
+
+  /* Placeholder Text */
+  font-family: 'Barlow';
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 16px; /* 114.286% */
+  width: 100%;
+}
+
+.ForgotModal form input:focus-visible{
+    outline: none;
+}
+.forgotModal-main .ant-modal-content {
+  width: 100%;
+  height: auto;
+  flex-shrink: 0;
+  border-radius: 0;
+}

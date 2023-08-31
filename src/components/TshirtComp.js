@@ -1,7 +1,6 @@
 import React from 'react'
-import '../styles/components/TshirtComp.css'
 
-const TshirtComp = ({ image, title, subtitle, price, colors, logo, toptags }) => {
+const TshirtComp = ({ image, title, subtitle, price, colors, logo, toptags, colorsWheel, heartWhiteIcon }) => {
   return (
     <>
       <div className='TshirtComp'>
@@ -16,6 +15,7 @@ const TshirtComp = ({ image, title, subtitle, price, colors, logo, toptags }) =>
                 )
               })}
             </div>
+            <img className='heartWhiteIcon' src={heartWhiteIcon}/>
             <img src={image} />
           </div>
           <div className='logo-TshirtComp'>
@@ -24,7 +24,10 @@ const TshirtComp = ({ image, title, subtitle, price, colors, logo, toptags }) =>
           <p className='title-TshirtComp'>{title}</p>
           <p className='subtitle-TshirtComp'>{subtitle}</p>
           <p className='price-TshirtComp'>{price}</p>
-          <p className='colors-TshirtComp'>{colors}</p>
+          <div className='colors'>
+            <img className='colorsWheel-TshirtComp' src={colorsWheel}></img>
+            <p className='colors-TshirtComp'>{colors}</p>
+          </div>
         </div>
       </div>
     </>

@@ -186,6 +186,7 @@ tr.ant-table-expanded-row:hover > td {
 .ant-drawer .ant-drawer-mask{
   background-color: transparent !important;
 }
+
 /* @media screen and (max-width: 4024px) {
   .ant-drawer-content-wrapper{
     width: 60% !important;

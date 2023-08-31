@@ -1,7 +1,6 @@
 import React from 'react'
-import { DownOutlined, SmileOutlined } from '@ant-design/icons'
+import { SmileOutlined } from '@ant-design/icons'
 import { Dropdown, Space } from 'antd'
-import '../styles/components/HeaderPage.css'
 // icons
 import { CgProfile } from 'react-icons/cg'
 import SearchDrawer from './Drawer/SearchDrawer'
@@ -10,6 +9,7 @@ import CartEmptyDrawer from './Drawer/CartEmptyDrawer'
 import CartFullDrawer1 from './Drawer/CartFullDrawer1'
 import FavoritesDrawer from './Drawer/FavoritesDrawer'
 import FavoriteProductsDrawer from './Drawer/FavoriteProductsDrawer'
+import { MdOutlineArrowDropDown } from 'react-icons/md'
 
 const items = [
   {
@@ -48,7 +48,8 @@ const items = [
 
 const HeaderPage = () => {
   return (
-    <div style={{ display: 'flex', justifyContent: 'space-between', width: '100%' }}>
+    <div className='HeaderPage' style={{ display: 'flex', justifyContent: 'space-between', width: '100%' }}>
+      
       <div className='dropdowns'>
         <Dropdown
           menu={{
@@ -58,7 +59,7 @@ const HeaderPage = () => {
           <a onClick={(e) => e.preventDefault()} className='dropdownLink'>
             <Space>
               Print Wear
-              <DownOutlined />
+              <MdOutlineArrowDropDown />
             </Space>
           </a>
         </Dropdown>
@@ -70,7 +71,7 @@ const HeaderPage = () => {
           <a onClick={(e) => e.preventDefault()} className='dropdownLink'>
             <Space>
               Safe Clothes
-              <DownOutlined />
+              <MdOutlineArrowDropDown />
             </Space>
           </a>
         </Dropdown>
@@ -82,7 +83,7 @@ const HeaderPage = () => {
           <a onClick={(e) => e.preventDefault()} className='dropdownLink'>
             <Space>
               Work Clothes
-              <DownOutlined />
+              <MdOutlineArrowDropDown />
             </Space>
           </a>
         </Dropdown>
@@ -94,7 +95,7 @@ const HeaderPage = () => {
           <a onClick={(e) => e.preventDefault()} className='dropdownLink'>
             <Space>
               Sports Clothes
-              <DownOutlined />
+              <MdOutlineArrowDropDown />
             </Space>
           </a>
         </Dropdown>
@@ -106,7 +107,7 @@ const HeaderPage = () => {
           <a onClick={(e) => e.preventDefault()} className='dropdownLink'>
             <Space>
               Theme & Events
-              <DownOutlined />
+              <MdOutlineArrowDropDown />
             </Space>
           </a>
         </Dropdown>
@@ -118,7 +119,7 @@ const HeaderPage = () => {
           <a onClick={(e) => e.preventDefault()} className='dropdownLink'>
             <Space className='spaceBetween'>
               Print Gadgets
-              <DownOutlined />
+              <MdOutlineArrowDropDown />
             </Space>
           </a>
         </Dropdown>
@@ -130,7 +131,7 @@ const HeaderPage = () => {
           <a onClick={(e) => e.preventDefault()} className='dropdownLink'>
             <Space>
               Customers Service
-              <DownOutlined />
+              <MdOutlineArrowDropDown />
             </Space>
           </a>
         </Dropdown>

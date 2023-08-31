@@ -22,6 +22,8 @@
   line-height: 18px; /* 112.5% */
   text-transform: capitalize;
 }
+
+
 .tabsMain .tabsData p:nth-child(1) {
   color: var(--medium-gray, #96a0af);
 
@@ -55,7 +57,7 @@
   line-height: 18px; /* 112.5% */
   text-transform: capitalize;
 }
-.tabsMain .myAccountTab{
+.tabsMain .myAccountTab {
   padding: 0 3rem;
 }
 .tabsMain .myAccountTab h6 {
@@ -200,7 +202,10 @@
   width: 100%;
   border-radius: 6px;
   border: 1px solid var(--stroke-gray, #cdcdcd);
-  margin-top: .5rem;
+  margin-top: 0.5rem;
+}
+.myAccountTab form .topSection input:focus-visible {
+  outline: none;
 }
 .myAccountTab form .topSection input::placeholder {
   color: var(--body-text-color, #444);
@@ -229,8 +234,10 @@
   gap: 10px;
   border-radius: 6px;
   border: 1px solid var(--stroke-gray, #cdcdcd);
-  margin-top: .5rem;
-
+  margin-top: 0.5rem;
+}
+.myAccountTab form .bottomSection input:focus-visible {
+  outline: none;
 }
 .myAccountTab form .bottomSection input::placeholder {
   color: var(--body-text-color, #444);
@@ -289,7 +296,7 @@
     flex-direction: column;
   }
 }
-.tabsMain .historyTAB{
+.tabsMain .historyTAB {
   padding: 0 3rem;
 }
 .tabsMain .historyTAB .topTab {
@@ -318,6 +325,9 @@
   align-items: center;
   gap: 10px;
   border: 1px solid var(--stroke-gray, #cdcdcd);
+}
+.tabsMain .historyTAB .topTab input:focus-visible {
+  outline: none;
 }
 /* .tabsMain .historyTAB .topTab input[type=search] {
     width: 100%;
@@ -390,7 +400,7 @@
 }
 
 /* Address Book */
-.addressBookTab{
+.addressBookTab {
   padding: 0 3rem;
 }
 .addressBookTab .titleandBtn {
@@ -477,29 +487,36 @@
     flex-direction: column;
     row-gap: 1rem;
   }
-  .myAccountTab .profileButton{
+  .myAccountTab .profileButton {
     display: flex;
     flex-direction: column;
     row-gap: 1rem;
   }
   .addressBookTab .titleandBtn {
-  display: flex;
-  flex-direction: column;
-  row-gap: 2rem;
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
   }
   .addressBookTab .addressBoxes {
-  display: flex;
-  flex-direction: column;
-  row-gap: 2rem;
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
   }
-  .tabsMain .historyTAB .profileSection{
+  .tabsMain .historyTAB .profileSection {
     flex-wrap: wrap;
+  }
+  .tabsMain .historyTAB .topTab {
+    display: flex;
+    align-items: self-start;
+    flex-direction: column;
+    justify-content: space-between;
+    row-gap: 1rem;
   }
 }
 
 /* LAPTOP responsiveness */
 @media screen and (max-width: 800px) {
-  .addressBookTab .titleandBtn{
+  .addressBookTab .titleandBtn {
     margin-top: 2rem;
   }
 }
@@ -509,10 +526,10 @@
   .tabsMain .ant-tabs-nav .ant-tabs-tab {
     padding: 5px 10px;
   }
-  .MyOrdersCompo{
+  .MyOrdersCompo {
     padding: 1rem;
   }
   .tabsMain .historyTAB {
     padding: 0 1rem;
-}
+  }
 }

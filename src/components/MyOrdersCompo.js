@@ -60,9 +60,9 @@ const MyOrdersCompo = ({
       </div>
       <Drawer className='orderDetailsDrawer' placement="right" open={open}>
         <div className='ColorDrawer-closeBTN'>
-          <p onClick={() => {setOpen(false)}}>Order Details</p>
-          <div  className='closeIconSearch'>
-            <LiaTimesSolid  />
+          <p onClick={() => { setOpen(false) }}>Order Details</p>
+          <div className='closeIconSearch'>
+            <LiaTimesSolid />
           </div>
         </div>
         <div className='orderDrawer'>
@@ -122,8 +122,8 @@ const MyOrdersCompo = ({
           </div>
           <Divider />
           <div className='ordersBTN'>
-            <button>Download invoice<img src={arrow_right}/></button>
-            <button>Cancel order<img src={arrowRightGreen}/></button>
+            <button>Download invoice<img src={arrow_right} /></button>
+            <button>Cancel order<img src={arrowRightGreen} /></button>
           </div>
         </div>
       </Drawer>

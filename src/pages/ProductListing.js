@@ -1,4 +1,3 @@
-import { Divider } from 'antd'
 import Layout from '../layout/Layout'
 import React from 'react'
 import ellipse from '../assets/productListing/ellipse.png'
@@ -14,7 +13,6 @@ const ProductListing = () => {
     return (
         <>
             <Layout active={'product-listing'}>
-                <Divider></Divider>
                 <div className='text-proctuctListing'>
                     <p className='greenText-proctuctListing'>HOME</p>
                     <img src={ellipse} />

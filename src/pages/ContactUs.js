@@ -1,6 +1,5 @@
 import React from 'react'
 import Layout from '../layout/Layout'
-import { Divider } from 'antd'
 import ellipse from '../assets/productListing/ellipse.png'
 import needHelpBox_location from '../assets/needHelpBox_location.png'
 import needHelpBox_call from '../assets/needHelpBox_call.png'
@@ -11,7 +10,6 @@ const ContactUs = () => {
     return (
         <>
             <Layout active={'contact-us'}>
-                <Divider></Divider>
                 <div className='text-proctuctListing'>
                     <p className='greenText-proctuctListing'>HOME</p>
                     <img src={ellipse} />

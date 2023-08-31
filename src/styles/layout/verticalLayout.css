@@ -36,4 +36,9 @@
 }
 .mainHeader{
   background-color: #fff;
+  height: 124px;
+}
+.HeaderPage .logo img {
+  width: 80%;
+  height: auto;
 }

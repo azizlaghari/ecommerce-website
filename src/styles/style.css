@@ -29,6 +29,10 @@
 @import './components/Drawer/FavoritesDrawer.css';
 @import './components/FavoriteProductsCompo.css';
 @import './components/Accordion/InformationAccordion.css';
+@import './components/Modal/ForgotModal.css';
+@import './components/HeaderPage.css';
+@import './components/TshirtComp.css';
+@import './components/ProductListing/TshirtsList.css';
 
 
 /* Page CSS */
@@ -46,6 +50,7 @@
 @import './pages/ContactUs.css';
 @import './pages/FAQ.css';
 @import './pages/Page404.css';
+@import './pages/SignUp.css';
 
 /* Fonts */
 @font-face {

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import Layout from '../layout/Layout'
-import { Divider, Tabs } from 'antd'
+import { Tabs } from 'antd'
 import ellipse from '../assets/productListing/ellipse.png'
 import FAQPageAccordin from '../components/Accordion/FAQPageAccordin'
 import arrow_right from '../assets/arrow_right.png'
@@ -21,7 +21,6 @@ const FAQ = () => {
     return (
         <>
             <Layout active={'faq'}>
-                <Divider></Divider>
                 <div className='text-proctuctListing'>
                     <p className='greenText-proctuctListing'>HOME</p>
                     <img src={ellipse} />
@@ -47,7 +46,7 @@ const FAQ = () => {
                                 key={'tab1'}
                             >
                                 <div className='faqTabContent'>
-                                    <FAQPageAccordin/>
+                                    <FAQPageAccordin />
                                 </div>
 
                             </TabPane>
@@ -82,7 +81,7 @@ const FAQ = () => {
                     <div className='contactUsBox'>
                         <h2>Did you not get an answer to your question?</h2>
                         <p>Then we hope we can help you further! You can either chat with us in the bottomright corner, call us or send us an email!</p>
-                        <button className='greenBTN'>Contact Us<img src={arrow_right}/></button>
+                        <button className='greenBTN'>Contact Us<img src={arrow_right} /></button>
                     </div>
                 </div>
             </Layout>
