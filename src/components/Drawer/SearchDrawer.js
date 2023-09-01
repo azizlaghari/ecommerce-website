@@ -16,6 +16,7 @@ import searchDimg10 from '../../assets/searchDrawerIMG/searchDimg10.png'
 import searchDimg11 from '../../assets/searchDrawerIMG/searchDimg11.png'
 import searchDimg12 from '../../assets/searchDrawerIMG/searchDimg12.png'
 import SearchDrawerCompo from '../SearchDrawerCompo'
+import updateIcon from '../../assets/update.png'
 
 const searchDrawerData = [
     {
@@ -102,6 +103,7 @@ const SearchDrawer = () => {
                 onClose={onClose}
                 open={open}
                 headerStyle={{ display: 'none' }}
+                width={'1040'}
             >
                 <div className='searchDrawer-container'>
                     <div className='searchDrawer-input'>
@@ -113,10 +115,10 @@ const SearchDrawer = () => {
                     <div className='searchDrawer-heading1'>
                         <p className='searchDrawer'>Recent searches</p>
                         <span className='searchTags-container'>
-                            <span className='searchTags'>male t-shirt</span>
-                            <span className='searchTags'>Women sportswear</span>
-                            <span className='searchTags'>bluetooth Speakers</span>
-                            <span className='searchTags'>pens</span>
+                            <span className='searchTags'><img src={updateIcon}/>male t-shirt</span>
+                            <span className='searchTags'><img src={updateIcon}/>Women sportswear</span>
+                            <span className='searchTags'><img src={updateIcon}/>bluetooth Speakers</span>
+                            <span className='searchTags'><img src={updateIcon}/>pens</span>
                         </span>
                     </div>
                     <div className='searchDivider'>

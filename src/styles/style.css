@@ -33,6 +33,7 @@
 @import './components/HeaderPage.css';
 @import './components/TshirtComp.css';
 @import './components/ProductListing/TshirtsList.css';
+@import './components/Popconfirm/CartDelPop.css';
 
 
 /* Page CSS */

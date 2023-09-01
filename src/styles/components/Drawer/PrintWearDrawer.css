@@ -14,7 +14,7 @@
   line-height: 24px; /* 160% */
   border: none;
   width: max-content;
-  margin-top: 5rem;
+  margin-top: 3rem;
   cursor: pointer;
 }
 .printWearBTN:hover {
@@ -81,6 +81,14 @@
   height: 300px;
   flex-shrink: 0;
 }
+.closeIconSearch{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+
 /* LAPTOP responsiveness */
 @media screen and (max-width: 1024px) {
   .printWear-main{

@@ -15,7 +15,7 @@ const TshirtComp = ({ image, title, subtitle, price, colors, logo, toptags, colo
                 )
               })}
             </div>
-            <img className='heartWhiteIcon' src={heartWhiteIcon}/>
+            <img className='heartWhiteIcon' src={heartWhiteIcon} />
             <img src={image} />
           </div>
           <div className='logo-TshirtComp'>

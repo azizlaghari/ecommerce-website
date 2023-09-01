@@ -25,6 +25,8 @@ const AddressDrawer = () => {
                 onClose={onClose}
                 open={open}
                 headerStyle={{ display: 'none' }}
+                width='650'
+
             >
                 <div className='addressTitleClose'>
                     <p>Add new address</p>

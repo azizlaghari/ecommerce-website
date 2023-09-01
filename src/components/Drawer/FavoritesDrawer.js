@@ -26,6 +26,8 @@ const FavoritesDrawer = () => {
                 onClose={onClose}
                 open={open}
                 headerStyle={{ display: 'none' }}
+                width='650'
+
             >
                 <div className='closeIconSearch'>
                     <p>Favorites</p>

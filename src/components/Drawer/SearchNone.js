@@ -25,8 +25,10 @@ const SearchNone = () => {
                 onClose={onClose}
                 open={open}
                 headerStyle={{ display: 'none' }}
+                width='650'
             >
                     <div className='closeIconSearch'>
+                        <p></p>
                         <LiaTimesSolid onClick={onClose} />
                     </div>
                 <div className='searchNoneDrawer-container'>

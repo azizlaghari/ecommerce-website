@@ -8,9 +8,9 @@
 
 }
 .searchDrawer-container .searchDrawer-input {
-  width: 900px !important;
+  width: 980px !important;
   height: auto !important;
-  border-bottom: 2px solid gray !important;
+  border-bottom: 1px solid var(--Stroke-Gray, #CDCDCD);
   display: flex;
   align-items: center;
   cursor: pointer;

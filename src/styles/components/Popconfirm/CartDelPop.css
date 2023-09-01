@@ -1,0 +1,8 @@
+.ant-popover .ant-popover-inner{
+  border: 1px solid var(--Stroke-Gray, #cdcdcd);
+  background: #fff;
+  padding: 24px;
+  margin-right: 6rem;
+  border-radius: 0;
+  border: none;
+}

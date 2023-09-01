@@ -7,6 +7,7 @@ import chat from '../assets/chat.png'
 import approve from '../assets/approve.png'
 import sketching from '../assets/sketching.png'
 import t_shirt from '../assets/t-shirt.png'
+import arrowRightGreen from '../assets/arrowRightGreen.png'
 //  Help icons
 import needHelpBox_call from '../assets/needHelpBox_call.png'
 import needHelpBox_email from '../assets/needHelpBox_email.png'
@@ -41,16 +42,21 @@ import TshirtCarousel from '../components/Carousels/TshirtCarousel'
 import Brands from '../components/Brands'
 import InformationAccordion from '../components/Accordion/InformationAccordion'
 import PrintWearDrawer from '../components/Drawer/PrintWearDrawer'
+import colorsWheel from '../assets/colorsWheel.png'
+import heartWhiteIcon from '../assets/heartWhiteIcon.png'
 
+// T shirt data
 const tshirtData = [
     {
         title: 'Cheap t shirt',
         subtitle:
             'ATTENTION! This promotional item can only be purchased without printing. Reservation for final sale! If any color or..',
         price: 'From 36.55 SEK',
+        heartWhiteIcon: heartWhiteIcon,
         image: tshirt1,
         logo: tlogo1,
         toptags: ['best seller', 'cheap t-shirt'],
+        colorsWheel: colorsWheel,
         colors: '02 color variants',
     },
     {
@@ -58,9 +64,11 @@ const tshirtData = [
         subtitle:
             'ATTENTION! This promotional item can only be purchased without printing. Reservation for final sale! If any color or..',
         price: 'From 36.55 SEK',
+        heartWhiteIcon: heartWhiteIcon,
         image: tshirt2,
         logo: tlogo1,
         toptags: ['best seller', 'cheap t-shirt'],
+        colorsWheel: colorsWheel,
         colors: '02 color variants',
     },
     {
@@ -68,9 +76,11 @@ const tshirtData = [
         subtitle:
             'ATTENTION! This promotional item can only be purchased without printing. Reservation for final sale! If any color or..',
         price: 'From 36.55 SEK',
+        heartWhiteIcon: heartWhiteIcon,
         image: tshirt3,
         logo: tlogo1,
         toptags: ['best seller', 'cheap t-shirt'],
+        colorsWheel: colorsWheel,
         colors: '02 color variants',
     },
     {
@@ -78,9 +88,11 @@ const tshirtData = [
         subtitle:
             'ATTENTION! This promotional item can only be purchased without printing. Reservation for final sale! If any color or..',
         price: 'From 36.55 SEK',
+        heartWhiteIcon: heartWhiteIcon,
         image: tshirt4,
         logo: tlogo2,
         toptags: ['best seller', 'cheap t-shirt'],
+        colorsWheel: colorsWheel,
         colors: '02 color variants',
     },
 
@@ -89,9 +101,11 @@ const tshirtData = [
         subtitle:
             'ATTENTION! This promotional item can only be purchased without printing. Reservation for final sale! If any color or..',
         price: 'From 36.55 SEK',
+        heartWhiteIcon: heartWhiteIcon,
         image: tshirt5,
         logo: tlogo2,
         toptags: ['best seller', 'cheap t-shirt'],
+        colorsWheel: colorsWheel,
         colors: '02 color variants',
     },
     {
@@ -99,9 +113,11 @@ const tshirtData = [
         subtitle:
             'ATTENTION! This promotional item can only be purchased without printing. Reservation for final sale! If any color or..',
         price: 'From 36.55 SEK',
+        heartWhiteIcon: heartWhiteIcon,
         image: tshirt6,
         logo: tlogo2,
         toptags: ['best seller', 'cheap t-shirt'],
+        colorsWheel: colorsWheel,
         colors: '02 color variants',
     },
     {
@@ -109,9 +125,11 @@ const tshirtData = [
         subtitle:
             'ATTENTION! This promotional item can only be purchased without printing. Reservation for final sale! If any color or..',
         price: 'From 36.55 SEK',
+        heartWhiteIcon: heartWhiteIcon,
         image: tshirt7,
         logo: tlogo3,
         toptags: ['best seller', 'cheap t-shirt'],
+        colorsWheel: colorsWheel,
         colors: '02 color variants',
     },
     {
@@ -119,9 +137,11 @@ const tshirtData = [
         subtitle:
             'ATTENTION! This promotional item can only be purchased without printing. Reservation for final sale! If any color or..',
         price: 'From 36.55 SEK',
+        heartWhiteIcon: heartWhiteIcon,
         image: tshirt8,
         logo: tlogo3,
         toptags: ['best seller', 'cheap t-shirt'],
+        colorsWheel: colorsWheel,
         colors: '02 color variants',
     },
 
@@ -130,9 +150,11 @@ const tshirtData = [
         subtitle:
             'ATTENTION! This promotional item can only be purchased without printing. Reservation for final sale! If any color or..',
         price: 'From 36.55 SEK',
+        heartWhiteIcon: heartWhiteIcon,
         image: tshirt9,
         logo: tlogo3,
         toptags: ['best seller', 'cheap t-shirt'],
+        colorsWheel: colorsWheel,
         colors: '02 color variants',
     },
 ]
@@ -243,14 +265,14 @@ const ProductCategoryDetails = () => {
                         <div className='greatNews-text'>
                             <h1 className='greatNews-heading '>Great news!</h1>
                             <p className='greatNews-discp '>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc euismod nulla ut orci cursus lobortis.</p>
-                            <button className='greatNews-btn '>Shop now</button>
+                            <button className='greatNews-btn '>Shop now <img src={arrowRightGreen} /></button>
                         </div>
                     </div>
                     <div className='greatNewsMobileIMG'>
                         <div className='greatNews-text'>
                             <h1 className='greatNews-mobile'>Great news!</h1>
                             <p className='greatNews-mobile'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc euismod nulla ut orci cursus lobortis.</p>
-                            <button className='greatNews-mobile'>Shop now</button>
+                            <button className='greatNews-mobile '>Shop now <img src={arrowRightGreen} /></button>
                         </div>
                     </div>
                     {/* t shirts carousel section 2 */}

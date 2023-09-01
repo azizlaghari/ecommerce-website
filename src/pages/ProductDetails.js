@@ -57,6 +57,9 @@ import colorDrawerIMG6 from '../assets/productDetails/colorDrawerIMG6.png'
 import colorDrawerIMG7 from '../assets/productDetails/colorDrawerIMG7.png'
 import ColorDrawerCompo from '../components/ColorDrawerCompo'
 
+import colorsWheel from '../assets/colorsWheel.png'
+import heartWhiteIcon from '../assets/heartWhiteIcon.png'
+
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 
@@ -195,16 +198,18 @@ const CategoryBrowseCarouselData = [
         tags: 't shirt',
     },
 ]
-
+// tshirt data
 const tshirtData = [
     {
         title: 'Cheap t shirt',
         subtitle:
             'ATTENTION! This promotional item can only be purchased without printing. Reservation for final sale! If any color or..',
         price: 'From 36.55 SEK',
+        heartWhiteIcon: heartWhiteIcon,
         image: tshirt1,
         logo: tlogo1,
         toptags: ['best seller', 'cheap t-shirt'],
+        colorsWheel: colorsWheel,
         colors: '02 color variants',
     },
     {
@@ -212,9 +217,11 @@ const tshirtData = [
         subtitle:
             'ATTENTION! This promotional item can only be purchased without printing. Reservation for final sale! If any color or..',
         price: 'From 36.55 SEK',
+        heartWhiteIcon: heartWhiteIcon,
         image: tshirt2,
         logo: tlogo1,
         toptags: ['best seller', 'cheap t-shirt'],
+        colorsWheel: colorsWheel,
         colors: '02 color variants',
     },
     {
@@ -222,9 +229,11 @@ const tshirtData = [
         subtitle:
             'ATTENTION! This promotional item can only be purchased without printing. Reservation for final sale! If any color or..',
         price: 'From 36.55 SEK',
+        heartWhiteIcon: heartWhiteIcon,
         image: tshirt3,
         logo: tlogo1,
         toptags: ['best seller', 'cheap t-shirt'],
+        colorsWheel: colorsWheel,
         colors: '02 color variants',
     },
     {
@@ -232,9 +241,11 @@ const tshirtData = [
         subtitle:
             'ATTENTION! This promotional item can only be purchased without printing. Reservation for final sale! If any color or..',
         price: 'From 36.55 SEK',
+        heartWhiteIcon: heartWhiteIcon,
         image: tshirt4,
         logo: tlogo2,
         toptags: ['best seller', 'cheap t-shirt'],
+        colorsWheel: colorsWheel,
         colors: '02 color variants',
     },
 
@@ -243,9 +254,11 @@ const tshirtData = [
         subtitle:
             'ATTENTION! This promotional item can only be purchased without printing. Reservation for final sale! If any color or..',
         price: 'From 36.55 SEK',
+        heartWhiteIcon: heartWhiteIcon,
         image: tshirt5,
         logo: tlogo2,
         toptags: ['best seller', 'cheap t-shirt'],
+        colorsWheel: colorsWheel,
         colors: '02 color variants',
     },
     {
@@ -253,9 +266,11 @@ const tshirtData = [
         subtitle:
             'ATTENTION! This promotional item can only be purchased without printing. Reservation for final sale! If any color or..',
         price: 'From 36.55 SEK',
+        heartWhiteIcon: heartWhiteIcon,
         image: tshirt6,
         logo: tlogo2,
         toptags: ['best seller', 'cheap t-shirt'],
+        colorsWheel: colorsWheel,
         colors: '02 color variants',
     },
     {
@@ -263,9 +278,11 @@ const tshirtData = [
         subtitle:
             'ATTENTION! This promotional item can only be purchased without printing. Reservation for final sale! If any color or..',
         price: 'From 36.55 SEK',
+        heartWhiteIcon: heartWhiteIcon,
         image: tshirt7,
         logo: tlogo3,
         toptags: ['best seller', 'cheap t-shirt'],
+        colorsWheel: colorsWheel,
         colors: '02 color variants',
     },
     {
@@ -273,9 +290,11 @@ const tshirtData = [
         subtitle:
             'ATTENTION! This promotional item can only be purchased without printing. Reservation for final sale! If any color or..',
         price: 'From 36.55 SEK',
+        heartWhiteIcon: heartWhiteIcon,
         image: tshirt8,
         logo: tlogo3,
         toptags: ['best seller', 'cheap t-shirt'],
+        colorsWheel: colorsWheel,
         colors: '02 color variants',
     },
 
@@ -284,9 +303,11 @@ const tshirtData = [
         subtitle:
             'ATTENTION! This promotional item can only be purchased without printing. Reservation for final sale! If any color or..',
         price: 'From 36.55 SEK',
+        heartWhiteIcon: heartWhiteIcon,
         image: tshirt9,
         logo: tlogo3,
         toptags: ['best seller', 'cheap t-shirt'],
+        colorsWheel: colorsWheel,
         colors: '02 color variants',
     },
 ]
@@ -327,7 +348,7 @@ const ProductDetails = () => {
     const onCloseColor = () => {
         setOpenColor(false)
     }
-
+    // openPrint
     const [openPrint, setOpenPrint] = useState(false)
     const showPrintDrawer = () => {
         setOpenPrint(true)
@@ -335,7 +356,7 @@ const ProductDetails = () => {
     const onClosePrint = () => {
         setOpenPrint(false)
     }
-
+    // openDelivery
     const [openDelivery, setOpenDelivery] = useState(false)
     const showDeliveryDrawer = () => {
         setOpenDelivery(true)
@@ -343,7 +364,7 @@ const ProductDetails = () => {
     const onCloseDelivery = () => {
         setOpenDelivery(false)
     }
-
+    // openContact
     const [openContact, setOpenContact] = useState(false)
     const showContactDrawer = () => {
         setOpenContact(true)
@@ -351,7 +372,6 @@ const ProductDetails = () => {
     const onCloseContact = () => {
         setOpenContact(false)
     }
-
 
     return (
         <Layout active={'product-details'}>
@@ -380,21 +400,53 @@ const ProductDetails = () => {
                             </div>
                         </div>
                         <div className='productDetails-text'>
-                            <p className='productDetails-brands'>Fruit of the Loom®</p>
+                            <p className='productDetails-brands' >Fruit of the Loom®</p>
                             <h5>Hoodie with kangaroo pocket | Hooded Sweat</h5>
                             <p className='productDetails-article'>Article #622080</p>
                             <p className='productDetails-price'>
                                 <span>196.00 SEK</span> per piece
                             </p>
+                            <p>This is the text you want to select.</p>
+
                         </div>
                         <div className='productDetails-drawer'>
                             <div className='productDetails-text' onClick={showColorDrawer}>
                                 <div className='productDetails-heading'>
                                     <div>
-                                        <span className='serialNum'>01</span>{' '}
+                                        <span className='serialNum' >01</span>{' '}
                                     </div>
                                     <div>
                                         <p className='productDetails-heading1'>Color</p>
+                                        <p className='productDetails-subheading' >
+                                            Select the preferred color from the list
+                                        </p>
+                                    </div>
+                                </div>
+                                <AiFillCaretRight />
+                            </div>
+                            <Drawer width='500' className='color-drawer' placement='right' open={openColor}>
+                                <div className='ColorDrawer-closeBTN'>
+                                    <p >Color</p>
+                                    <LiaTimesSolid onClick={onCloseColor} />
+                                </div>
+                                <div className='ColorDrawerData' >
+                                    {colorDrawerData?.map((item, index) => (
+                                        <div className='ColorDrawer' key={index} >
+                                            <ColorDrawerCompo images={item.images} title={item.title} />
+                                        </div>
+                                    ))}
+                                    <button className='drawerBTN' src={arrow_right} >
+                                        Confirm selection <img src={arrow_right} />
+                                    </button>
+                                </div>
+                            </Drawer>
+                            <div className='productDetails-text' onClick={showPrintDrawer}>
+                                <div className='productDetails-heading'>
+                                    <div>
+                                        <span className='serialNum'>02</span>{' '}
+                                    </div>
+                                    <div>
+                                        <p className='productDetails-heading1'>Print</p>
                                         <p className='productDetails-subheading'>
                                             Select the preferred color from the list
                                         </p>
@@ -402,34 +454,7 @@ const ProductDetails = () => {
                                 </div>
                                 <AiFillCaretRight />
                             </div>
-                            <Drawer className='color-drawer' placement='right' open={openColor}>
-                                <div className='ColorDrawer-closeBTN'>
-                                    <p>Color</p>
-                                    <LiaTimesSolid onClick={onCloseColor} />
-                                </div>
-                                <div className='ColorDrawerData'>
-                                    {colorDrawerData?.map((item, index) => (
-                                        <div className='ColorDrawer' key={index}>
-                                            <ColorDrawerCompo images={item.images} title={item.title} />
-
-                                        </div>
-                                    ))}
-                                    <button className='drawerBTN' src={arrow_right}>
-                                        Confirm selection <img src={arrow_right} />
-                                    </button>
-                                </div>
-                            </Drawer>
-                            <div className='productDetails-text' onClick={showPrintDrawer}>
-                                <div className='productDetails-heading'>
-                                    <span className='serialNum'>02</span>{' '}
-                                    <p className='productDetails-heading1'>Print</p>
-                                    <p className='productDetails-subheading'>
-                                        Select the preferred color from the list
-                                    </p>
-                                </div>
-                                <AiFillCaretRight />
-                            </div>
-                            <Drawer size='default' className='print-drawer' placement='right' open={openPrint}>
+                            <Drawer width='500' className='print-drawer' placement='right' open={openPrint}>
                                 <div className='ColorDrawer-closeBTN'>
                                     <p>Print</p>
                                     <LiaTimesSolid onClick={onClosePrint} />
@@ -438,7 +463,7 @@ const ProductDetails = () => {
                                     <div>
                                         <p>No Print</p>
                                         <p>1-Color Print</p>
-                                        <p>2-Color Print<FcCheckmark /></p>
+                                        <p >2-Color Print<FcCheckmark style={{ marginLeft: '14rem' }} /></p>
                                         <p>3-Color Print</p>
                                         <p>4-Color Print</p>
                                     </div>
@@ -449,15 +474,19 @@ const ProductDetails = () => {
                             </Drawer>
                             <div className='productDetails-text' onClick={showDeliveryDrawer}>
                                 <div className='productDetails-heading '>
-                                    <span className='serialNum'>03</span>{' '}
-                                    <p className='productDetails-heading1'>Delivery Type</p>
-                                    <p className='productDetails-subheading'>
-                                        Select the preferred color from the list
-                                    </p>
+                                    <div>
+                                        <span className='serialNum'>03</span>{' '}
+                                    </div>
+                                    <div>
+                                        <p className='productDetails-heading1'>Delivery Type</p>
+                                        <p className='productDetails-subheading'>
+                                            Select the preferred color from the list
+                                        </p>
+                                    </div>
                                 </div>
                                 <AiFillCaretRight />
                             </div>
-                            <Drawer size='default' className='delivery-drawer' placement='right' open={openDelivery}>
+                            <Drawer width='500' className='delivery-drawer' placement='right' open={openDelivery}>
                                 <div className='ColorDrawer-closeBTN'>
                                     <p>Delivery Type</p>
                                     <LiaTimesSolid onClick={onCloseDelivery} />
@@ -468,8 +497,8 @@ const ProductDetails = () => {
                                             Normal Delivery <span>0.00 SEK</span>
                                         </p>
                                         <p>
-                                            Express Delivery (7 days)<span>500.00 SEK</span>
-                                            <FcCheckmark />
+                                            Express Delivery (7 days)<span >500.00 SEK <FcCheckmark style={{ marginLeft: '14rem' }} /></span>
+
                                         </p>
                                         <p>
                                             Express Delivery (5 days)<span>1,200.00 SEK</span>
@@ -483,11 +512,15 @@ const ProductDetails = () => {
                             </Drawer>
                             <div className='productDetails-text'>
                                 <div className='productDetails-heading'>
-                                    <span className='serialNum'>04</span>{' '}
-                                    <p className='productDetails-heading1'>Quantity</p>
-                                    <p className='productDetails-subheading'>
-                                        Select the preferred color from the list
-                                    </p>
+                                    <div>
+                                        <span className='serialNum'>04</span>{' '}
+                                    </div>
+                                    <div>
+                                        <p className='productDetails-heading1'>Quantity</p>
+                                        <p className='productDetails-subheading'>
+                                            Select the preferred color from the list
+                                        </p>
+                                    </div>
                                 </div>
                                 <AiFillCaretRight />
                             </div>
@@ -505,7 +538,7 @@ const ProductDetails = () => {
 
                             <div className='productDetailsBTNs'>
                                 <button onClick={showContactDrawer}>Contact</button>
-                                <Drawer className='contactus-main' size='default' placement='right' open={openContact}>
+                                <Drawer width='500' className='contactus-main' placement='right' open={openContact}>
                                     <div>
                                         <div className='ColorDrawer-closeBTN'>
                                             <p>Contact Us</p>
@@ -563,8 +596,8 @@ const ProductDetails = () => {
                     <img src={productDetailsIMG6} />
                 </div>
                 <div className='description'>
-                    <p>Description</p>
-                    <p>
+                    <p >Description</p>
+                    <p >
                         Hoodie with kangaroo pocket. A hooded sweatshirt with an excellent fit! This shirt is
                         made of 80% cotton and 20% polyester. The cotton is so-called Belcoro® yarn, which gives
                         the sweater a soft feel and good quality. Belcoro® yarn also makes the sweater optimal
@@ -578,6 +611,7 @@ const ProductDetails = () => {
                         Printing and profiling can be purchased separately, if there is interest just contact us
                         for a free quote.
                     </p>
+                    <button >Select</button>
                 </div>
                 {/* table */}
                 <div className='productDetail-table'>
@@ -624,7 +658,7 @@ const ProductDetails = () => {
                 </div>
                 <div className='reacentlyViewed'>
                     <h2>Recently Viewed Articles</h2>
-                    <div>
+                    <div className='backgroungIMG'>
                         <Carousel responsive={responsive}>
                             {recentlyViewedData?.map((item, index) => (
                                 <RecentlyViewedCompo key={index} image={item.image} title={item.title} price={item.price} />

@@ -5,9 +5,8 @@ import { LiaTimesSolid } from 'react-icons/lia'
 import { AiOutlineShoppingCart } from 'react-icons/ai'
 import shoppingCartIMG1 from '../../assets/shoppingCartIMG1.png'
 import shoppingCartIMG2 from '../../assets/shoppingCartIMG2.png'
-import deleteIcon from '../../assets/delete.png'
 import editIcon from '../../assets/edit.png'
-import CartDeleteModal from '../modal/CartDeleteModal'
+import CartDelPop from '../Popconfirm/CartDelPop'
 
 const CartFullDrawer1 = () => {
     const [open, setOpen] = useState(false)
@@ -36,6 +35,8 @@ const CartFullDrawer1 = () => {
                 onClose={onClose}
                 open={open}
                 headerStyle={{ display: 'none' }}
+                width='900'
+
             >
                 <div className='CartFullDrawer1TitleIcon'>
                     <p>Shopping Cart</p>
@@ -54,7 +55,7 @@ const CartFullDrawer1 = () => {
                         </div>
                         <div className='icons'>
                             <img src={editIcon} />
-                            <span><CartDeleteModal /></span>
+                            <span><CartDelPop /></span>
                         </div>
                     </div>
 
@@ -70,7 +71,7 @@ const CartFullDrawer1 = () => {
                         </div>
                         <div className='icons'>
                             <img src={editIcon} />
-                            <img src={deleteIcon} />
+                            <span><CartDelPop /></span>
                         </div>
                     </div>
 

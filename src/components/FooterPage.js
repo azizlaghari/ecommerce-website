@@ -4,9 +4,12 @@ import facebook from '../assets/social-icons/facebook.png'
 import instagram from '../assets/social-icons/instagram.png'
 import linkedin from '../assets/social-icons/linkedin.png'
 import send from '../assets/social-icons/send.png'
-import { Divider } from 'antd';
+import { Collapse, Divider } from 'antd';
+import { BsPlusLg } from 'react-icons/bs';
+import { RxCross2 } from 'react-icons/rx';
 
 const FooterPage = () => {
+    const { Panel } = Collapse
     return (
         <>
             <div className='FooterPage'>
@@ -40,8 +43,33 @@ const FooterPage = () => {
                     <a href='#'>Care advice</a>
                     <a href='#'>The blog</a>
                 </div>
+                <div className='mobileAccordion'>
+                    <div className='information-container'>
+                        <Collapse accordion className='questions' expandIcon={({ isActive }) => !isActive ? <BsPlusLg /> : <RxCross2 />} expandIconPosition={'end'}>
+                            <Panel header="Customer Service"  >
+                                <div className='links'>
+                                    <a href='#'>FAQ</a>
+                                    <a href='#'>Trademarks</a>
+                                    <a href='#'>UF company</a>
+                                    <a href='#'>Reference</a>
+                                </div>
+                            </Panel>
+                            <Panel header="Information"  >
+                                <div className='links'>
+                                    <a href='#'>Terms of purchase</a>
+                                    <a href='#'>Privacy Policy</a>
+                                    <a href='#'>Environmental & sustainability policy</a>
+                                    <a href='#'>Returns & complaints</a>
+                                    <a href='#'>Care advice</a>
+                                    <a href='#'>The blog</a>
+                                </div>
+                            </Panel>
+
+                        </Collapse>
+                    </div >
+                </div>
                 <div className='Our-Story'>
-                <span className='divider'><Divider /></span>
+                    <span className='divider'><Divider /></span>
 
                     <h4 className='footerTitleStory'>Our Story</h4>
                     <p className='storyText'>

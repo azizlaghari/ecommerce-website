@@ -33,6 +33,7 @@
   font-style: normal;
   font-weight: 500;
   line-height: 28px; /* 155.556% */
+  width: 100%;
 }
 
 /* Models Section */
@@ -72,7 +73,7 @@
   margin-top: 4rem;
 }
 .greatNewsMobileIMG {
-  background-image: url('../../assets/greatNewsMobileIMG.png');
+  background-image: url(../../assets/greatNewsMobileIMG.png);
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
@@ -80,7 +81,10 @@
   height: 431px;
 }
 .greatNews-text {
-  padding: 3rem 2rem;
+  padding: 3rem 9rem;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
 }
 .greatNews h1 {
   color: #fff;
@@ -146,6 +150,45 @@
 .greatNewsMobileIMG {
   display: none;
 }
+.ProductCategoryDetails .greatNewsMobileIMG .greatNews-text h1 {
+  color: #fff;
+
+  /* H1 */
+  font-family: 'Barlow';
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 64px; /* 100% */
+  text-transform: capitalize;
+}
+.ProductCategoryDetails .greatNewsMobileIMG .greatNews-text p {
+  color: #fff;
+
+  /* Body Large */
+  font-family: 'Barlow';
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 28px; /* 155.556% */
+}
+.ProductCategoryDetails .greatNewsMobileIMG .greatNews-text button {
+  display: inline-flex;
+  padding: 12px 24px;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  border-radius: 24px;
+  background: var(--White, #fff);
+  color: var(--Dark-Green, #11505d);
+  font-family: 'Barlow';
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px; /* 160% */
+  cursor: pointer;
+  border: none;
+  width: max-content;
+}
 
 /* LAPTOP responsiveness */
 @media screen and (max-width: 1024px) {
@@ -185,6 +228,9 @@
     display: none !important;
   }
   .greatNewsMobileIMG {
-    display: inline;
+    display: block;
   }
+  .greatNews-text {
+    padding: 2rem;
+}
 }
