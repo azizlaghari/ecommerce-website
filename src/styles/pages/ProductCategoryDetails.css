@@ -5,7 +5,7 @@
   justify-content: center;
 }
 .ProductCategoryDetails .printWear-container .blueGBModel {
-  width: 60% !important;
+  width: 50% !important;
 }
 .leftText-printWear {
   display: flex;
@@ -194,6 +194,12 @@
 @media screen and (max-width: 1024px) {
   .ProductCategoryDetails .printWear-container .blueGBModel {
     display: none;
+  }
+  .modelSectionPC {
+    display: none;
+  }
+  .mobileCarousel {
+    display: inline;
   }
   .leftText-printWear {
     width: 100% !important;

@@ -18,6 +18,7 @@ import searchDimg12 from '../../assets/searchDrawerIMG/searchDimg12.png'
 import SearchDrawerCompo from '../SearchDrawerCompo'
 import updateIcon from '../../assets/update.png'
 
+// search Drawer Data
 const searchDrawerData = [
     {
         images: searchDimg1,

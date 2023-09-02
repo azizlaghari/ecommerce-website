@@ -4,6 +4,9 @@
 .tabsMain {
   margin-top: 3rem !important;
 }
+.tabsMain .ant-tabs-ink-bar{
+  left: 0;
+}
 
 .tabsMain .tabsData {
   display: flex;

@@ -299,6 +299,7 @@
   display: flex;
   align-items: center;
   margin-top: 1rem;
+  column-gap: 2rem;
 }
 .orderDrawer .summarySection img {
   background: #f8f8f8;

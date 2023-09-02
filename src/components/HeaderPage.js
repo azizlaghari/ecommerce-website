@@ -1,14 +1,14 @@
 import React from 'react'
 import { SmileOutlined } from '@ant-design/icons'
-import { Dropdown, Space } from 'antd'
+import { Dropdown, Space, Tooltip } from 'antd'
 // icons
 import { CgProfile } from 'react-icons/cg'
 import SearchDrawer from './Drawer/SearchDrawer'
 import SearchNone from './Drawer/SearchNone'
 import CartEmptyDrawer from './Drawer/CartEmptyDrawer'
-import CartFullDrawer1 from './Drawer/CartFullDrawer1'
 import FavoritesDrawer from './Drawer/FavoritesDrawer'
-import FavoriteProductsDrawer from './Drawer/FavoriteProductsDrawer'
+// import CartFullDrawer1 from './Drawer/CartFullDrawer1'
+// import FavoriteProductsDrawer from './Drawer/FavoriteProductsDrawer'
 import { MdOutlineArrowDropDown } from 'react-icons/md'
 
 const items = [
@@ -47,9 +47,11 @@ const items = [
 ]
 
 const HeaderPage = () => {
+  const text = <p>Your Cart(0)</p>;
+
   return (
     <div className='HeaderPage' style={{ display: 'flex', justifyContent: 'space-between', width: '100%' }}>
-      
+
       <div className='dropdowns'>
         <Dropdown
           menu={{
@@ -138,12 +140,14 @@ const HeaderPage = () => {
       </div>
       {/* Icons */}
       <div className='rightIcons'>
-        <SearchNone/>
+        <SearchNone />
         <SearchDrawer />
         <FavoritesDrawer />
-        <FavoriteProductsDrawer />
-        <CartEmptyDrawer />
-        <CartFullDrawer1 />
+        {/* <FavoriteProductsDrawer /> */}
+        <Tooltip placement="bottom" title={text}>
+          <button style={{all: "unset"}}> <CartEmptyDrawer /></button>
+        </Tooltip>
+        {/* <CartFullDrawer1 /> */}
         <CgProfile />
       </div>
     </div>

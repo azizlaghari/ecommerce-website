@@ -139,12 +139,15 @@
   .rightText-Section3 {
     width: 100%;
   }
-  .rightBox-Section3{
+  .rightBox-Section3 {
     height: 100%;
   }
 }
 @media screen and (max-width: 500px) {
-.Section3{
-  margin: 0 2rem;
-}
+  .Section3 {
+    margin: 0 2rem;
+  }
+  .icon-Section3 {
+    margin-bottom: 0rem;
+  }
 }

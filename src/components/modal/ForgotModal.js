@@ -3,7 +3,7 @@ import { Modal } from 'antd';
 import arrow_right from '../../assets/arrow_right.png'
 
 const ForgotModal = () => {
-    const [isModalOpen, setIsModalOpen] = useState(true);
+    const [isModalOpen, setIsModalOpen] = useState(false);
     const showModal = () => {
         setIsModalOpen(true);
     };

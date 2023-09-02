@@ -28,3 +28,11 @@
   line-height: 18px; /* 155.556% */
 }
 
+@media screen and (max-width: 800px) {
+  .ModelSection .models .model{
+    width: 100%;
+  }
+  .ModelSection .models .model img {
+    width: 100%;
+  }
+}

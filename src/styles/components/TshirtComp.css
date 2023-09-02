@@ -93,10 +93,32 @@
   line-height: 20px; /* 181.818% */
   text-transform: uppercase;
 }
+/* laptop responsiveness */
+@media screen and (max-width: 1024px) {
+  .toptags-TshirtComp {
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    justify-content: start;
+    row-gap: 6px;
+  }
+  .image-TshirtComp {
+    height: 600px;
+}
+}
 
+/* tablet responsiveness */
+@media screen and (max-width: 800px) {
+  .image-TshirtComp {
+    height: 480px;
+  }
+}
 /* mobile responsiveness */
 @media screen and (max-width: 500px) {
   .toptags-TshirtComp {
     display: none;
+  }
+  .image-TshirtComp {
+    height: 430px;
   }
 }

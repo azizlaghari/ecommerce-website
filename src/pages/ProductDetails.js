@@ -424,7 +424,7 @@ const ProductDetails = () => {
                                 </div>
                                 <AiFillCaretRight />
                             </div>
-                            <Drawer width='500' className='color-drawer' placement='right' open={openColor}>
+                            <Drawer width='425' className='color-drawer' placement='right' open={openColor}>
                                 <div className='ColorDrawer-closeBTN'>
                                     <p >Color</p>
                                     <LiaTimesSolid onClick={onCloseColor} />
@@ -435,10 +435,13 @@ const ProductDetails = () => {
                                             <ColorDrawerCompo images={item.images} title={item.title} />
                                         </div>
                                     ))}
-                                    <button className='drawerBTN' src={arrow_right} >
+                                    {/* <button className='drawerBTN' src={arrow_right} >
                                         Confirm selection <img src={arrow_right} />
-                                    </button>
+                                    </button> */}
                                 </div>
+                                <button className='drawerBTN' src={arrow_right} >
+                                    Confirm selection <img src={arrow_right} />
+                                </button>
                             </Drawer>
                             <div className='productDetails-text' onClick={showPrintDrawer}>
                                 <div className='productDetails-heading'>
@@ -454,7 +457,7 @@ const ProductDetails = () => {
                                 </div>
                                 <AiFillCaretRight />
                             </div>
-                            <Drawer width='500' className='print-drawer' placement='right' open={openPrint}>
+                            <Drawer width='425' className='print-drawer' placement='right' open={openPrint}>
                                 <div className='ColorDrawer-closeBTN'>
                                     <p>Print</p>
                                     <LiaTimesSolid onClick={onClosePrint} />
@@ -463,7 +466,7 @@ const ProductDetails = () => {
                                     <div>
                                         <p>No Print</p>
                                         <p>1-Color Print</p>
-                                        <p >2-Color Print<FcCheckmark style={{ marginLeft: '14rem' }} /></p>
+                                        <p >2-Color Print<FcCheckmark style={{ marginLeft: '10rem' }} /></p>
                                         <p>3-Color Print</p>
                                         <p>4-Color Print</p>
                                     </div>
@@ -486,7 +489,7 @@ const ProductDetails = () => {
                                 </div>
                                 <AiFillCaretRight />
                             </div>
-                            <Drawer width='500' className='delivery-drawer' placement='right' open={openDelivery}>
+                            <Drawer width='425' className='delivery-drawer' placement='right' open={openDelivery}>
                                 <div className='ColorDrawer-closeBTN'>
                                     <p>Delivery Type</p>
                                     <LiaTimesSolid onClick={onCloseDelivery} />
@@ -497,7 +500,7 @@ const ProductDetails = () => {
                                             Normal Delivery <span>0.00 SEK</span>
                                         </p>
                                         <p>
-                                            Express Delivery (7 days)<span >500.00 SEK <FcCheckmark style={{ marginLeft: '14rem' }} /></span>
+                                            Express Delivery (7 days)<span >500.00 SEK <FcCheckmark style={{ marginLeft: '11rem' }} /></span>
 
                                         </p>
                                         <p>
@@ -538,7 +541,7 @@ const ProductDetails = () => {
 
                             <div className='productDetailsBTNs'>
                                 <button onClick={showContactDrawer}>Contact</button>
-                                <Drawer width='500' className='contactus-main' placement='right' open={openContact}>
+                                <Drawer width='425' className='contactus-main' placement='right' open={openContact}>
                                     <div>
                                         <div className='ColorDrawer-closeBTN'>
                                             <p>Contact Us</p>
@@ -611,7 +614,6 @@ const ProductDetails = () => {
                         Printing and profiling can be purchased separately, if there is interest just contact us
                         for a free quote.
                     </p>
-                    <button >Select</button>
                 </div>
                 {/* table */}
                 <div className='productDetail-table'>

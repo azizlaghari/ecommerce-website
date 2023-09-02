@@ -159,6 +159,7 @@ const tshirtData = [
     },
 ]
 
+// mobile carousel modelsDataSource
 const modelsData = [
     {
         images: productCD1,

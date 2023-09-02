@@ -46,18 +46,20 @@
   margin-top: 2rem;
 }
 
-.sign-up .signUpContainer .orText p{
-   text-align: center; 
-   border-bottom: 1px solid #cdcdcd; 
-   line-height: 0.1em;
-   margin: 10px 0 20px; 
-
+.sign-up .signUpContainer .orText p {
+  text-align: center;
+  border-bottom: 1px solid #cdcdcd;
+  line-height: 0.1em;
+  margin: 10px 0 20px;
 }
-.sign-up .signUpContainer .orText p span { 
-    background:#fff; 
-    padding:0 10px; 
+.sign-up .signUpContainer .orText p span {
+  background: #fff;
+  padding: 0 10px;
 }
-
+.sign-up .signUpContainer form {
+  display: flex;
+  flex-direction: column;
+}
 .sign-up .signUpContainer form label {
   color: var(--Body-Text-Color, #444);
   font-family: 'Barlow';
@@ -65,7 +67,7 @@
   font-style: normal;
   font-weight: 600;
   line-height: 14px; /* 107.692% */
-  margin-top: 2rem;
+  margin-top: 24px;
 }
 .sign-up .signUpContainer form label span {
   color: var(--Red, #ff1d1d);
@@ -91,7 +93,7 @@
   font-style: normal;
   font-weight: 500;
   line-height: 16px; /* 114.286% */
-  margin-top: 2px;
+  margin-top: 8px;
 }
 .sign-up .signUpContainer form input:focus-visible {
   outline: none;
@@ -170,6 +172,103 @@
 .sign-up .signUpContainer .signUpCheckBoxes .ant-checkbox-wrapper + .ant-checkbox-wrapper {
   margin-inline-start: 0;
 }
+/* .sign-up .signUpContainer .signUpCheckBoxes .ant-checkbox-inner{
+  background-color: transparent;
+} */
+.sign-up .signUpContainer .ant-checkbox:not(.ant-checkbox-disabled):hover .ant-checkbox-inner {
+  border-color: #00515e;
+}
+.sign-up
+  .signUpContainer
+  .ant-checkbox-wrapper:not(.ant-checkbox-wrapper-disabled):hover
+  .ant-checkbox-checked:not(.ant-checkbox-disabled)
+  .ant-checkbox-inner {
+  background-color: #00515e;
+}
+.sign-up .signUpContainer .ant-checkbox-checked .ant-checkbox-inner {
+  background-color: #00515e;
+  border-color: #00515e;
+}
+.sign-up
+  .signUpContainer
+  .ant-checkbox-wrapper:not(.ant-checkbox-wrapper-disabled):hover
+  .ant-checkbox-checked:not(.ant-checkbox-disabled):after {
+  border-color: #00515e;
+}
+.sign-up .signUpContainer .ant-checkbox-checked:after {
+  border: 2px solid #00515e;
+}
+/* Password seen hide eye icon */
+.passwordEye {
+  position: relative;
+}
+
+.eyeOpenIcon {
+  height: 1.5rem;
+  width: 1.5rem;
+  padding: 4px;
+  position: absolute;
+  box-sizing: border-box;
+  top: 50%;
+  right: 135px;
+  transform: translateY(-50%);
+}
+.eyeCloseIcon {
+  height: 1.5rem;
+  width: 1.5rem;
+  padding: 4px;
+  position: absolute;
+  box-sizing: border-box;
+  top: 50%;
+  right: 135px;
+  transform: translateY(-50%);
+}
+.eyeIcon svg {
+  width: 30px;
+  height: 30px;
+}
+
+input {
+  height: 50px;
+  box-sizing: border-box;
+  padding-left: 1.5rem;
+}
+
+@media screen and (max-width: 1024px) {
+  .sign-up .rowMobile {
+    width: 100%;
+  }
+  .sign-up .signUpIMG img {
+    min-width: 100%;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .sign-up .signUpIMG img {
+    display: none;
+  }
+  .signup-main-tab .ant-tabs-nav {
+    width: 100%;
+  }
+  .sign-up .signUpContainer form input {
+    width: 100%;
+  }
+  .sign-up .signUpContainer .btns {
+    width: 100%;
+  }
+  .eyeOpenIcon {
+    height: 1.5rem;
+    width: 1.5rem;
+    padding: 4px;
+    position: absolute;
+    box-sizing: border-box;
+    top: 50%;
+    right: 25px;
+    transform: translateY(-50%);
+  }
+  
+}
+
 @media screen and (max-width: 500px) {
   .sign-up .signUpIMG img {
     display: none;
@@ -189,6 +288,9 @@
   }
   .sign-up .signUpContainer .btns .socialBTN {
     width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   .sign-up {
     padding: 2rem 0;
@@ -200,26 +302,5 @@
     width: 100%;
   }
 }
-@media screen and (max-width: 800px) {
-  .sign-up .signUpIMG img {
-    display: none;
-  }
-  .signup-main-tab .ant-tabs-nav {
-    width: 100%;
-  }
-  .sign-up .signUpContainer form input {
-    width: 100%;
-  }
-  .sign-up .signUpContainer .btns {
-    width: 100%;
-  }
-}
-@media screen and (max-width: 1024px) {
-  .sign-up .rowMobile {
-    width: 100%;
-  }
-  .sign-up .signUpIMG img {
-    min-width: 100%;
 
-  }
-}
+

@@ -1,9 +1,10 @@
-import React from 'react'
-import "../../styles/components/ProductListing/TshirtIMG.css"
+import React, { useState } from 'react'
 import arrowRightGreen from '../../assets/productListing/arrowRightGreen.png'
-import { Divider, Dropdown, Space } from 'antd'
+import { Divider, Drawer, Dropdown, Space } from 'antd'
 import arrow_drop_down from '../../assets/productListing/arrow_drop_down.png'
 import arrow_right from '../../assets/arrow_right.png'
+import { LiaTimesSolid } from 'react-icons/lia'
+import LeftCollapse from '../LeftCollapse'
 
 const items = [
     {
@@ -40,6 +41,13 @@ const items = [
     },
 ]
 const TshirtIMG = () => {
+    const [open, setOpen] = useState(false)
+    const showDrawer = () => {
+        setOpen(true)
+    }
+    const onClose = () => {
+        setOpen(false)
+    }
     return (
         <>
             <div className='TshirtIMG'>
@@ -57,7 +65,26 @@ const TshirtIMG = () => {
                         <p className='Check-out-the-products'>Check out the products</p>
                         <p className='PRODUCTS-250'>250 PRODUCTS</p>
                     </div>
-                    <p className='filter'>Filter</p>
+                    <p className='filter' onClick={showDrawer}>Filter</p>
+                    <div>
+                        <Drawer
+                            className='searchNoneDrawer-main'
+                            // title='What are you looking for?'
+                            placement='right'
+                            onClose={onClose}
+                            open={open}
+                            headerStyle={{ display: 'none' }}
+                            width='326px'
+                        >
+                            <div className='closeIcon' style={{display: 'flex', alignItems: 'center'}}>
+                                <p style={{ fontSize: '24px', marginRight: '12rem' }}>Filter</p>
+                                <span ><LiaTimesSolid onClick={onClose} style={{width: '20px', height: '20px'}} /></span>
+                            </div>
+                            <div className='LeftCollapse-drawer' style={{ width: '300px' }}>
+                                <LeftCollapse />
+                            </div>
+                        </Drawer>
+                    </div>
                     <div className='productDropdown'>
                         <div className='checkProductText'>
                             <Dropdown
@@ -76,9 +103,9 @@ const TshirtIMG = () => {
                             </Dropdown>
                         </div>
                     </div>
-                </div>
-            </div>
-            <span className='dividerNone'><Divider/></span>
+                </div >
+            </div >
+            <span className='dividerNone'><Divider /></span>
         </>
     )
 }

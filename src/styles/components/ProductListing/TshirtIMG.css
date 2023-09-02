@@ -78,7 +78,7 @@
   align-items: center;
   justify-content: space-between;
   height: 80px;
-  border-bottom: 1px solid var(--Stroke-Gray, #CDCDCD);
+  border-bottom: 1px solid var(--Stroke-Gray, #cdcdcd);
   margin-bottom: 2rem;
 }
 .checkProductText {
@@ -122,6 +122,27 @@
 }
 .mobile-tshirtBTN {
   display: none;
+}
+.TshirtIMG .check-products .closeIcon{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.TshirtIMG .check-products .closeIcon p {
+  color: #000;
+
+  /* H5 */
+  font-family: 'Barlow';
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 34px; /* 141.667% */
+  text-transform: capitalize;
+}
+.check-products .closeIcon span {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
 }
 /* Check product mobile responsiveness */
 @media screen and (max-width: 500px) {
@@ -187,7 +208,7 @@
     align-items: center;
     justify-content: space-evenly;
   }
-  .feature{
+  .feature {
     display: none;
   }
   .arrow_drop_down {
@@ -195,10 +216,10 @@
     height: 3px;
     fill: var(--nav, #4e4e4e);
   }
-  .colon{
+  .colon {
     display: none;
   }
-  .dividerNone{
+  .dividerNone {
     display: none;
   }
 }

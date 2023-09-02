@@ -7,6 +7,8 @@ import signInIMG from '../assets/signInIMG.png'
 import googleIcon from '../assets/googleIcon.png'
 import facebookIcon from '../assets/facebookIcon.png'
 import ForgotModal from '../components/modal/ForgotModal'
+import { AiOutlineEye, AiOutlineEyeInvisible } from 'react-icons/ai';
+
 
 
 const SignUp = () => {
@@ -20,6 +22,19 @@ const SignUp = () => {
         console.log(key);
         setTabValue(key)
     };
+
+    const [passwordType, setPasswordType] = useState("password");
+    const [passwordInput, setPasswordInput] = useState("");
+    const handlePasswordChange = (evnt) => {
+        setPasswordInput(evnt.target.value);
+    }
+    const togglePassword = () => {
+        if (passwordType === "password") {
+            setPasswordType("text")
+            return;
+        }
+        setPasswordType("password")
+    }
     return (
         <>
             <div className='sign-up'>
@@ -55,17 +70,21 @@ const SignUp = () => {
                                         <label htmlFor='password'>
                                             Password <span>*</span>
                                         </label>
-                                        <input placeholder='Enter the Password' type='text' id='password' name='password' />
+                                        <div className='passwordEye'>
+                                            <div onClick={togglePassword} className='eyeOpenIcon'>{passwordType === "password" ? <AiOutlineEyeInvisible /> : <AiOutlineEye />}</div>
+                                            <input type={passwordType} onChange={handlePasswordChange} value={passwordInput} placeholder='Enter the Password' id='password' name='password' />
+                                        </div>
+                                        {/* <input placeholder='Enter the Password' type='text' id='password' name='password' /> */}
                                     </form>
                                     <div className='btns'>
                                         <button className='greenBTN'>Submit<img src={arrow_right} /></button>
-                                        <div><ForgotModal/></div>
+                                        <div><ForgotModal /></div>
                                     </div>
                                     <span className='orText'>
-                                    <p><span>or continue with</span></p>
+                                        <p><span>or continue with</span></p>
                                     </span>
                                     <div className='btns socialBTNs'>
-                                        <button className='socialBTN'> <img src={googleIcon} />Sign in with Google</button>
+                                        <button className='socialBTN'> <img src={googleIcon} /> Sign in with Google</button>
                                         <button className='socialBTN'> <img src={facebookIcon} />Sign in with Facebook</button>
                                     </div>
                                     <div className='copyRight'>© 2023 Profilewear.se</div>
@@ -114,7 +133,11 @@ const SignUp = () => {
                                         <label htmlFor='password'>
                                             Password <span>*</span>
                                         </label>
-                                        <input placeholder='Enter the Password' type='text' id='password' name='password' />
+
+                                        <div className='passwordEye'>
+                                            <div onClick={togglePassword} className='eyeOpenIcon'>{passwordType === "password" ? <AiOutlineEyeInvisible /> : <AiOutlineEye />}</div>
+                                            <input type={passwordType} onChange={handlePasswordChange} value={passwordInput} placeholder='Enter the Password' id='password' name='password' />
+                                        </div>
                                     </form>
                                     <div className='signUpCheckBoxes'>
                                         <Checkbox onChange={onChange}>I want to subscribe to the newsletter for latest offers and updates</Checkbox>
