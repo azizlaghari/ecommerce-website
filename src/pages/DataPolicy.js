@@ -65,8 +65,8 @@ const DataPolicy = () => {
                             <br />
                             We use analysis tools such as Google Analytics that help us collect statistics about what you do on our website. This with the help of:
                             <ul>
-                                <li>Cookies</li>
-                                <li>By the users themselves providing information (e.g. when subscribing to our newsletter)</li>
+                                <li className='greenArrowIcon'>Cookies</li>
+                                <li className='greenArrowIcon'>By the users themselves providing information (e.g. when subscribing to our newsletter)</li>
                             </ul>
                         </p>
                         <h5>What is a cookie?</h5>
@@ -80,7 +80,7 @@ const DataPolicy = () => {
                             <br />
                             Keep in mind that if you do not accept cookies, there may be functions on Swedish Profile Wear AB that will not work for you.
                             <ul>
-                                <li>
+                                <li className='greenArrowIcon'>
                                     Firefox
                                 </li>
                             </ul>
@@ -89,13 +89,13 @@ const DataPolicy = () => {
                             <br />
                             Visit the following guide: <a>https://support.microsoft.com/sv-se/help/17442/windows-internet-explorer-delete-manage-cookies</a>  •
                             <ul>
-                                <li>
+                                <li className='greenArrowIcon'>
                                     Google Chrome
                                 </li>
                             </ul>
                             Visit the following guide <a>https://support.google.com/chrome/answer/95647?co=GENIE.Platform%3DDesktop&hl=en</a>
                             <ul>
-                                <li>
+                                <li className='greenArrowIcon'>
                                     Safari
                                 </li>
                             </ul>

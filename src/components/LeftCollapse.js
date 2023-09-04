@@ -9,7 +9,7 @@ const onAfterChange = (value) => {
   console.log('onAfterChange: ', value);
 };
 
-const LeftCollapse = () => {
+const LeftCollapse = ({ hideCollapseTags }) => {
   const onChange = (key) => {
     console.log(key);
   };
@@ -34,6 +34,7 @@ const LeftCollapse = () => {
             <div className='Price-data'>
               <p className='priceAmount'>50.00 SEK - 120.00 SEK</p>
               <Slider
+                className='priceSlider'
                 range
                 step={10}
                 defaultValue={[20, 50]}
@@ -82,7 +83,7 @@ const LeftCollapse = () => {
 
             </div>
           </Panel>
-          <div className='tagsLeft'>
+          {!hideCollapseTags && <div className='tagsLeft'>
             <p className='tagsLeft-heading'>Check out more from Printwear</p>
             <div className='leftCollapse-tags'>
               <p className='tags'>thermomuggar</p>
@@ -93,9 +94,9 @@ const LeftCollapse = () => {
               <p className='tags'>print </p>
               <p className='tags'>tap toys & games</p>
             </div>
-            <button className='leftCollapse-replyBTN'><CgMailReply/>Go back to main category</button>
-          </div>
-        </Collapse>;
+            <button className='leftCollapse-replyBTN'><CgMailReply />Go back to main category</button>
+          </div>}
+        </Collapse>
       </div>
     </>
   )

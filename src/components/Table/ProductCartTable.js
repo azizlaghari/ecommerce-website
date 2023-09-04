@@ -112,7 +112,7 @@ const expandedRowRender = () => {
             test: 'Hello Expand'
         },
     ];
-    return <Table columns={columns} dataSource={data} pagination={false} />;
+    return <Table className='ExpandedTable' columns={columns} dataSource={data} pagination={false} />;
 };
 
 
@@ -120,13 +120,14 @@ const ProductCartTable = () => {
     return (
 
         <Table
-        columns={columns}
-        expandable={{
-          expandedRowRender,
-          defaultExpandedRowKeys: ['0'],
-        }}
-        dataSource={data}
-      />
+            className='ProductCartTable'
+            columns={columns}
+            expandable={{
+                expandedRowRender,
+                defaultExpandedRowKeys: ['0'],
+            }}
+            dataSource={data}
+        />
 
     )
 

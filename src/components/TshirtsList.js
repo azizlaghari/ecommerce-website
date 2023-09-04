@@ -135,15 +135,15 @@ const tshirtData = [
   },
 ]
 
-const TshirtsList = () => {
+const TshirtsList = ({ hideSoftTshirtBox, hideCollapseTags }) => {
   return (
     <>
       <div className='leftCollapse-parent'>
         <div className='LeftCollapse-main'>
-          <LeftCollapse />
+          <LeftCollapse hideCollapseTags={hideCollapseTags} />
         </div>
         <div className='TshirtsList'>
-          <div className='softTshirtBox'>
+          {!hideSoftTshirtBox && <div className='softTshirtBox' >
             <div className='leftText'>
               <p className='title-softTshirtBox'>Soft T-shirts for pleasant comfort</p>
               <p className='discp-softTshirtBox'>
@@ -156,7 +156,8 @@ const TshirtsList = () => {
             <div className='SoftTshirtBox-modal'>
               <SoftTshirtBox />
             </div>
-          </div>
+          </div>}
+
           <div className='tshirtCards'>
             <div className='tshirtCard'>
               <Row>

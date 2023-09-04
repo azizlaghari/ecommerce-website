@@ -140,9 +140,47 @@
 }
 .PrintInformation .productCardSummary .summaryCard .summaryTop .leftSide p {
   padding: 0.2rem 0;
+  color: var(--Black, #2a2a2a);
+
+  /* Filter Options */
+  font-family: 'Barlow';
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px; /* 123.077% */
+}
+.PrintInformation .productCardSummary .summaryCard .summaryTop .leftSide .totalTitle {
+  color: #102434;
+
+  /* Table Header Text */
+  font-family: 'Barlow';
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 14px; /* 107.692% */
 }
 .PrintInformation .productCardSummary .summaryCard .summaryTop .rightSide p {
   padding: 0.2rem 0;
+  color: var(--Body-Text-Color, #444);
+  text-align: right;
+
+  /* Product Price Text */
+  font-family: 'Barlow';
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 14px; /* 100% */
+}
+.PrintInformation .productCardSummary .summaryCard .summaryTop .rightSide .totalAmount {
+  color: var(--Black, #2a2a2a);
+  text-align: right;
+
+  /* Product Details Price */
+  font-family: 'Barlow';
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 18px; /* 100% */
 }
 .PrintInformation .productCardSummary .summaryCard .summaryTop .rightSide p:nth-child(2) {
   text-align: right;
@@ -313,13 +351,9 @@
   font-weight: 600;
   line-height: 14px;
 }
-.PrintInformation
-  .productCardSummary
-  .CustomizeDetails
-  .colorsSeletions
-  div{
-    width: 100%;
-  }
+.PrintInformation .productCardSummary .CustomizeDetails .colorsSeletions div {
+  width: 100%;
+}
 .PrintInformation
   .productCardSummary
   .CustomizeDetails

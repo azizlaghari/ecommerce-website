@@ -64,6 +64,10 @@
 .DataPolicy .DataPolicyQuestion ul {
   list-style-image: url('../../assets//greenEllipse.png');
 }
+.DataPolicy .DataPolicyQuestion .greenArrowIcon{
+  list-style-image: url('../../assets/greenArrowIcon.png');
+}
+
 .DataPolicy .DataPolicyQuestion ul li {
   color: var(--body-text-color, #444);
 

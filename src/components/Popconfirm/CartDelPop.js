@@ -21,7 +21,6 @@ const CartDelPop = () => (
             okText="Remove"
             cancelText="Move to favorites"
         >
-
             <img src={deleteIcon} />
         </Popconfirm>
     </div>

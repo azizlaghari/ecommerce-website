@@ -51,7 +51,16 @@ const HeroSection = () => {
       <div className='hero'>
         <div className='image'>
           <img src={HeroImage}></img>
+          <div className='heroIMGtags'>
+            <div className='seaction4-tags'>
+              <p className='tags'>T-shirt</p>
+              <p className='tags'>Polo</p>
+              <p className='tags'>Jackets</p>
+              <p className='tags'>pens</p>
+            </div>
+          </div>
         </div>
+
         <div className='textBox'>
           <h1 className='headingHero'>Clothing with print</h1>
           <p className='textHero'>

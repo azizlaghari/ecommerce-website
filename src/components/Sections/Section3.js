@@ -47,8 +47,7 @@ const Section3 = () => {
                                 <p className='rightparagraph-Section3'>
                                     We have all class shirts with print! In addition to choosing and creating your own motif, it is equally important to choose the right shirt for your school class. Here with us, you will find many different school shirts, everything from class t-shirts to class hoodies, among other things. We deliver to all of Sweden, so all schools are welcome to order class shirts online from us with fast delivery and cheap shipping.
                                     <br />
-                                    <br />
-                                    With us, you can always count on us to deliver high-class class shirts on your terms!
+                                    
                                 </p>
                                 <button className='heroBTN sectionRightBTN'>Show products<img src={arrow_right} /></button>
                             </div>

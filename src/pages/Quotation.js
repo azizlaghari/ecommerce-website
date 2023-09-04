@@ -28,17 +28,25 @@ const Quotation = () => {
                             <form>
                                 <label htmlFor="email">Email<span>*</span></label>
                                 <input type="text" name="email" placeholder='Enter your email id' required />
-                                <div>
-                                    <label htmlFor="firstname">First Name<span>*</span></label>
-                                    <input type="text" name="firstname" placeholder='Enter your first name' required />
-                                    <label htmlFor="lastname">Last Name<span>*</span></label>
-                                    <input type="text" name="lastname" placeholder='Enter your last name' required />
+                                <div style={{display: 'flex', columnGap: '1rem'}}>
+                                    <div style={{display: 'flex', flexDirection: 'column', width: '50%'}}>
+                                        <label htmlFor="firstname">First Name<span>*</span></label>
+                                        <input type="text" name="firstname" placeholder='Enter your first name' required />
+                                    </div>
+                                    <div style={{display: 'flex', flexDirection: 'column' , width: '50%'}}>
+                                        <label htmlFor="lastname">Last Name<span>*</span></label>
+                                        <input type="text" name="lastname" placeholder='Enter your last name' required />
+                                    </div>
                                 </div>
-                                <div >
-                                    <label htmlFor="company">Company</label>
-                                    <input type="company" name="company" placeholder='Enter your company name' required />
-                                    <label htmlFor="telephone">Telephone<span>*</span></label>
-                                    <input type="number" name="telephone" placeholder='Enter your phone no.' required />
+                                <div style={{display: 'flex', columnGap: '1rem'}}>
+                                    <div style={{display: 'flex', flexDirection: 'column', width: '50%'}}>
+                                        <label htmlFor="company">Company</label>
+                                        <input type="company" name="company" placeholder='Enter your company name' required />
+                                    </div>
+                                    <div style={{display: 'flex', flexDirection: 'column', width: '50%'}}>
+                                        <label htmlFor="telephone">Telephone<span>*</span></label>
+                                        <input type="number" name="telephone" placeholder='Enter your phone no.' required />
+                                    </div>
                                 </div>
                                 <label htmlFor="message">Message<span>*</span></label>
                                 <textarea type='text' placeholder='Your message'></textarea>

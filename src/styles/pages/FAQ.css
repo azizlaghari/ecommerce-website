@@ -112,6 +112,20 @@
   height: 75px;
   flex-shrink: 0;
 }
+/* .faq .ant-tabs-nav {
+  border-left: 1px solid #eaeaea;
+} */
+.faqTabMain .ant-tabs-ink-bar {
+  left: 0;
+  border-left: 3px solid var(--Pink, #f6bacb);
+}
+.faqTabMain .ant-tabs-content-holder {
+  border-left: 0;
+}
+.faqTabMain .ant-tabs-ink-bar-animated{
+  background:  #f6bacb;
+
+}
 /* LAPTOP responsiveness */
 @media screen and (max-width: 800px) {
   .faq .faqBox .faqContent h2 {
@@ -148,7 +162,7 @@
   .faq .contactUsBox {
     height: auto;
   }
-  .faq .contactUsBox button{
+  .faq .contactUsBox button {
     margin-top: 10rem;
   }
 }

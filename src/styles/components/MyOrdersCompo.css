@@ -331,7 +331,8 @@
 .orderDrawer .productSizeBTNs {
   display: flex;
   align-items: center;
-  column-gap: 3rem;
+  column-gap: .5rem;
+  margin-left: 6rem;
 }
 
 .orderDrawer .productSizeBTNs p {
@@ -402,6 +403,11 @@
   letter-spacing: 0.6px;
   text-transform: uppercase;
 }
+.orderDrawer .orderPrice .priceRightText {
+  display: flex;
+  flex-direction: column;
+  row-gap: 5px;
+}
 .orderDrawer .orderPrice .priceRightText p {
   color: var(--black, #2a2a2a);
   text-align: right;
@@ -413,7 +419,7 @@
   font-weight: 500;
   line-height: 14px; /* 100% */
 }
-.orderDrawer .ordersBTN{
+.orderDrawer .ordersBTN {
   display: flex;
   align-items: center;
   column-gap: 2rem;
@@ -436,7 +442,7 @@
   cursor: pointer;
   border: none;
 }
-.orderDrawer .ordersBTN button:nth-child(1):hover{
+.orderDrawer .ordersBTN button:nth-child(1):hover {
   border: 2px solid var(--dark-green, #11505d);
   background: var(--white, #fff);
   color: var(--dark-green, #11505d);
@@ -458,10 +464,9 @@
   line-height: 24px; /* 160% */
   cursor: pointer;
 }
-.orderDrawer .ordersBTN button:nth-child(2):hover{
+.orderDrawer .ordersBTN button:nth-child(2):hover {
   background: var(--dark-green, #11505d);
   color: var(--white, #fff);
-
 }
 
 /* MOBILE responsiveness */

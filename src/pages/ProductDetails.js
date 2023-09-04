@@ -5,6 +5,7 @@ import ellipse from '../assets/productListing/ellipse.png'
 import product1 from '../assets/product1.png'
 import { AiFillCaretRight, AiOutlineHeart } from 'react-icons/ai'
 import arrow_right from '../assets/arrow_right.png'
+import greenTickMark from '../assets/greenTickMark.png'
 import { FcCheckmark } from 'react-icons/fc'
 
 // img
@@ -60,30 +61,29 @@ import ColorDrawerCompo from '../components/ColorDrawerCompo'
 import colorsWheel from '../assets/colorsWheel.png'
 import heartWhiteIcon from '../assets/heartWhiteIcon.png'
 
-import Carousel from "react-multi-carousel";
-import "react-multi-carousel/lib/styles.css";
+import Carousel from 'react-multi-carousel'
+import 'react-multi-carousel/lib/styles.css'
 
 // Recently Viewed Articles carousel responsive
 const responsive = {
     superLargeDesktop: {
         // the naming can be any, depends on you.
         breakpoint: { max: 4000, min: 3000 },
-        items: 5
+        items: 5,
     },
     desktop: {
         breakpoint: { max: 3000, min: 1024 },
-        items: 6
+        items: 6,
     },
     tablet: {
         breakpoint: { max: 1024, min: 464 },
-        items: 4
+        items: 4,
     },
     mobile: {
         breakpoint: { max: 464, min: 0 },
-        items: 1
-    }
-};
-
+        items: 1,
+    },
+}
 
 // Color Drawer Data
 const colorDrawerData = [
@@ -340,6 +340,16 @@ const items = [
 ]
 
 const ProductDetails = () => {
+    const [productColor, setProductColor] = useState(null)
+    const [productPrint, setProductPrint] = useState(null)
+    const [productDelivery, setProductDelivery] = useState(null)
+
+    // main product image change state
+    const [activeIMG, setActiveIMG] = useState(product1)
+    const onIMGClick = (image) => {
+        setActiveIMG(image)
+    }
+
     // Open and Close Drawer function
     const [openColor, setOpenColor] = useState(false)
     const showColorDrawer = () => {
@@ -387,7 +397,7 @@ const ProductDetails = () => {
                 </div>
                 <div className='productContainer'>
                     <div className='productIMG'>
-                        <img src={product1} />
+                        <img src={activeIMG} />
                     </div>
                     <div className='productDetails'>
                         <div className='tagsIcons'>
@@ -400,24 +410,27 @@ const ProductDetails = () => {
                             </div>
                         </div>
                         <div className='productDetails-text'>
-                            <p className='productDetails-brands' >Fruit of the Loom®</p>
+                            <p className='productDetails-brands'>Fruit of the Loom®</p>
                             <h5>Hoodie with kangaroo pocket | Hooded Sweat</h5>
                             <p className='productDetails-article'>Article #622080</p>
                             <p className='productDetails-price'>
                                 <span>196.00 SEK</span> per piece
                             </p>
                             <p>This is the text you want to select.</p>
-
                         </div>
                         <div className='productDetails-drawer'>
                             <div className='productDetails-text' onClick={showColorDrawer}>
                                 <div className='productDetails-heading'>
                                     <div>
-                                        <span className='serialNum' >01</span>{' '}
+                                        {productColor !== null ? (
+                                            <img src={greenTickMark} className='greenMark'></img>
+                                        ) : (
+                                            <span className='serialNum'>01</span>
+                                        )}
                                     </div>
                                     <div>
                                         <p className='productDetails-heading1'>Color</p>
-                                        <p className='productDetails-subheading' >
+                                        <p className='productDetails-subheading'>
                                             Select the preferred color from the list
                                         </p>
                                     </div>
@@ -426,32 +439,37 @@ const ProductDetails = () => {
                             </div>
                             <Drawer width='425' className='color-drawer' placement='right' open={openColor}>
                                 <div className='ColorDrawer-closeBTN'>
-                                    <p >Color</p>
+                                    <p>Color</p>
                                     <LiaTimesSolid onClick={onCloseColor} />
                                 </div>
-                                <div className='ColorDrawerData' >
+                                <div className='ColorDrawerData'>
                                     {colorDrawerData?.map((item, index) => (
-                                        <div className='ColorDrawer' key={index} >
-                                            <ColorDrawerCompo images={item.images} title={item.title} />
+                                        <div className='ColorDrawer' key={index}>
+                                            <ColorDrawerCompo
+                                                images={item.images}
+                                                title={item.title}
+                                                setProductColor={setProductColor}
+                                            />
                                         </div>
                                     ))}
-                                    {/* <button className='drawerBTN' src={arrow_right} >
-                                        Confirm selection <img src={arrow_right} />
-                                    </button> */}
                                 </div>
-                                <button className='drawerBTN' src={arrow_right} >
+                                <button className='drawerBTN' src={arrow_right}>
                                     Confirm selection <img src={arrow_right} />
                                 </button>
                             </Drawer>
                             <div className='productDetails-text' onClick={showPrintDrawer}>
                                 <div className='productDetails-heading'>
                                     <div>
-                                        <span className='serialNum'>02</span>{' '}
+                                        {productPrint !== null ? (
+                                            <img src={greenTickMark} className='greenMark'></img>
+                                        ) : (
+                                            <span className='serialNum'>02</span>
+                                        )}
                                     </div>
                                     <div>
                                         <p className='productDetails-heading1'>Print</p>
                                         <p className='productDetails-subheading'>
-                                            Select the preferred color from the list
+                                            Select the type of print you want in your product
                                         </p>
                                     </div>
                                 </div>
@@ -463,10 +481,14 @@ const ProductDetails = () => {
                                     <LiaTimesSolid onClick={onClosePrint} />
                                 </div>
                                 <div className='printDrawer-data'>
-                                    <div>
+                                    <div onClick={() => setProductPrint('')}
+                                    >
                                         <p>No Print</p>
-                                        <p>1-Color Print</p>
-                                        <p >2-Color Print<FcCheckmark style={{ marginLeft: '10rem' }} /></p>
+                                        <p >1-Color Print</p>
+                                        <p>
+                                            2-Color Print
+                                            <FcCheckmark style={{ marginLeft: '10rem' }} />
+                                        </p>
                                         <p>3-Color Print</p>
                                         <p>4-Color Print</p>
                                     </div>
@@ -478,12 +500,15 @@ const ProductDetails = () => {
                             <div className='productDetails-text' onClick={showDeliveryDrawer}>
                                 <div className='productDetails-heading '>
                                     <div>
-                                        <span className='serialNum'>03</span>{' '}
+                                        {productDelivery !== null ? (
+                                            <img src={greenTickMark} className='greenMark'></img>
+                                        ) : (
+                                            <span className='serialNum'>03</span>)}
                                     </div>
                                     <div>
                                         <p className='productDetails-heading1'>Delivery Type</p>
                                         <p className='productDetails-subheading'>
-                                            Select the preferred color from the list
+                                            Select the preferred delivery time
                                         </p>
                                     </div>
                                 </div>
@@ -495,13 +520,15 @@ const ProductDetails = () => {
                                     <LiaTimesSolid onClick={onCloseDelivery} />
                                 </div>
                                 <div className='deliveryDrawer-data'>
-                                    <div>
+                                    <div onClick={() => setProductDelivery('')}>
                                         <p>
                                             Normal Delivery <span>0.00 SEK</span>
                                         </p>
                                         <p>
-                                            Express Delivery (7 days)<span >500.00 SEK <FcCheckmark style={{ marginLeft: '11rem' }} /></span>
-
+                                            Express Delivery (7 days)
+                                            <span>
+                                                500.00 SEK <FcCheckmark style={{ marginLeft: '11rem' }} />
+                                            </span>
                                         </p>
                                         <p>
                                             Express Delivery (5 days)<span>1,200.00 SEK</span>
@@ -520,12 +547,24 @@ const ProductDetails = () => {
                                     </div>
                                     <div>
                                         <p className='productDetails-heading1'>Quantity</p>
-                                        <p className='productDetails-subheading'>
-                                            Select the preferred color from the list
-                                        </p>
+                                        <p className='productDetails-subheading'>Select the number of products you want</p>
                                     </div>
                                 </div>
                                 <AiFillCaretRight />
+                            </div>
+                            <div className='quantitySelect'>
+                                <ul style={{ listStyleType: 'none' }}>
+                                    <li><span style={{ color: 'red' }}>*</span>  The minimum amount quantity 25pcs</li>
+                                    <li><span style={{ color: 'red' }}>*</span>  Increase with 25pcs more and get 10% discount</li>
+                                </ul>
+                                <span className='sizeBTN'>
+                                    <p>XS</p>
+                                    <p>S   |   25</p>
+                                    <p>M   |   25</p>
+                                    <p>L   |   25</p>
+                                    <p>XL   |   25</p>
+                                    <p>XXL</p>
+                                </span>
                             </div>
 
                             <div className='productDetails-drawer-price'>
@@ -591,16 +630,40 @@ const ProductDetails = () => {
                     </div>
                 </div>
                 <div className='imageSlider'>
-                    <img src={productDetailsIMG1} />
-                    <img src={productDetailsIMG2} />
-                    <img src={productDetailsIMG3} />
-                    <img src={productDetailsIMG4} />
-                    <img src={productDetailsIMG5} />
-                    <img src={productDetailsIMG6} />
+                    <img
+                        src={productDetailsIMG1}
+                        style={{ border: activeIMG == productDetailsIMG1 ? '2px solid #32CD32' : 'none' }}
+                        onClick={() => onIMGClick(productDetailsIMG1)}
+                    />
+                    <img
+                        src={productDetailsIMG2}
+                        style={{ border: activeIMG == productDetailsIMG2 ? '2px solid #32CD32' : 'none' }}
+                        onClick={() => onIMGClick(productDetailsIMG2)}
+                    />
+                    <img
+                        src={productDetailsIMG3}
+                        style={{ border: activeIMG == productDetailsIMG3 ? '2px solid #32CD32' : 'none' }}
+                        onClick={() => onIMGClick(productDetailsIMG3)}
+                    />
+                    <img
+                        src={productDetailsIMG4}
+                        style={{ border: activeIMG == productDetailsIMG4 ? '2px solid #32CD32' : 'none' }}
+                        onClick={() => onIMGClick(productDetailsIMG4)}
+                    />
+                    <img
+                        src={productDetailsIMG5}
+                        style={{ border: activeIMG == productDetailsIMG5 ? '2px solid #32CD32' : 'none' }}
+                        onClick={() => onIMGClick(productDetailsIMG5)}
+                    />
+                    <img
+                        src={productDetailsIMG6}
+                        style={{ border: activeIMG == productDetailsIMG6 ? '2px solid #32CD32' : 'none' }}
+                        onClick={() => onIMGClick(productDetailsIMG6)}
+                    />
                 </div>
                 <div className='description'>
-                    <p >Description</p>
-                    <p >
+                    <p>Description</p>
+                    <p>
                         Hoodie with kangaroo pocket. A hooded sweatshirt with an excellent fit! This shirt is
                         made of 80% cotton and 20% polyester. The cotton is so-called Belcoro® yarn, which gives
                         the sweater a soft feel and good quality. Belcoro® yarn also makes the sweater optimal
@@ -663,14 +726,18 @@ const ProductDetails = () => {
                     <div className='backgroungIMG'>
                         <Carousel responsive={responsive}>
                             {recentlyViewedData?.map((item, index) => (
-                                <RecentlyViewedCompo key={index} image={item.image} title={item.title} price={item.price} />
+                                <RecentlyViewedCompo
+                                    key={index}
+                                    image={item.image}
+                                    title={item.title}
+                                    price={item.price}
+                                />
                             ))}
                         </Carousel>
-
                     </div>
                 </div>
             </div>
-        </Layout>
+        </Layout >
     )
 }
 

@@ -1,13 +1,14 @@
-.ProductCartTable .ant-table-cell {
-  color: var(--body-text-color, #444);
 
-  /* Table Cell Text */
-  font-family: Barlow;
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 14px; /* 100% */
+.ProductCartTable .ant-pagination {
+  display: none;
 }
-.ProductCartTable .ant-pagination{
-    display: none;
+.ProductCartTable .ant-table-thead >tr>th {
+  color: var(--Medium-Gray, #96a0af);
+
+  /* Table Header Text */
+  font-family: 'Barlow';
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 14px; /* 107.692% */
 }

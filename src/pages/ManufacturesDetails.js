@@ -92,7 +92,8 @@ const ManufacturesDetails = () => {
                     </div>
                     <div className='ProductPage'>
                         <div className='TshirtsList-main'>
-                            <TshirtsList />
+                            {/* sanding props to hide some data */}
+                            <TshirtsList hideSoftTshirtBox={true} hideCollapseTags={true} />
                         </div>
                         <div className='needHelpBox'>
                             <h2 className='needHelpBox-heading'>Need help? We are happy to help you</h2>

@@ -53,7 +53,7 @@ const CartFullDrawer1 = () => {
                                 <p>Azure Blue  |   2-Color Print   |   Express Delivery (7 days)</p>
                             </span>
                         </div>
-                        <div className='icons'>
+                        <div className='iconsEditDelete'>
                             <img src={editIcon} />
                             <span><CartDelPop /></span>
                         </div>

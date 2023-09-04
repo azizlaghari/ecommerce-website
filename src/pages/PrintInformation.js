@@ -33,9 +33,14 @@ const PrintInformation = () => {
         console.log(`selected ${value}`);
     };
     // product customization tab open/close state
-    const [isVisible, setIsVisible] = useState(false);
+    const [isVisible, setIsVisible] = useState("toggle");
     const toggle = () => {
         setIsVisible(prevState => !prevState);
+    };
+
+    const [isVisibleProduct2, setIsVisibleProduct2] = useState(false);
+    const toggleProduct2 = () => {
+        setIsVisibleProduct2(prevState => !prevState);
     };
 
     // upload box
@@ -225,7 +230,7 @@ const PrintInformation = () => {
                                     <button>Save details <img src={arrowRightGreen} /></button>
                                 </div>
                             )}
-                            <div className='productCard'>
+                            <div className='productCard' onClick={toggleProduct2}>
                                 <div className='productIMGDetails'>
                                     <img src={shoppingCartIMG2} />
                                     <div className='productDetails'>
@@ -238,6 +243,145 @@ const PrintInformation = () => {
                                     <p>37,905.00 SEK</p>
                                 </div>
                             </div>
+                            {isVisibleProduct2 && (
+                                <div className='productCustomization'>
+                                    <div className='CustomizeDetails'>
+                                        <p>Customize Details</p>
+                                        <div className='CustomizeDetailsText'>
+                                            <div>
+                                                <p>Print File
+                                                    <Tooltip title="File info">
+                                                        <img src={info} />
+                                                    </Tooltip>
+                                                </p>
+                                                <div className='summaryRadioBTN'>
+                                                    <Radio.Group onChange={onChangeFile} value={fileValue}>
+                                                        <Radio value={'upload-file-later'}>Upload my print files later</Radio>
+                                                        <Radio value={'upload-file-now'}>Upload my print files now</Radio>
+                                                    </Radio.Group>
+                                                </div>
+                                            </div>
+                                            <div className='fileUploadField'>
+                                                <div className='uploadBox'>
+                                                    <Upload className='upload' {...props}>
+                                                        <div> <img src={uploadICON} /><p>Select files to upload (the file size should not exceed 5.0MB)</p>
+                                                        </div>
+                                                    </Upload>
+                                                </div>
+                                                <div className='antDtags'>
+                                                    <span>
+                                                        <Tag closeIcon onClose={preventDefault}>
+                                                            logotype.pdf (1.0 MB)
+                                                            <LiaTimesSolid />
+                                                        </Tag>
+                                                    </span>
+                                                    <span>
+                                                        <Tag closeIcon onClose={preventDefault}>
+                                                            shape-one.eps (2.7 MB)
+                                                            <LiaTimesSolid />
+                                                        </Tag>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div className='CustomizeDetailsText'>
+                                            <p>Print Color
+                                                <Tooltip title="Color info">
+                                                    <img src={info} />
+                                                </Tooltip>
+                                            </p>
+                                            <div className='summaryRadioBTN'>
+                                                <Radio.Group onChange={onChangeColor} value={colorValue}>
+                                                    <Radio value={'color-suggestion'}>I want suggestion for printing color</Radio>
+                                                    <Radio value={'specify-color'}>I want to specify print color</Radio>
+                                                </Radio.Group>
+                                            </div>
+                                        </div>
+                                        <div className='colorsSeletions'>
+                                            <div>
+                                                <p>Color 01 <span>*</span> <img src={colorsWheel} /></p>
+                                                <Select
+                                                    defaultValue="Select"
+                                                    className='color-select'
+                                                    // style={{
+                                                    //     width: 120,
+                                                    // }}
+                                                    onChange={handleChange}
+                                                    options={[
+                                                        {
+                                                            value: 'blue',
+                                                            label: 'Blue',
+                                                        },
+                                                        {
+                                                            value: 'green',
+                                                            label: 'Green',
+                                                        },
+                                                        {
+                                                            value: 'red',
+                                                            label: 'Red',
+                                                        },
+                                                    ]}
+                                                />
+                                            </div>
+                                            <div>
+                                                <p>Color 02 <span>*</span> <img src={colorsWheel} /></p>
+                                                <Select
+                                                    defaultValue="Select"
+                                                    className='color-select'
+                                                    // style={{
+                                                    //     width: 120,
+                                                    // }}
+                                                    onChange={handleChange}
+                                                    options={[
+                                                        {
+                                                            value: 'blue',
+                                                            label: 'Blue',
+                                                        },
+                                                        {
+                                                            value: 'green',
+                                                            label: 'Green',
+                                                        },
+                                                        {
+                                                            value: 'red',
+                                                            label: 'Red',
+                                                        },
+                                                    ]}
+                                                />
+                                            </div>
+                                            <div>
+                                                <p>Color 03 <span>*</span> <img src={colorsWheel} /></p>
+                                                <Select
+                                                    defaultValue="Select"
+                                                    className='color-select'
+                                                    // style={{
+                                                    //     width: 120,
+                                                    // }}
+                                                    onChange={handleChange}
+                                                    options={[
+                                                        {
+                                                            value: 'blue',
+                                                            label: 'Blue',
+                                                        },
+                                                        {
+                                                            value: 'green',
+                                                            label: 'Green',
+                                                        },
+                                                        {
+                                                            value: 'red',
+                                                            label: 'Red',
+                                                        },
+                                                    ]}
+                                                />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className='messageInfo'>
+                                        <p>Message <span>*</span></p>
+                                        <textarea placeholder='Your message'></textarea>
+                                    </div>
+                                    <button>Save details <img src={arrowRightGreen} /></button>
+                                </div>
+                            )}
                         </div>
                         <div className='summaryCard'>
                             <h6>Order summary</h6>
@@ -254,24 +398,23 @@ const PrintInformation = () => {
                             <Divider />
                             <div className='summaryTop'>
                                 <div className='leftSide'>
-                                    <p>Item (s) Total</p>
-                                    <p>Shipping Charges</p>
+                                    <p>Sub Total</p>
+                                    <p>Tax (25%)</p>
                                 </div>
                                 <div className='rightSide'>
-                                    <p>1,04,520.00 SEK</p>
-                                    <p>500.00 SEK</p>
+                                    <p>1,05,020.00 SEK</p>
+                                    <p>26,255.00 SEK</p>
                                 </div>
                             </div>
                             <Divider />
                             <div className='summaryTop'>
                                 <div className='leftSide'>
-                                    <p>Grand Total</p>
+                                    <p className='totalTitle'>Grand Total</p>
                                 </div>
                                 <div className='rightSide'>
-                                    <p>1,04,520.00 SEK</p>
+                                    <p className='totalAmount'>1,31,275.00 SEK</p>
                                 </div>
                             </div>
-
                         </div>
                     </div>
                     <div className='summaryCardMobile'>

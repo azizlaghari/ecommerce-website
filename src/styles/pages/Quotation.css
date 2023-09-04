@@ -38,6 +38,7 @@
   display: flex;
   align-items: start;
   column-gap: 2rem;
+  margin-top: 2rem;
 }
 .quotation .inputsSummary .quotationsInputs {
   width: 70%;
@@ -86,7 +87,7 @@
   font-weight: 500;
   line-height: 16px; /* 114.286% */
   width: 100% !important;
-  margin-top: 3px !important;
+  margin-top: 6px !important;
 }
 .quotation .inputsSummary .quotationsInputs form input:focus-visible {
   outline: none !important;

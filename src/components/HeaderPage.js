@@ -7,7 +7,7 @@ import SearchDrawer from './Drawer/SearchDrawer'
 import SearchNone from './Drawer/SearchNone'
 import CartEmptyDrawer from './Drawer/CartEmptyDrawer'
 import FavoritesDrawer from './Drawer/FavoritesDrawer'
-// import CartFullDrawer1 from './Drawer/CartFullDrawer1'
+import CartFullDrawer1 from './Drawer/CartFullDrawer1'
 // import FavoriteProductsDrawer from './Drawer/FavoriteProductsDrawer'
 import { MdOutlineArrowDropDown } from 'react-icons/md'
 
@@ -147,7 +147,7 @@ const HeaderPage = () => {
         <Tooltip placement="bottom" title={text}>
           <button style={{all: "unset"}}> <CartEmptyDrawer /></button>
         </Tooltip>
-        {/* <CartFullDrawer1 /> */}
+        <CartFullDrawer1 />
         <CgProfile />
       </div>
     </div>

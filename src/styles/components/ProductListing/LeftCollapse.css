@@ -34,6 +34,12 @@
 .leftCollapse-Container .ant-slider-track {
   background-color: #32cd32;
 }
+.priceSlider .ant-slider-handle:hover::after {
+  background-origin: 0 0 0 2px #32cd32;
+}
+.priceSlider .ant-slider:hover .ant-slider-track {
+  background-color: #32cd32;
+}
 
 .Sub-categories-data {
   display: flex;
@@ -153,7 +159,7 @@
   .information-container {
     margin-bottom: 3rem;
   }
-  .needHelpBox{
+  .needHelpBox {
     margin-top: 3rem;
   }
 }

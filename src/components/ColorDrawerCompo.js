@@ -1,10 +1,10 @@
 import React from 'react'
 // import { FcCheckmark } from 'react-icons/fc'
 
-const ColorDrawerCompo = ({ images, title }) => {
+const ColorDrawerCompo = ({ images, title , setProductColor}) => {
     return (
         <div>
-            <div className='ColorDrawerCompo' >
+            <div className='ColorDrawerCompo' onClick={()=>setProductColor('')}>
                 <div className='colorIMG-title'>
                     <img src={images}  />
                     <p>{title}</p>
