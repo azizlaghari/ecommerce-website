@@ -8,7 +8,7 @@ import SearchNone from './Drawer/SearchNone'
 import CartEmptyDrawer from './Drawer/CartEmptyDrawer'
 import FavoritesDrawer from './Drawer/FavoritesDrawer'
 import CartFullDrawer1 from './Drawer/CartFullDrawer1'
-// import FavoriteProductsDrawer from './Drawer/FavoriteProductsDrawer'
+import FavoriteProductsDrawer from './Drawer/FavoriteProductsDrawer'
 import { MdOutlineArrowDropDown } from 'react-icons/md'
 
 const items = [
@@ -143,7 +143,7 @@ const HeaderPage = () => {
         <SearchNone />
         <SearchDrawer />
         <FavoritesDrawer />
-        {/* <FavoriteProductsDrawer /> */}
+        <FavoriteProductsDrawer />
         <Tooltip placement="bottom" title={text}>
           <button style={{all: "unset"}}> <CartEmptyDrawer /></button>
         </Tooltip>

@@ -1,11 +1,11 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import Layout from '../layout/Layout'
 import { Drawer, Tabs } from 'antd'
-import ellipse from '../assets/productListing/ellipse.png'
 import product1 from '../assets/product1.png'
-import { AiFillCaretRight, AiOutlineHeart } from 'react-icons/ai'
+import ellipse from '../assets/productListing/ellipse.png'
 import arrow_right from '../assets/arrow_right.png'
 import greenTickMark from '../assets/greenTickMark.png'
+import { AiFillCaretRight, AiOutlineHeart } from 'react-icons/ai'
 import { FcCheckmark } from 'react-icons/fc'
 
 // img
@@ -60,6 +60,8 @@ import ColorDrawerCompo from '../components/ColorDrawerCompo'
 
 import colorsWheel from '../assets/colorsWheel.png'
 import heartWhiteIcon from '../assets/heartWhiteIcon.png'
+import infoIcon from '../assets/infoIcon.png'
+import local_shipping from '../assets/local_shipping.png'
 
 import Carousel from 'react-multi-carousel'
 import 'react-multi-carousel/lib/styles.css'
@@ -90,30 +92,37 @@ const colorDrawerData = [
     {
         images: colorDrawerIMG1,
         title: 'Azure Blue',
+        color: 'blue'
     },
     {
         images: colorDrawerIMG2,
-        title: 'Azure Blue',
+        title: 'Black',
+        color: 'black'
     },
     {
         images: colorDrawerIMG3,
-        title: 'Azure Blue',
+        title: 'Bottle Green',
+        color: 'green'
     },
     {
         images: colorDrawerIMG4,
-        title: 'Azure Blue',
+        title: 'Burgundy',
+        color: 'burgundy'
     },
     {
         images: colorDrawerIMG5,
-        title: 'Azure Blue',
+        title: 'Classic Olive',
+        color: 'classicOlive'
     },
     {
         images: colorDrawerIMG6,
-        title: 'Azure Blue',
+        title: 'Dark Heather Gray',
+        color: 'gray'
     },
     {
         images: colorDrawerIMG7,
-        title: 'Azure Blue',
+        title: 'Deep Navy',
+        color: 'navy'
     },
 ]
 // Recently Viewed Data
@@ -340,9 +349,14 @@ const items = [
 ]
 
 const ProductDetails = () => {
+    // state for green tick marks
     const [productColor, setProductColor] = useState(null)
     const [productPrint, setProductPrint] = useState(null)
-    const [productDelivery, setProductDelivery] = useState(null)
+
+    // small tick mark state
+    const [deliveryType, setDeliveryType] = useState(null)
+    // const [printType, setPrintType] = useState(null)
+    const [colorType, setcolorType] = useState(null)
 
     // main product image change state
     const [activeIMG, setActiveIMG] = useState(product1)
@@ -382,6 +396,38 @@ const ProductDetails = () => {
     const onCloseContact = () => {
         setOpenContact(false)
     }
+    // quantity container show state
+    const [isVisibleQuantity, setVisibleQuantity] = useState(false);
+    const QuantityVisible = () => {
+        setVisibleQuantity(prevState => !prevState);
+    };
+
+    // size button state
+    const [sizeBTN, setSizeBTN] = useState([])
+    const sizeOnChange = (size) => {
+        if (sizeBTN.includes(size) == true) {
+            let tempSizeBtn = sizeBTN?.filter((item) => item !== size)
+            setSizeBTN([...tempSizeBtn])
+        } else {
+            setSizeBTN([...sizeBTN, size])
+        }
+    }
+
+    // print type selection 
+    const [printType, setPrintType] = useState(null);
+    const printTypes = [
+        { type: 'No-Print', label: 'No Print' },
+        { type: '1-Color-Print', label: '1-Color Print' },
+        { type: '2-Color-Print', label: '2-Color Print' },
+        { type: '3-Color-Print', label: '3-Color Print' },
+        { type: '4-Color-Print', label: '4-Color Print' },
+    ];
+
+    useEffect(() => {
+        console.log('sizeBTN length', sizeBTN.length)
+        console.log('sizeBTN', sizeBTN)
+    }, [sizeBTN])
+
 
     return (
         <Layout active={'product-details'}>
@@ -432,6 +478,8 @@ const ProductDetails = () => {
                                         <p className='productDetails-heading1'>Color</p>
                                         <p className='productDetails-subheading'>
                                             Select the preferred color from the list
+                                            {colorType !== null && <span className='selectedColor'>{colorType}</span>
+                                            }
                                         </p>
                                     </div>
                                 </div>
@@ -446,9 +494,12 @@ const ProductDetails = () => {
                                     {colorDrawerData?.map((item, index) => (
                                         <div className='ColorDrawer' key={index}>
                                             <ColorDrawerCompo
-                                                images={item.images}
-                                                title={item.title}
+                                                images={item?.images}
+                                                title={item?.title}
+                                                color={item?.color}
                                                 setProductColor={setProductColor}
+                                                colorType={colorType}
+                                                setcolorType={setcolorType}
                                             />
                                         </div>
                                     ))}
@@ -470,6 +521,7 @@ const ProductDetails = () => {
                                         <p className='productDetails-heading1'>Print</p>
                                         <p className='productDetails-subheading'>
                                             Select the type of print you want in your product
+                                            {printType !== null && <span className='selectedColor'>{printType}</span>}
                                         </p>
                                     </div>
                                 </div>
@@ -483,14 +535,18 @@ const ProductDetails = () => {
                                 <div className='printDrawer-data'>
                                     <div onClick={() => setProductPrint('')}
                                     >
-                                        <p>No Print</p>
-                                        <p >1-Color Print</p>
-                                        <p>
-                                            2-Color Print
-                                            <FcCheckmark style={{ marginLeft: '10rem' }} />
-                                        </p>
-                                        <p>3-Color Print</p>
-                                        <p>4-Color Print</p>
+                                        <div>
+                                            {printTypes.map((item) => (
+                                                <p key={item.type} onClick={() => setPrintType(item.type)}>
+                                                    {item.label} {printType === item.type ? <FcCheckmark /> : ''}
+                                                </p>
+                                            ))}
+                                        </div>ٖ
+                                        {/* <p onClick={() => setPrintType('noPrint')} >No Print {printType === 'noPrint' ? <FcCheckmark /> : ''}</p>
+                                        <p onClick={() => setPrintType('1color')} >1-Color Print {printType === '1color' ? <FcCheckmark /> : ''}</p>
+                                        <p onClick={() => setPrintType('2color')} >2-Color Print {printType === '2color' ? <FcCheckmark /> : ''}</p>
+                                        <p onClick={() => setPrintType('3color')} >3-Color Print {printType === '3color' ? <FcCheckmark /> : ''}</p>
+                                        <p onClick={() => setPrintType('4color')} >4-Color Print {printType === '4color' ? <FcCheckmark /> : ''}</p> */}
                                     </div>
                                     <button className='drawerBTN'>
                                         Confirm selection <img src={arrow_right} />
@@ -500,7 +556,7 @@ const ProductDetails = () => {
                             <div className='productDetails-text' onClick={showDeliveryDrawer}>
                                 <div className='productDetails-heading '>
                                     <div>
-                                        {productDelivery !== null ? (
+                                        {deliveryType !== null ? (
                                             <img src={greenTickMark} className='greenMark'></img>
                                         ) : (
                                             <span className='serialNum'>03</span>)}
@@ -509,6 +565,8 @@ const ProductDetails = () => {
                                         <p className='productDetails-heading1'>Delivery Type</p>
                                         <p className='productDetails-subheading'>
                                             Select the preferred delivery time
+                                            {deliveryType !== null && <span className='selectedColor'>{deliveryType}</span>}
+
                                         </p>
                                     </div>
                                 </div>
@@ -520,18 +578,18 @@ const ProductDetails = () => {
                                     <LiaTimesSolid onClick={onCloseDelivery} />
                                 </div>
                                 <div className='deliveryDrawer-data'>
-                                    <div onClick={() => setProductDelivery('')}>
-                                        <p>
-                                            Normal Delivery <span>0.00 SEK</span>
+                                    <div>
+                                        <p onClick={() => setDeliveryType('Normal Delivery')}>
+                                            Normal Delivery <span>0.00 SEK {deliveryType === 'Normal Delivery' ? <FcCheckmark /> : ''}</span>
                                         </p>
-                                        <p>
+                                        <p onClick={() => setDeliveryType('Express Delivery (7 days)')}>
                                             Express Delivery (7 days)
                                             <span>
-                                                500.00 SEK <FcCheckmark style={{ marginLeft: '11rem' }} />
+                                                500.00 SEK{deliveryType === 'Express Delivery (7 days)' ? <FcCheckmark /> : ''}
                                             </span>
                                         </p>
-                                        <p>
-                                            Express Delivery (5 days)<span>1,200.00 SEK</span>
+                                        <p onClick={() => setDeliveryType('Express Delivery (5 days)')}>
+                                            Express Delivery (5 days)<span>1,200.00 SEK{deliveryType === 'Express Delivery (5 days)' ? <FcCheckmark /> : ''}</span>
                                         </p>
                                     </div>
                                     <button className='drawerBTN'>
@@ -541,9 +599,12 @@ const ProductDetails = () => {
                                 </div>
                             </Drawer>
                             <div className='productDetails-text'>
-                                <div className='productDetails-heading'>
+                                <div className='productDetails-heading' onClick={QuantityVisible}>
                                     <div>
-                                        <span className='serialNum'>04</span>{' '}
+                                        {sizeBTN.length > 0 ? (
+                                            <img src={greenTickMark} className='greenMark'></img>
+                                        ) : (
+                                            <span className='serialNum'>04</span>)}
                                     </div>
                                     <div>
                                         <p className='productDetails-heading1'>Quantity</p>
@@ -552,30 +613,34 @@ const ProductDetails = () => {
                                 </div>
                                 <AiFillCaretRight />
                             </div>
-                            <div className='quantitySelect'>
+                            {isVisibleQuantity && (<div className='quantitySelect'>
                                 <ul style={{ listStyleType: 'none' }}>
                                     <li><span style={{ color: 'red' }}>*</span>  The minimum amount quantity 25pcs</li>
                                     <li><span style={{ color: 'red' }}>*</span>  Increase with 25pcs more and get 10% discount</li>
                                 </ul>
-                                <span className='sizeBTN'>
-                                    <p>XS</p>
-                                    <p>S   |   25</p>
-                                    <p>M   |   25</p>
-                                    <p>L   |   25</p>
-                                    <p>XL   |   25</p>
-                                    <p>XXL</p>
+                                <span className='sizeBTN' >
+                                    <p onClick={() => sizeOnChange('xs')} style={{ border: sizeBTN.includes('xs') == true ? '1px solid #32CD32' : '' }}>XS</p>
+                                    <p onClick={() => sizeOnChange('s')} style={{ border: sizeBTN.includes('s') == true ? '1px solid #32CD32' : '' }}>S  |   25</p>
+                                    <p onClick={() => sizeOnChange('m')} style={{ border: sizeBTN.includes('m') == true ? '1px solid #32CD32' : '' }}>M  |   25</p>
+                                    <p onClick={() => sizeOnChange('l')} style={{ border: sizeBTN.includes('l') == true ? '1px solid #32CD32' : '' }}>L  |   25</p>
+                                    <p onClick={() => sizeOnChange('xl')} style={{ border: sizeBTN.includes('xl') == true ? '1px solid #32CD32' : '' }}>XL   |  25</p>
+                                    <p onClick={() => sizeOnChange('xll')} style={{ border: sizeBTN.includes('xll') == true ? '1px solid #32CD32' : '' }}>XXL</p>
                                 </span>
                             </div>
-
+                            )}
                             <div className='productDetails-drawer-price'>
                                 <div className='priceTotal'>
                                     <p>Total price</p>
                                     <p>Price specifications</p>
                                 </div>
                                 <div className='priceAmount'>
-                                    <p>00.00 SEK</p>
-                                    <p>Incl. VAT: 00.00 SEK</p>
+                                    <p>37,905.00 SEK</p>
+                                    <p>Incl. VAT: 245.00 SEK</p>
                                 </div>
+                            </div>
+                            <div className='shippingInfoBox'>
+                                <p><img src={local_shipping} />Express Delivery (7 days) - Latest by <span>Mon, 05 Jun 2023</span></p>
+                                <p><img src={infoIcon} />You will upload your files and print instructions in the cart</p>
                             </div>
 
                             <div className='productDetailsBTNs'>
@@ -629,6 +694,7 @@ const ProductDetails = () => {
                         </div>
                     </div>
                 </div>
+                {/* image Slider */}
                 <div className='imageSlider'>
                     <img
                         src={productDetailsIMG1}
@@ -680,7 +746,7 @@ const ProductDetails = () => {
                 </div>
                 {/* table */}
                 <div className='productDetail-table'>
-                    <Tabs defaultActiveKey='1' items={items} onChange={onChange} />
+                    <Tabs defaultActiveKey='1' className='custom-tabs' items={items} onChange={onChange} />
                 </div>
                 <div className='tableDiscp'>
                     <p>

@@ -1,17 +1,17 @@
 import React from 'react'
-// import { FcCheckmark } from 'react-icons/fc'
+import { FcCheckmark } from 'react-icons/fc'
 
-const ColorDrawerCompo = ({ images, title , setProductColor}) => {
+const ColorDrawerCompo = ({ images, title, setProductColor, colorType, setcolorType }) => {
     return (
         <div>
-            <div className='ColorDrawerCompo' onClick={()=>setProductColor('')}>
-                <div className='colorIMG-title'>
-                    <img src={images}  />
+            <div className='ColorDrawerCompo' onClick={() => setProductColor('')}>
+                <div className='colorIMG-title' onClick={() => setcolorType(title)}>
+                    <img src={images} />
                     <p>{title}</p>
-                    {/* <FcCheckmark style={{marginLeft: '12rem'}} /> */}
+                    {colorType === title ?
+                        <div style={{ marginLeft: '5rem' }}><FcCheckmark /></div> : ''}
                 </div>
             </div>
-
         </div>
     )
 }

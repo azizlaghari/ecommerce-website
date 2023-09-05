@@ -48,5 +48,5 @@ const data = [
         price: '468.50 SEK',
     },
 ];
-const ProductDetailsTable = () => <Table columns={columns} dataSource={data} />;
+const ProductDetailsTable = () => <Table ProductDetailsTable columns={columns} dataSource={data} />;
 export default ProductDetailsTable;
