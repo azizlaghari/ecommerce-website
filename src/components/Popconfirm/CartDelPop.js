@@ -13,7 +13,7 @@ const cancel = (e) => {
 const CartDelPop = () => (
     <div className='CartDelPop-main'>
         <Popconfirm
-            className='CartDelPop'
+            className='deletePopConfirmation'
             title="Delete from shopping cart"
             description="Are you sure you want to delete this item from cart?"
             onConfirm={confirm}

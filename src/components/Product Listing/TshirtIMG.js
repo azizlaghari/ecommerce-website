@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import arrowRightGreen from '../../assets/productListing/arrowRightGreen.png'
-import { Divider, Drawer, Dropdown, Space } from 'antd'
+import { Drawer, Dropdown, Space } from 'antd'
 import arrow_drop_down from '../../assets/productListing/arrow_drop_down.png'
 import arrow_right from '../../assets/arrow_right.png'
 import { LiaTimesSolid } from 'react-icons/lia'
@@ -105,7 +105,6 @@ const TshirtIMG = () => {
                     </div>
                 </div >
             </div >
-            <span className='dividerNone'><Divider /></span>
         </>
     )
 }

@@ -12,7 +12,7 @@ const Section3 = () => {
     return (
         <>
             <div className='Section3'>
-                <Row className='boxes-Section3' gutter={[20, 20]}>
+                <Row className='boxes-Section3' gutter={[10, 10]}>
                     <Col xl={10} md={24} sm={24} xs={24}>
                         <div className='leftBox-Section3'>
                             <div className='text-Section3'>

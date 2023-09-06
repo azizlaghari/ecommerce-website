@@ -5,10 +5,10 @@
   column-gap: 1rem;
 }
 .imageCard1 {
-  background-image: url('../../../assets/imageCard1.png');
+  background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.82) 61.74%),
+    url('../../../assets/imageCard1.png');
   height: 640px;
   background-repeat: no-repeat;
-  /* background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.82) 70.94%); */
   width: 50%;
   display: flex;
   flex-direction: column;
@@ -65,7 +65,8 @@
 }
 /* box 2 */
 .imageCard2 {
-  background-image: url('../../../assets/imageCard2.png');
+  background-image: -webkit-linear-gradient(270deg, rgba(54, 54, 54, 0) 56.88%, #363636 100%),
+    url('../../../assets/imageCard2.png');
   height: 640px;
   background-repeat: no-repeat;
   width: 50%;
@@ -106,12 +107,12 @@
     align-items: center;
     justify-content: center;
     row-gap: 1rem;
-    padding: 1rem;
   }
-  .imageCard1{
+  .imageCard1 {
     width: 100%;
+    height: 680px;
   }
-  .imageCard2{
+  .imageCard2 {
     width: 100%;
   }
 }

@@ -19,15 +19,15 @@ const MenuStyle = {
 }
 
 const MenuDrawer = ({ active }) => {
-  const [visible, setVisible] = useState(false)
+  const [open, setOpen] = useState(false)
   const theme = useSelector((state) => state.theme.theme)
 
   const showDrawer = () => {
-    setVisible(true)
+    setOpen(true)
   }
 
   const onClose = () => {
-    setVisible(false)
+    setOpen(false)
   }
 
   return (
@@ -42,7 +42,7 @@ const MenuDrawer = ({ active }) => {
         placement='left'
         closable={false}
         onClose={onClose}
-        visible={visible}
+        open={open}
       >
         <div>
           <div className='m-drawer'>
@@ -53,9 +53,9 @@ const MenuDrawer = ({ active }) => {
                 <img src={''} alt='logo' className='logo' />
               )}
             </div>
-            <BiArrowBack onClick={() => setVisible(false)} className='back-arrow' />
+            <BiArrowBack onClick={() => setOpen(false)} className='back-arrow' />
           </div>
-          <MainMenu active={active} setVisible={setVisible} visible={visible} />
+          <MainMenu active={active} setOpen={setOpen} open={open} />
         </div>
       </Drawer>
     </>

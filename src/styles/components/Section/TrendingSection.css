@@ -4,7 +4,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 4rem 0;
+  padding: 4rem 1rem;
 }
 .trendingTitle {
   color: var(--dark-green, #11505d);
@@ -36,7 +36,7 @@
   display: flex;
   /* justify-content: center; */
   justify-content: center;
-  row-gap: .5rem;
+  row-gap: 0.5rem;
   flex-wrap: wrap;
 }
 
@@ -63,6 +63,11 @@
 }
 @media screen and (max-width: 1024px) {
   .img-tags {
-  font-size: 8px;
+    font-size: 8px;
+  }
+}
+@media (max-width: 800px) {
+  .imageContainer {
+    width: 100%;
   }
 }

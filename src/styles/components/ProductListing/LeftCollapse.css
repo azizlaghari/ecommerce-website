@@ -25,7 +25,7 @@
 .leftCollapse-Container .ant-slider-track {
   background: var(--selection-green, #32cd32);
 }
-.leftCollapse-Container .ant-slider-handle::after {
+.priceSlider .ant-slider-handle::after {
   box-shadow: 0 0 0 2px #32cd32;
 }
 .leftCollapse-Container .ant-slider-handle:focus::after {
@@ -40,6 +40,7 @@
 .priceSlider .ant-slider:hover .ant-slider-track {
   background-color: #32cd32;
 }
+
 
 .Sub-categories-data {
   display: flex;

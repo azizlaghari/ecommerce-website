@@ -210,6 +210,7 @@ const CategoryBrowseCarouselData = [
 // tshirt data
 const tshirtData = [
     {
+        id: 1,
         title: 'Cheap t shirt',
         subtitle:
             'ATTENTION! This promotional item can only be purchased without printing. Reservation for final sale! If any color or..',
@@ -222,6 +223,7 @@ const tshirtData = [
         colors: '02 color variants',
     },
     {
+        id: 2,
         title: 'Cheap t shirt',
         subtitle:
             'ATTENTION! This promotional item can only be purchased without printing. Reservation for final sale! If any color or..',
@@ -234,6 +236,7 @@ const tshirtData = [
         colors: '02 color variants',
     },
     {
+        id: 3,
         title: 'Cheap t shirt',
         subtitle:
             'ATTENTION! This promotional item can only be purchased without printing. Reservation for final sale! If any color or..',
@@ -246,6 +249,7 @@ const tshirtData = [
         colors: '02 color variants',
     },
     {
+        id: 4,
         title: 'Cheap t shirt',
         subtitle:
             'ATTENTION! This promotional item can only be purchased without printing. Reservation for final sale! If any color or..',
@@ -259,6 +263,7 @@ const tshirtData = [
     },
 
     {
+        id: 5,
         title: 'Cheap t shirt',
         subtitle:
             'ATTENTION! This promotional item can only be purchased without printing. Reservation for final sale! If any color or..',
@@ -271,6 +276,7 @@ const tshirtData = [
         colors: '02 color variants',
     },
     {
+        id: 6,
         title: 'Cheap t shirt',
         subtitle:
             'ATTENTION! This promotional item can only be purchased without printing. Reservation for final sale! If any color or..',
@@ -283,6 +289,7 @@ const tshirtData = [
         colors: '02 color variants',
     },
     {
+        id: 7,
         title: 'Cheap t shirt',
         subtitle:
             'ATTENTION! This promotional item can only be purchased without printing. Reservation for final sale! If any color or..',
@@ -295,6 +302,7 @@ const tshirtData = [
         colors: '02 color variants',
     },
     {
+        id: 8,
         title: 'Cheap t shirt',
         subtitle:
             'ATTENTION! This promotional item can only be purchased without printing. Reservation for final sale! If any color or..',
@@ -308,6 +316,7 @@ const tshirtData = [
     },
 
     {
+        id: 9,
         title: 'Cheap t shirt',
         subtitle:
             'ATTENTION! This promotional item can only be purchased without printing. Reservation for final sale! If any color or..',
@@ -320,6 +329,9 @@ const tshirtData = [
         colors: '02 color variants',
     },
 ]
+localStorage.setItem('tshirtData', JSON.stringify(tshirtData));
+
+
 
 const onChange = (key) => {
     console.log(key)
@@ -349,6 +361,7 @@ const items = [
 ]
 
 const ProductDetails = () => {
+
     // state for green tick marks
     const [productColor, setProductColor] = useState(null)
     const [productPrint, setProductPrint] = useState(null)
@@ -403,15 +416,15 @@ const ProductDetails = () => {
     };
 
     // size button state
-    const [sizeBTN, setSizeBTN] = useState([])
-    const sizeOnChange = (size) => {
-        if (sizeBTN.includes(size) == true) {
-            let tempSizeBtn = sizeBTN?.filter((item) => item !== size)
-            setSizeBTN([...tempSizeBtn])
-        } else {
-            setSizeBTN([...sizeBTN, size])
+    const [sizeBTN, setSizeBTN] = useState([]); // state variable for the selected sizes
+    const sizeOnChange = (size) => { // function to handle size selection
+        if (sizeBTN.includes(size) == true) { // if the size is already selected
+            let tempSizeBtn = sizeBTN?.filter((item) => item !== size) // remove the size from the selected sizes
+            setSizeBTN([...tempSizeBtn]) // update the state variable with the new selected sizes
+        } else { // if the size is not already selected
+            setSizeBTN([...sizeBTN, size]) // add the size to the selected sizes
         }
-    }
+    };
 
     // print type selection 
     const [printType, setPrintType] = useState(null);
@@ -451,7 +464,7 @@ const ProductDetails = () => {
                                 <p className='toptags'>Bestseller</p>
                                 <p className='toptags'>Cheap jerseys</p>
                             </div>
-                            <div>
+                            <div >
                                 <AiOutlineHeart />
                             </div>
                         </div>
@@ -761,6 +774,7 @@ const ProductDetails = () => {
                 <div className=''>
                     <TshirtCarousel carouselData={tshirtData} />
                 </div>
+
                 {/* Categories section */}
                 <div className='categoryBrowse'>
                     <h2>Related Categories to browse</h2>

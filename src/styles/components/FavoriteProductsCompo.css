@@ -8,22 +8,20 @@
   justify-content: center;
   cursor: pointer;
 }
-.FavoriteProductsCompo .productIMG img{
-    mix-blend-mode: darken;
-
+.FavoriteProductsCompo .productIMG img {
+  mix-blend-mode: darken;
 }
-.FavoriteProductsCompo .heartIcon{
-    position: relative;
-    top: 34px;
-    left: 210px;
-    cursor: pointer;
+.FavoriteProductsCompo .heartIcon {
+  position: relative;
+  top: 34px;
+  left: 210px;
+  cursor: pointer;
 }
-.FavoriteProductsCompo .logo{
-    position: relative;
-    bottom: 34px;
-    
+.FavoriteProductsCompo .logo {
+  position: relative;
+  bottom: 34px;
 }
-.FavoriteProductsCompo .productDetails{
+.FavoriteProductsCompo .productDetails {
   display: flex;
   flex-direction: column;
   row-gap: 1rem;
@@ -57,4 +55,29 @@
   font-style: normal;
   font-weight: 400;
   line-height: 14px; /* 100% */
+}
+.Favorite_Products_Drawer .ant-tabs-tab-btn {
+  color: var(--Gray, #7a8089);
+
+  /* Menu Links */
+  font-family: 'Barlow';
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 18px; /* 112.5% */
+  text-transform: capitalize;
+}
+.Favorite_Products_Drawer .ant-tabs-tab-active .ant-tabs-tab-btn {
+  color: #2a2a2a !important;
+
+  /* Menu Links */
+  font-family: 'Barlow';
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 18px; /* 112.5% */
+  text-transform: capitalize;
+}
+.Favorite_Products_Drawer .ant-tabs-ink-bar {
+  background: #f6bacb;
 }

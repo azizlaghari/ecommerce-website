@@ -26,6 +26,7 @@ import SoftTshirtBox from './modal/SoftTshirtBox'
 
 const tshirtData = [
   {
+    id: 1,
     title: 'Cheap t shirt',
     subtitle:
       'ATTENTION! This promotional item can only be purchased without printing. Reservation for final sale! If any color or..',
@@ -38,6 +39,7 @@ const tshirtData = [
     colors: '02 color variants',
   },
   {
+    id: 2,
     title: 'Cheap t shirt',
     subtitle:
       'ATTENTION! This promotional item can only be purchased without printing. Reservation for final sale! If any color or..',
@@ -50,6 +52,7 @@ const tshirtData = [
     colors: '02 color variants',
   },
   {
+    id: 3,
     title: 'Cheap t shirt',
     subtitle:
       'ATTENTION! This promotional item can only be purchased without printing. Reservation for final sale! If any color or..',
@@ -62,6 +65,7 @@ const tshirtData = [
     colors: '02 color variants',
   },
   {
+    id: 4,
     title: 'Cheap t shirt',
     subtitle:
       'ATTENTION! This promotional item can only be purchased without printing. Reservation for final sale! If any color or..',
@@ -74,6 +78,7 @@ const tshirtData = [
     colors: '02 color variants',
   },
   {
+    id: 5,
     title: 'Cheap t shirt',
     subtitle:
       'ATTENTION! This promotional item can only be purchased without printing. Reservation for final sale! If any color or..',
@@ -86,6 +91,7 @@ const tshirtData = [
     colors: '02 color variants',
   },
   {
+    id: 6,
     title: 'Cheap t shirt',
     subtitle:
       'ATTENTION! This promotional item can only be purchased without printing. Reservation for final sale! If any color or..',
@@ -98,6 +104,7 @@ const tshirtData = [
     colors: '02 color variants',
   },
   {
+    id: 7,
     title: 'Cheap t shirt',
     subtitle:
       'ATTENTION! This promotional item can only be purchased without printing. Reservation for final sale! If any color or..',
@@ -110,6 +117,7 @@ const tshirtData = [
     colors: '02 color variants',
   },
   {
+    id: 8,
     title: 'Cheap t shirt',
     subtitle:
       'ATTENTION! This promotional item can only be purchased without printing. Reservation for final sale! If any color or..',
@@ -122,6 +130,7 @@ const tshirtData = [
     colors: '02 color variants',
   },
   {
+    id: 9,
     title: 'Cheap t shirt',
     subtitle:
       'ATTENTION! This promotional item can only be purchased without printing. Reservation for final sale! If any color or..',
@@ -165,6 +174,7 @@ const TshirtsList = ({ hideSoftTshirtBox, hideCollapseTags }) => {
                   return (
                     <Col lg={8} md={8} sm={12} xs={12} key={index}>
                       <TshirtComp
+                        id={item.id}
                         title={item.title}
                         subtitle={item.subtitle}
                         price={item.price}

@@ -1,5 +1,4 @@
 import React from 'react'
-import '../../styles/components/Section/TrendingSection.css'
 
 
 const TrendingSection = ({ image, title, subtitle, tags }) => {

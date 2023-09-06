@@ -1,6 +1,29 @@
-import React from 'react'
+import React, { useState } from 'react'
+import heartSelected from '../assets/heartSelected.png'
 
-const TshirtComp = ({ image, title, subtitle, price, colors, logo, toptags, colorsWheel, heartWhiteIcon }) => {
+const TshirtComp = ({ id, image, title, subtitle, price, colors, logo, toptags, colorsWheel, heartWhiteIcon }) => {
+
+  const handleFavorite = (id) => {
+    const addToFavorite = () => {
+      let parsed = JSON.parse(favorites); // parse the favorites list from localStorage
+      let index = parsed.indexOf(id); // get the index of the item to be added
+      if (index === -1) { // if the item is not already in the list
+        parsed.push(id); // add the item to the list
+      }
+      localStorage.setItem("favorites", JSON.stringify(parsed)) // store the updated list in localStorage
+    }
+    let favorites = localStorage.getItem("favorites"); // get the favorites list from localStorage
+    if (favorites) { // if the favorites list exists in localStorage
+      addToFavorite(); // add the item to the favorites list
+    } else { // if the favorites list does not exist in localStorage
+      localStorage.setItem("favorites", JSON.stringify([])); // create an empty favorites list in localStorage
+      addToFavorite(); // add the item to the favorites list
+    }
+  };
+
+  const [favoriteIcon, setFavoriteIcon] = useState(null)
+
+
   return (
     <>
       <div className='TshirtComp'>
@@ -15,7 +38,10 @@ const TshirtComp = ({ image, title, subtitle, price, colors, logo, toptags, colo
                 )
               })}
             </div>
-            <img className='heartWhiteIcon' src={heartWhiteIcon} />
+            {favoriteIcon !== null ? (
+              <img src={heartSelected} className='heartWhiteIcon'></img>
+            ) : (
+              <img onClick={() => {handleFavorite(id); setFavoriteIcon();}}  className='heartWhiteIcon' src={heartWhiteIcon} />)}
             <img src={image} />
           </div>
           <div className='logo-TshirtComp'>
