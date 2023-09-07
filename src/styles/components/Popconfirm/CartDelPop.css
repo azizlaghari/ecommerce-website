@@ -1,4 +1,4 @@
-.ant-popover .ant-popover-inner{
+.ant-popover .ant-popover-inner {
   border: 1px solid var(--Stroke-Gray, #cdcdcd);
   background: #fff;
   padding: 24px;
@@ -6,9 +6,35 @@
   border-radius: 0;
   border: none;
 }
-.CartDelPop-main .CartDelPop .ant-btn.ant-btn-sm {
-  font-size: 22px;
-  height: 57px;
-  padding: 10px 20px;
-  border-radius: 25px;
-}
+/* .ant-popover .ant-popconfirm-buttons .ant-btn-sm {
+  color: var(--Dark-Green, #11505d);
+  font-family: 'Barlow';
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 12px; 
+  display: flex;
+  padding: 8px 16px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 14px;
+  border: 1px solid var(--Dark-Green, #11505d);
+  background: var(--White, #fff);
+} */
+/* .ant-popover .ant-popconfirm-buttons .ant-btn-sm 
+{
+  color: var(--White, #fff);
+  font-family: "Barlow";
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 12px;
+  display: flex;
+  padding: 8px 16px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 14px;
+  background: var(--Dark-Green, #11505d);
+} */

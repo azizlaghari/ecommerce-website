@@ -14,8 +14,10 @@
   align-items: start;
   justify-content: start;
   margin-top: 1rem;
-
-  color: var(--medium-gray, #96a0af);
+  row-gap: .3rem;
+}
+.tabsMain .ant-tabs-tab-btn {
+  color: var(--Medium-Gray, #96a0af);
 
   /* Menu Links */
   font-family: 'Barlow';
@@ -25,31 +27,8 @@
   line-height: 18px; /* 112.5% */
   text-transform: capitalize;
 }
-
-.tabsMain .tabsData p:nth-child(1) {
-  color: var(--medium-gray, #96a0af);
-
-  /* Menu Links */
-  font-family: 'Barlow';
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 18px; /* 112.5% */
-  text-transform: capitalize;
-}
-.tabsMain .tabsData p:nth-child(2) {
-  color: var(--stroke-gray, #cdcdcd);
-
-  /* Table Header Text */
-  font-family: 'Barlow';
-  font-size: 13px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 14px; /* 107.692% */
-}
-
-.tabsMain .ant-tabs-tab:hover {
-  color: var(--black, #2a2a2a);
+.tabsMain .ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn {
+  color: var(--Black, #2A2A2A);
 
   /* Menu Links */
   font-family: 'Barlow';
@@ -59,6 +38,10 @@
   line-height: 18px; /* 112.5% */
   text-transform: capitalize;
 }
+.tabsMain .ant-tabs-ink-bar{
+  background: #F6BACB;
+}
+
 .tabsMain .myAccountTab {
   padding: 0 3rem;
 }

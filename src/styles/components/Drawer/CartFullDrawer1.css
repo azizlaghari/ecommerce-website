@@ -95,6 +95,9 @@
   font-weight: 400;
   line-height: 16px; /* 123.077% */
 }
+.CartFullDrawer1-container .product-container .iconsEditDelete{
+  display: flex;
+}
 .CartFullDrawer1-container .product-container .iconsEditDelete img {
   padding: 0.5rem;
   cursor: pointer;

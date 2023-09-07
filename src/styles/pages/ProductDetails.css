@@ -573,7 +573,6 @@
   height: 1024px;
 } */
 .ColorDrawer {
-  display: flex;
   align-items: start;
   justify-content: start;
   border-bottom: 1px solid rgba(128, 128, 128, 0.656);

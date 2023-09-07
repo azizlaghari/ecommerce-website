@@ -60,34 +60,34 @@ const tshirtData = [
         colors: '02 color variants',
     },
     {
-        title: 'Cheap t shirt',
+        title: 'Klass T-shirt',
         subtitle:
-            'ATTENTION! This promotional item can only be purchased without printing. Reservation for final sale! If any color or..',
+            'Short-sleeved t-shirt with double layer round neckline. Reinforced cover seams in collar. Tubular Fabric...',
         price: 'From 36.55 SEK',
         heartWhiteIcon: heartWhiteIcon,
         image: tshirt2,
         logo: tlogo1,
         toptags: ['best seller', 'cheap t-shirt'],
         colorsWheel: colorsWheel,
-        colors: '02 color variants',
+        colors: '17 color variants',
     },
     {
-        title: 'Cheap t shirt',
+        title: 'Original T Lady-Fit',
         subtitle:
-            'ATTENTION! This promotional item can only be purchased without printing. Reservation for final sale! If any color or..',
+            'One of the markets cheapest womens T-shirts available in several different colors. This durable t-shirt from b..',
         price: 'From 36.55 SEK',
         heartWhiteIcon: heartWhiteIcon,
         image: tshirt3,
         logo: tlogo1,
         toptags: ['best seller', 'cheap t-shirt'],
         colorsWheel: colorsWheel,
-        colors: '02 color variants',
+        colors: '05 color variants',
     },
     {
-        title: 'Cheap t shirt',
+        title: 'Organic Childrens T-shirt',
         subtitle:
-            'ATTENTION! This promotional item can only be purchased without printing. Reservation for final sale! If any color or..',
-        price: 'From 36.55 SEK',
+            'Childrens T-shirt with double stitching in sleeves and hem. Taped neckline from shoulder to shoulder.',
+        price: 'From 81.60 SEK',
         heartWhiteIcon: heartWhiteIcon,
         image: tshirt4,
         logo: tlogo2,
@@ -97,31 +97,31 @@ const tshirtData = [
     },
 
     {
-        title: 'Cheap t shirt',
+        title: 'Gym T-shirt',
         subtitle:
             'ATTENTION! This promotional item can only be purchased without printing. Reservation for final sale! If any color or..',
-        price: 'From 36.55 SEK',
+        price: 'From 85.55 SEK',
         heartWhiteIcon: heartWhiteIcon,
         image: tshirt5,
         logo: tlogo2,
         toptags: ['best seller', 'cheap t-shirt'],
         colorsWheel: colorsWheel,
-        colors: '02 color variants',
+        colors: '17 color variants',
     },
     {
-        title: 'Cheap t shirt',
+        title: 'Soft T-shirt Short Sleeve Men',
         subtitle:
-            'ATTENTION! This promotional item can only be purchased without printing. Reservation for final sale! If any color or..',
+            'Childrens T-shirt with double stitching in sleeves and hem. Taped neckline from shoulder to shoulder.',
         price: 'From 36.55 SEK',
         heartWhiteIcon: heartWhiteIcon,
         image: tshirt6,
         logo: tlogo2,
         toptags: ['best seller', 'cheap t-shirt'],
         colorsWheel: colorsWheel,
-        colors: '02 color variants',
+        colors: '05 color variants',
     },
     {
-        title: 'Cheap t shirt',
+        title: 'Long-sleeved Childrens T-shirt Valu...',
         subtitle:
             'ATTENTION! This promotional item can only be purchased without printing. Reservation for final sale! If any color or..',
         price: 'From 36.55 SEK',
@@ -133,7 +133,7 @@ const tshirtData = [
         colors: '02 color variants',
     },
     {
-        title: 'Cheap t shirt',
+        title: 'Polyester T-shirt Barn',
         subtitle:
             'ATTENTION! This promotional item can only be purchased without printing. Reservation for final sale! If any color or..',
         price: 'From 36.55 SEK',
@@ -142,11 +142,11 @@ const tshirtData = [
         logo: tlogo3,
         toptags: ['best seller', 'cheap t-shirt'],
         colorsWheel: colorsWheel,
-        colors: '02 color variants',
+        colors: '17 color variants',
     },
 
     {
-        title: 'Cheap t shirt',
+        title: 'Bomull T-shirt',
         subtitle:
             'ATTENTION! This promotional item can only be purchased without printing. Reservation for final sale! If any color or..',
         price: 'From 36.55 SEK',
@@ -155,7 +155,7 @@ const tshirtData = [
         logo: tlogo3,
         toptags: ['best seller', 'cheap t-shirt'],
         colorsWheel: colorsWheel,
-        colors: '02 color variants',
+        colors: '05 color variants',
     },
 ]
 

@@ -10,9 +10,12 @@
   font-weight: 500;
   line-height: 16px !important;
 }
- .dropdownLink .ant-space {
+ .dropdownLink .ant-space-horizontal {
   gap: 2px;
 }
+/* .dropdownLink .ant-space-item{
+  margin: -2px;
+} */
 
 .anticon svg {
   height: 8px;

@@ -26,10 +26,14 @@
   font-style: normal;
   font-weight: 500;
   line-height: 18px; /* 155.556% */
+  display: inline-flex;
+  padding: 8px 24px;
+  align-items: flex-start;
+  gap: 10px;
 }
 
 @media screen and (max-width: 800px) {
-  .ModelSection .models .model{
+  .ModelSection .models .model {
     width: 100%;
   }
   .ModelSection .models .model img {

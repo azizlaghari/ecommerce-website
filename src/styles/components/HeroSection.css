@@ -120,6 +120,7 @@
 .featureImages img {
   width: 23%;
   height: auto;
+
 }
 /* responsive of feature images */
 @media screen and (max-width: 500px) {

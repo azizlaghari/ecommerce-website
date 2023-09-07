@@ -71,24 +71,24 @@ const HeroSection = () => {
         </div>
       </div>
       <div className='featureImages'>
-        <img src={CapsHats}></img>
-        <img src={RainWear}></img>
-        <img src={SportsWear}></img>
-        <img src={sunglasses}></img>
-      </div>
-      <Row className='featureCards' gutter={[20, 20]}>
-        {data.map((item, index) => {
-          return (
-            <Col lg={6} md={6} sm={12} xs={12} key={index} >
-              <FeatureCards text={item.text} icon={item.icon} />
-            </Col>
-          )
-        })}
-      </Row>
-      <Divider />
+          <img src={CapsHats}></img>
+          <img src={RainWear}></img>
+          <img src={SportsWear}></img>
+          <img src={sunglasses}></img>
+        </div>
+        <Row className='featureCards' gutter={[20, 20]}>
+          {data.map((item, index) => {
+            return (
+              <Col lg={6} md={6} sm={12} xs={12} key={index} >
+                <FeatureCards text={item.text} icon={item.icon} />
+              </Col>
+            )
+          })}
+        </Row>
+        <Divider />
 
-    </>
-  )
+      </>
+      )
 }
 
-export default HeroSection
+      export default HeroSection

@@ -55,7 +55,7 @@ const TshirtCarousel = ({ carouselData }) => {
   // const onChange = () => {}
   return (
     <div>
-      <Carousel responsive={responsive} customDot={<CustomDot />}>
+      <Carousel responsive={responsive}  customDot={<CustomDot />}>
         {carouselData.map((item, index) => (
           <div
             key={index}

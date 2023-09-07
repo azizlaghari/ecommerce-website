@@ -58,6 +58,7 @@ a {
   font-style: normal;
   font-weight: 500;
   line-height: 34px; /* 220% */
+  margin: 1rem 0;
 }
 .emailAddress {
   border: none;

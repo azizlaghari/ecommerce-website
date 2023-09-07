@@ -1,5 +1,4 @@
 import React from 'react'
-import { SmileOutlined } from '@ant-design/icons'
 import { Dropdown, Space, Tooltip } from 'antd'
 // icons
 import { CgProfile } from 'react-icons/cg'
@@ -24,25 +23,25 @@ const items = [
     key: '2',
     label: (
       <a target='_blank' rel='noopener noreferrer' href='https://www.aliyun.com'>
-        2nd menu item (disabled)
+        2nd menu item
       </a>
     ),
-    icon: <SmileOutlined />,
-    disabled: true,
   },
   {
     key: '3',
     label: (
       <a target='_blank' rel='noopener noreferrer' href='https://www.luohanacademy.com'>
-        3rd menu item (disabled)
+        3rd menu item
       </a>
     ),
-    disabled: true,
   },
   {
     key: '4',
-    danger: true,
-    label: 'a danger item',
+    label: (
+      <a target='_blank' rel='noopener noreferrer' href='https://www.luohanacademy.com'>
+        4th menu item
+      </a>
+    ),
   },
 ]
 

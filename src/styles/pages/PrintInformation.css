@@ -303,6 +303,9 @@
   font-weight: 500;
   line-height: 16px; /* 114.286% */
 }
+.PrintInformation .productCardSummary .messageInfo textarea:focus-visible{
+  outline: none;
+}
 .PrintInformation .productCardSummary button {
   color: var(--dark-green, #11505d);
   font-family: 'Barlow';
